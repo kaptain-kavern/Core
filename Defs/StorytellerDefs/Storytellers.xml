@@ -18,7 +18,7 @@
         <mtbDaysThreatSmall>3.75</mtbDaysThreatSmall>
         <mtbDaysThreatBig>1.25</mtbDaysThreatBig>
         <threatCycleLength>9.2</threatCycleLength>
-        <minDaysBetweenThreatBigs>1.9</minDaysBetweenThreatBigs>
+        <minDaysBetweenThreatBigs>2.1</minDaysBetweenThreatBigs>
       </li>
       <li Class="StorytellerCompProperties_CategoryMTB">
         <minDaysPassed>5</minDaysPassed>

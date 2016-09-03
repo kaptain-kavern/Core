@@ -59,6 +59,8 @@
     </inspectorTabs>
   </ThingDef>
 
+
+
   <ThingDef Name="BaseMeleeWeapon_Sharp" ParentName="BaseMeleeWeapon" Abstract="True">
     <recipeMaker>
     <defaultIngredientFilter>
@@ -86,7 +88,12 @@
         </exceptedThingDefs>
       </defaultIngredientFilter>
     </recipeMaker>
-  </ThingDef>  
+  </ThingDef>
+  
+  
+  
+  
+  
   
   <!-- ============================================================== -->
 
