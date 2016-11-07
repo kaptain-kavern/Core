@@ -12,7 +12,7 @@
     <rotatable>false</rotatable>
     <statBases>
       <WorkToMake>600</WorkToMake>
-      <MarketValue>80</MarketValue>
+      <MarketValue>90</MarketValue>
     </statBases>
     <techLevel>Industrial</techLevel>
     <ingestible>
@@ -135,7 +135,7 @@
     <comps>
       <li>
         <compClass>HediffComp_SeverityPerDay</compClass>
-        <severityPerDay>-0.014</severityPerDay>
+        <severityPerDay>-0.015</severityPerDay>
       </li>
       <li>
         <compClass>HediffComp_DrugEffectFactor</compClass>

@@ -3,7 +3,7 @@
 
   <InstructionDef>
     <defName>CreateWorldParams</defName>
-    <text>Welcome to RimWorld! This tutorial will teach you how to play the game.\n\nThe first step is to generate a world to play in.\n\nIn this page, you set up the parameters of your world.\n\nThe default settings here are good - go ahead and click GENERATE!</text>
+    <text>Welcome to RimWorld! This tutorial will teach you how to play the game.\n\nThe first step is to generate a world to play in.\n\nThis page configures how your world should be generated.\n\nThe default settings here are good - go ahead and click GENERATE!</text>
     <eventTagInitiate>PageStart-CreateWorldParams</eventTagInitiate>
     <actionTagsAllowed>
       <li>GotoPrevPage</li>
@@ -20,7 +20,7 @@
 
   <InstructionDef>
     <defName>ChooseLandingSite</defName>
-    <text>Here, you choose your landing site.\n\nThere are lots of biomes, but for now, let's start with a friendly one.\n\nChoose a landing site with temperate forest biome and flat terrain, and click SELECT SITE.</text>
+    <text>Here, you choose your landing site.\n\nThere are lots of biomes, but for now, let's start with a friendly one.\n\nClick a landing site with temperate forest biome and flat terrain, and click SELECT SITE.</text>
     <eventTagInitiate>PageStart-SelectLandingSite</eventTagInitiate>
     <actionTagsAllowed>
       <li>GotoPrevPage</li>

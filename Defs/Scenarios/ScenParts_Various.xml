@@ -8,6 +8,7 @@
     <label>game start dialog</label>
     <category>Misc</category>
     <scenPartClass>ScenPart_GameStartDialog</scenPartClass>
+    <maxUses>1</maxUses>
   </ScenPartDef>
 
   <!--================= player pawn filters =================-->

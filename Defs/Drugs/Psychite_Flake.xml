@@ -12,7 +12,7 @@
     <rotatable>false</rotatable>
     <statBases>
       <WorkToMake>300</WorkToMake>
-      <MarketValue>11</MarketValue>
+      <MarketValue>15</MarketValue>
     </statBases>
     <techLevel>Industrial</techLevel>
     <ingestible>
@@ -56,7 +56,7 @@
     <comps>
       <li Class="CompProperties_Drug">
         <chemical>Psychite</chemical>
-        <addictiveness>0.19</addictiveness>
+        <addictiveness>0.20</addictiveness>
         <minToleranceToAddict>0.00</minToleranceToAddict>
         <existingAddictionSeverityOffset>0.30</existingAddictionSeverityOffset>
         <needLevelOffset>1</needLevelOffset>

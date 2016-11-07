@@ -7,7 +7,7 @@
     <defName>PsychiteRefining</defName>
     <label>psychite refining</label>
     <description>Learn to refine psychoid leaves into flake and yayo, different forms of the euphoric drug psychite.</description>
-    <baseCost>600</baseCost>
+    <baseCost>400</baseCost>
     <techLevel>Industrial</techLevel>
     <prerequisites>
       <li>DrugProduction</li>
@@ -18,7 +18,7 @@
     <defName>WakeUpProduction</defName>
     <label>wake-up production</label>
     <description>Your chemists learn the formulas and techniques for synthesizing wake-up, a work performance-enhancing drug.</description>
-    <baseCost>800</baseCost>
+    <baseCost>600</baseCost>
     <techLevel>Industrial</techLevel>
     <prerequisites>
       <li>DrugProduction</li>
@@ -40,7 +40,7 @@
     <defName>MalariBlockProduction</defName>
     <label>malari-block production</label>
     <description>Learn to produce malari-block, a malaria prevention drug.</description>
-    <baseCost>600</baseCost>
+    <baseCost>500</baseCost>
     <techLevel>Industrial</techLevel>
     <prerequisites>
       <li>DrugProduction</li>

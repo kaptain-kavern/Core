@@ -91,7 +91,7 @@
     <defName>DrugProduction</defName>
     <label>drug production</label>
     <description>The basics of drug preparation and synthesis. Allows creation of the drug lab. Further research is required to make specific drugs.</description>
-    <baseCost>700</baseCost>
+    <baseCost>500</baseCost>
     <techLevel>Industrial</techLevel>
   </ResearchProjectDef>
 

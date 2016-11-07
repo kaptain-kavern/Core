@@ -29,7 +29,7 @@
     <ingestible>
       <foodType>Meal, Processed</foodType>
       <maxNumToIngestAtOnce>1</maxNumToIngestAtOnce>
-      <optimalityOffset>7</optimalityOffset>
+      <optimalityOffset>16</optimalityOffset>
     </ingestible>
   </ThingDef>
 

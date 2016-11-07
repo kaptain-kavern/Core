@@ -768,6 +768,9 @@
       <WorkToMake>170</WorkToMake>
       <Flammability>1.0</Flammability>
     </statBases>
+    <researchPrerequisites>
+      <li>Electricity</li>
+    </researchPrerequisites>
   </ThingDef>
 
   <ThingDef Abstract="True" Name="StandingLampBase" ParentName="LampBase">

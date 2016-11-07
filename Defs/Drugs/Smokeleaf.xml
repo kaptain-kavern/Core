@@ -12,7 +12,7 @@
     <rotatable>false</rotatable>
     <statBases>
       <WorkToMake>200</WorkToMake>
-      <MarketValue>13</MarketValue>
+      <MarketValue>14</MarketValue>
     </statBases>
     <techLevel>Neolithic</techLevel>
     <ingestible>
@@ -54,8 +54,8 @@
     <comps>
       <li Class="CompProperties_Drug">
         <chemical>Smokeleaf</chemical>
-        <addictiveness>0.01</addictiveness>
-        <minToleranceToAddict>0.25</minToleranceToAddict>
+        <addictiveness>0.013</addictiveness>
+        <minToleranceToAddict>0.15</minToleranceToAddict>
         <existingAddictionSeverityOffset>0.06</existingAddictionSeverityOffset>
         <needLevelOffset>1</needLevelOffset>
         <listOrder>20</listOrder>
@@ -80,7 +80,6 @@
         <li>
           <hungerRateFactor>1.3</hungerRateFactor>
           <painOffset>-0.2</painOffset>
-          <socialFightChanceFactor>0.1</socialFightChanceFactor>
           <capMods>
             <li>
               <capacity>Consciousness</capacity>
@@ -131,7 +130,7 @@
     <comps>
       <li>
         <compClass>HediffComp_SeverityPerDay</compClass>
-        <severityPerDay>-0.016</severityPerDay>
+        <severityPerDay>-0.015</severityPerDay>
       </li>
       <li>
         <compClass>HediffComp_DrugEffectFactor</compClass>

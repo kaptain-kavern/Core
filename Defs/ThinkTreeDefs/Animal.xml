@@ -178,6 +178,10 @@
           <subNodes>
             <li Class="JobGiver_WanderColony">
               <maxDanger>None</maxDanger>
+              <ticksBetweenWandersRange>
+                <min>120</min>
+                <max>240</max>
+              </ticksBetweenWandersRange>
             </li>
           </subNodes>
         </li>
@@ -196,12 +200,20 @@
           <subNodes>
             <li Class="JobGiver_WanderHerd">
               <maxDanger>Deadly</maxDanger>
+              <ticksBetweenWandersRange>
+                <min>120</min>
+                <max>240</max>
+              </ticksBetweenWandersRange>
             </li>
           </subNodes>
         </li>
         
         <li Class="JobGiver_WanderAnywhere">
           <maxDanger>Deadly</maxDanger>
+          <ticksBetweenWandersRange>
+            <min>120</min>
+            <max>240</max>
+          </ticksBetweenWandersRange>    
         </li>
 
         <li Class="JobGiver_IdleError"/>

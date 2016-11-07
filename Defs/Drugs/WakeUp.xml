@@ -12,7 +12,7 @@
     <rotatable>false</rotatable>
     <statBases>
       <WorkToMake>800</WorkToMake>
-      <MarketValue>26</MarketValue>
+      <MarketValue>28</MarketValue>
     </statBases>
     <techLevel>Industrial</techLevel>
     <ingestible>
@@ -48,7 +48,7 @@
       <li Class="CompProperties_Drug">
         <chemical>WakeUp</chemical>
         <addictiveness>0.10</addictiveness>
-        <minToleranceToAddict>0.15</minToleranceToAddict>
+        <minToleranceToAddict>0.10</minToleranceToAddict>
         <existingAddictionSeverityOffset>0.20</existingAddictionSeverityOffset>
         <needLevelOffset>1</needLevelOffset>
         <listOrder>210</listOrder>
@@ -122,7 +122,7 @@
     <comps>
       <li>
         <compClass>HediffComp_SeverityPerDay</compClass>
-        <severityPerDay>-0.016</severityPerDay>
+        <severityPerDay>-0.015</severityPerDay>
       </li>
       <li>
         <compClass>HediffComp_DrugEffectFactor</compClass>

@@ -12,7 +12,7 @@
     <rotatable>false</rotatable>
     <statBases>
       <WorkToMake>500</WorkToMake>
-      <MarketValue>18</MarketValue>
+      <MarketValue>22</MarketValue>
     </statBases>
     <techLevel>Industrial</techLevel>
     <ingestible>
@@ -54,8 +54,8 @@
     <comps>
       <li Class="CompProperties_Drug">
         <chemical>Psychite</chemical>
-        <addictiveness>0.05</addictiveness>
-        <minToleranceToAddict>0.05</minToleranceToAddict>
+        <addictiveness>0.08</addictiveness>
+        <minToleranceToAddict>0.04</minToleranceToAddict>
         <existingAddictionSeverityOffset>0.20</existingAddictionSeverityOffset>
         <needLevelOffset>1</needLevelOffset>
         <isCombatEnhancingDrug>true</isCombatEnhancingDrug>
@@ -131,7 +131,7 @@
     <comps>
       <li>
         <compClass>HediffComp_SeverityPerDay</compClass>
-        <severityPerDay>-0.016</severityPerDay>
+        <severityPerDay>-0.015</severityPerDay>
       </li>
       <li>
         <compClass>HediffComp_DrugEffectFactor</compClass>

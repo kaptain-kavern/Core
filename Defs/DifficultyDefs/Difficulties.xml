@@ -16,8 +16,8 @@
 
 	<DifficultyDef>
 		<defName>Easy</defName>
-		<label>Casual</label>
-		<description>For players on their first game, or casual players who still want a challenge. Threats are scaled back, but no so much that they aren't dangerous.</description>
+		<label>Some challenge</label>
+		<description>For players on their first game, or casual players who still want a challenge. Threats are dangerous but not brutal.</description>
     <difficulty>2</difficulty>
     <threatScale>0.35</threatScale>
 		<colonistMoodOffset>-5</colonistMoodOffset>
@@ -42,8 +42,8 @@
 
 	<DifficultyDef>
 		<defName>Hard</defName>
-		<label>Challenge</label>
-		<description>A significant challenge. Succeeding at this level requires a solid and well-rounded understanding of survival strategies.</description>
+		<label>Intense</label>
+		<description>A significant challenge. Succeeding at this level requires a solid and well-rounded understanding of survival strategies, and some luck.</description>
     <difficulty>4</difficulty>
     <threatScale>1.0</threatScale>
 		<colonistMoodOffset>-13</colonistMoodOffset>
