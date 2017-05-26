@@ -26,6 +26,7 @@
         <baseMoodEffect>20</baseMoodEffect>
       </li>
     </stages>
+    <validWhileDespawned>true</validWhileDespawned>
   </ThoughtDef>
   
   <ThoughtDef>
@@ -57,10 +58,10 @@
     </stages>
   </ThoughtDef>
 
-
   <ThoughtDef>
     <defName>ApparelDamaged</defName>
     <workerClass>ThoughtWorker_ApparelDamaged</workerClass>
+    <validWhileDespawned>true</validWhileDespawned>
     <stages>
       <li>
         <label>wearing worn-out apparel</label>
@@ -75,11 +76,105 @@
     </stages>
   </ThoughtDef>
 
+  <ThoughtDef>
+    <defName>DeadMansApparel</defName>
+    <workerClass>ThoughtWorker_DeadMansApparel</workerClass>
+    <validWhileDespawned>true</validWhileDespawned>
+    <stages>
+      <li>
+        <label>dead man's {0}</label>
+        <description>I am wearing apparel that someone died in. It creeps me out and feels dirty.</description>
+        <baseMoodEffect>-3</baseMoodEffect>
+      </li>
+			<li>
+				<label>dead man's {0} (+1)</label>
+				<description>I am wearing two pieces of apparel that someone died in. It creeps me out and feels dirty.</description>
+				<baseMoodEffect>-5</baseMoodEffect>
+			</li>
+			<li>
+				<label>dead man's {0} (+2)</label>
+				<description>I am wearing three pieces of apparel that someone died in. It creeps me out and feels dirty.</description>
+				<baseMoodEffect>-7</baseMoodEffect>
+			</li>
+			<li>
+				<label>dead man's {0} etc</label>
+				<description>I am wearing more than three pieces of apparel that someone died in. It creeps me out and feels dirty.</description>
+				<baseMoodEffect>-8</baseMoodEffect>
+			</li>
+    </stages>
+		<nullifyingTraits>
+			<li>Bloodlust</li>
+		</nullifyingTraits>
+  </ThoughtDef>
 
-
+  <ThoughtDef>
+    <defName>HumanLeatherApparelSad</defName>
+    <workerClass>ThoughtWorker_HumanLeatherApparel</workerClass>
+    <validWhileDespawned>true</validWhileDespawned>
+    <stages>
+      <li>
+        <label>human leather {0}</label>
+        <description>Wearing human leather is disturbing. Who could do this?</description>
+        <baseMoodEffect>-3</baseMoodEffect>
+      </li>
+			<li>
+				<label>human leather {0} (+1)</label>
+				<description>I'm dressed like an insane person.</description>
+				<baseMoodEffect>-5</baseMoodEffect>
+			</li>
+			<li>
+				<label>human leather {0} (+2)</label>
+				<description>I think there may be a face on my clothes. Oh, no, my clothes *are* a face.</description>
+				<baseMoodEffect>-7</baseMoodEffect>
+			</li>
+			<li>
+				<label>human leather {0} etc</label>
+				<description>I look like a freak from a horror show, and I feel like I'm in a horror show.</description>
+				<baseMoodEffect>-8</baseMoodEffect>
+			</li>
+    </stages>
+		<nullifyingTraits>
+			<li>Bloodlust</li>
+			<li>Cannibal</li>
+		</nullifyingTraits>
+  </ThoughtDef>
+	
+  <ThoughtDef>
+    <defName>HumanLeatherApparelHappy</defName>
+    <workerClass>ThoughtWorker_HumanLeatherApparel</workerClass>
+    <validWhileDespawned>true</validWhileDespawned>
+    <stages>
+      <li>
+        <label>human leather {0}</label>
+        <description>I enjoy wearing the suffering of others.</description>
+        <baseMoodEffect>+3</baseMoodEffect>
+      </li>
+			<li>
+				<label>human leather {0} (+1)</label>
+				<description>This will scare them. All will know my power.</description>
+				<baseMoodEffect>+5</baseMoodEffect>
+			</li>
+			<li>
+				<label>human leather {0} (+2)</label>
+				<description>The faces on my clothes aren't smiling, but they make *me* happy.</description>
+				<baseMoodEffect>+7</baseMoodEffect>
+			</li>
+			<li>
+				<label>human leather {0} etc</label>
+				<description>The flesh! The flesh signals my triumph!</description>
+				<baseMoodEffect>+8</baseMoodEffect>
+			</li>
+    </stages>
+		<requiredTraits>
+			<li>Bloodlust</li>
+			<li>Cannibal</li>
+		</requiredTraits>
+  </ThoughtDef>
+	
   <ThoughtDef>
     <defName>Sick</defName>
     <workerClass>ThoughtWorker_Sick</workerClass>
+    <validWhileDespawned>true</validWhileDespawned>
     <stages>
       <li>
         <label>sick</label>
@@ -89,10 +184,10 @@
     </stages>
   </ThoughtDef>
 
-
   <ThoughtDef>
     <defName>EnvironmentCold</defName>
     <workerClass>ThoughtWorker_Cold</workerClass>
+    <validWhileDespawned>true</validWhileDespawned>
     <stages>
       <li>
         <label>cold</label>
@@ -115,6 +210,7 @@
   <ThoughtDef>
     <defName>EnvironmentHot</defName>
     <workerClass>ThoughtWorker_Hot</workerClass>
+    <validWhileDespawned>true</validWhileDespawned>
     <stages>
       <li>
         <label>hot</label>

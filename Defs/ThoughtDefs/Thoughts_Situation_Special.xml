@@ -1,7 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ThoughtDefs>
 
-
   <ThoughtDef>
     <defName>Imprisoned</defName>
     <workerClass>ThoughtWorker_Imprisoned</workerClass>
@@ -9,18 +8,6 @@
       <li>
         <label>imprisoned</label>
         <description>I hate being locked up.</description>
-        <baseMoodEffect>-5</baseMoodEffect>
-      </li>
-    </stages>
-  </ThoughtDef>
-
-  <ThoughtDef>
-    <defName>SharedBedroom</defName>
-    <workerClass>ThoughtWorker_SharedBedroom</workerClass>
-    <stages>
-      <li>
-        <label>shared bedroom</label>
-        <description>Sharing a room with others is annoying. I want some privacy.</description>
         <baseMoodEffect>-5</baseMoodEffect>
       </li>
     </stages>
@@ -52,11 +39,11 @@
       </li>
     </stages>
   </ThoughtDef>
-
   
   <ThoughtDef>
     <defName>Naked</defName>
     <workerClass>ThoughtWorker_PsychologicallyNude</workerClass>
+    <validWhileDespawned>true</validWhileDespawned>
     <nullifyingTraits>
       <li>Nudist</li>
     </nullifyingTraits>
@@ -72,6 +59,7 @@
   <ThoughtDef>
     <defName>Pain</defName>
     <workerClass>ThoughtWorker_Pain</workerClass>
+    <validWhileDespawned>true</validWhileDespawned>
     <nullifyingTraits>
       <li>Masochist</li>
     </nullifyingTraits>

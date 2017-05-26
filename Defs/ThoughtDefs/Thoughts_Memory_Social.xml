@@ -81,6 +81,36 @@
     </stages>
   </ThoughtDef>
   
+  <ThoughtDef>
+    <defName>KindWords</defName>
+		<showBubble>true</showBubble>
+		<thoughtClass>Thought_MemorySocial</thoughtClass>
+    <durationDays>20</durationDays>
+    <stackLimit>300</stackLimit>
+    <stackLimitPerPawn>10</stackLimitPerPawn>
+    <stackedEffectMultiplier>0.88</stackedEffectMultiplier>
+    <stages>
+      <li>
+        <label>kind words</label>
+        <baseOpinionOffset>15</baseOpinionOffset>
+      </li>
+    </stages>
+    <thoughtToMake>KindWordsMood</thoughtToMake>
+  </ThoughtDef>
+  <ThoughtDef>
+    <defName>KindWordsMood</defName>
+    <durationDays>2</durationDays>
+    <stackLimit>10</stackLimit>
+    <stackedEffectMultiplier>0.9</stackedEffectMultiplier>
+    <stages>
+      <li>
+        <label>kind words</label>
+        <description>I've been bestowed with kind words! What a nice person!</description>
+        <baseMoodEffect>5</baseMoodEffect>
+      </li>
+    </stages>
+  </ThoughtDef>
+  
   
   <!-- Special -->
   
@@ -213,7 +243,7 @@
     <stackLimitPerPawn>2</stackLimitPerPawn>
     <stages>
       <li>
-        <label>loved one {0} sold</label>
+        <label>loved one sold</label>
         <labelSocial>sold my loved one</labelSocial>
         <description>Someone I love was sold to a trader like a piece of meat!</description>
         <baseOpinionOffset>-10</baseOpinionOffset>
@@ -230,11 +260,63 @@
     <stackLimitPerPawn>2</stackLimitPerPawn>
     <stages>
       <li>
-        <label>bonded animal {0} sold</label>
+        <label>bonded animal sold</label>
         <labelSocial>sold my bonded animal</labelSocial>
         <description>My special bonded animal was sold to a trader!</description>
         <baseOpinionOffset>-10</baseOpinionOffset>
         <baseMoodEffect>-10</baseMoodEffect>
+      </li>
+    </stages>
+  </ThoughtDef>
+
+  <ThoughtDef>
+    <defName>ForcedMeToTakeDrugs</defName>
+    <thoughtClass>Thought_MemorySocial</thoughtClass>
+    <durationDays>6.0</durationDays>
+    <stackLimit>10</stackLimit>
+    <stackLimitPerPawn>1</stackLimitPerPawn>
+    <stages>
+      <li>
+        <label>forced me to take drugs</label>
+        <baseOpinionOffset>-30</baseOpinionOffset>
+      </li>
+    </stages>
+    <thoughtToMake>ForcedMeToTakeDrugsMood</thoughtToMake>
+  </ThoughtDef>
+  <ThoughtDef>
+    <defName>ForcedMeToTakeDrugsMood</defName>
+    <durationDays>6.0</durationDays>
+    <stages>
+      <li>
+        <label>forced to take drugs</label>
+        <description>I'm a teetotaler; I would never take drugs by choice. But I was forced! I feel unclean.</description>
+        <baseMoodEffect>-20</baseMoodEffect>
+      </li>
+    </stages>
+  </ThoughtDef>
+
+  <ThoughtDef>
+    <defName>ForcedMeToTakeLuciferium</defName>
+    <thoughtClass>Thought_MemorySocial</thoughtClass>
+    <durationDays>6.0</durationDays>
+    <stackLimit>10</stackLimit>
+    <stackLimitPerPawn>1</stackLimitPerPawn>
+    <stages>
+      <li>
+        <label>forced me to take luciferium</label>
+        <baseOpinionOffset>-30</baseOpinionOffset>
+      </li>
+    </stages>
+    <thoughtToMake>ForcedMeToTakeLuciferiumMood</thoughtToMake>
+  </ThoughtDef>
+  <ThoughtDef>
+    <defName>ForcedMeToTakeLuciferiumMood</defName>
+    <durationDays>6.0</durationDays>
+    <stages>
+      <li>
+        <label>forced to take luciferium</label>
+        <description>I'm a prosthophobe; I would never take luciferium by choice. But I was forced! I feel unclean.</description>
+        <baseMoodEffect>-20</baseMoodEffect>
       </li>
     </stages>
   </ThoughtDef>
@@ -258,9 +340,9 @@
   </ThoughtDef>
   <ThoughtDef>
     <defName>RebuffedMyRomanceAttemptMood</defName>
-    <durationDays>4.0</durationDays>
+    <durationDays>3.0</durationDays>
     <stackLimit>5</stackLimit>
-    <stackedEffectMultiplier>0.9</stackedEffectMultiplier>
+    <stackedEffectMultiplier>0.8</stackedEffectMultiplier>
     <stages>
       <li>
         <label>rebuffed by {0}</label>
@@ -284,6 +366,20 @@
       </li>
     </stages>
   </ThoughtDef>
+	<ThoughtDef>
+		<defName>FailedRomanceAttemptOnMeLowOpinionMood</defName>
+		<durationDays>3.0</durationDays>
+		<stackLimit>5</stackLimit>
+		<stackedEffectMultiplier>0.8</stackedEffectMultiplier>
+		<stages>
+			<li>
+				<label>had to rebuff {0}</label>
+				<description>Someone I don't like tried to romance me.</description>
+				<baseMoodEffect>-3</baseMoodEffect>
+			</li>
+		</stages>
+	</ThoughtDef>
+	
   
   <ThoughtDef>
     <defName>BrokeUpWithMe</defName>

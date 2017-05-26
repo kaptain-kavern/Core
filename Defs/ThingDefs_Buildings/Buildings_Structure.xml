@@ -35,16 +35,20 @@
     <blockLight>true</blockLight>
     <drawerType>RealtimeOnly</drawerType>
     <building>
+			<isInert>true</isInert>
+			<ignoreNeedsPower>true</ignoreNeedsPower>
+			<canPlaceOverWall>true</canPlaceOverWall>
       <soundDoorOpenPowered>DoorOpenPowered</soundDoorOpenPowered>
       <soundDoorClosePowered>DoorClosePowered</soundDoorClosePowered>
       <soundDoorOpenManual>DoorOpenManual</soundDoorOpenManual>
       <soundDoorCloseManual>DoorCloseManual</soundDoorCloseManual>
-      <ignoreNeedsPower>true</ignoreNeedsPower>
-      <canPlaceOverWall>true</canPlaceOverWall>
     </building>
     <comps>
       <li Class="CompProperties_Forbiddable"/>
     </comps>
+		<placeWorkers>
+			<li>PlaceWorker_DoorLearnOpeningSpeed</li>
+		</placeWorkers>
   </ThingDef>
 
   <ThingDef ParentName="DoorBase">
@@ -52,7 +56,7 @@
     <label>door</label>
     <description>Divides rooms. Must be manually opened and closed, which slows people down.</description>
     <statBases>
-      <WorkToMake>850</WorkToMake>
+      <WorkToBuild>850</WorkToBuild>
     </statBases>
     <graphicData>
       <texPath>Things/Building/Door/DoorSimple_Mover</texPath>
@@ -73,7 +77,7 @@
     <label>autodoor</label>
     <description>Divides rooms. Powered operation allows people to move through the door without slowing down.</description>
     <statBases>
-      <WorkToMake>1100</WorkToMake>
+      <WorkToBuild>1100</WorkToBuild>
     </statBases>
     <graphicData>
       <texPath>Things/Building/Door/Autodoor_Mover</texPath>
@@ -142,7 +146,7 @@
     <uiIconPath>Things/Building/Linked/WallSmooth_MenuIcon</uiIconPath>
     <statBases>
       <MaxHitPoints>350</MaxHitPoints>
-      <WorkToMake>150</WorkToMake>
+      <WorkToBuild>150</WorkToBuild>
       <Flammability>1.0</Flammability>
     </statBases>
     <costStuffCount>5</costStuffCount>
@@ -163,6 +167,7 @@
     <designationCategory>Structure</designationCategory>
     <staticSunShadowHeight>1.0</staticSunShadowHeight>
     <blockLight>true</blockLight>
+    <canOverlapZones>false</canOverlapZones>
     <stuffCategories>
       <li>Metallic</li>
       <li>Woody</li>

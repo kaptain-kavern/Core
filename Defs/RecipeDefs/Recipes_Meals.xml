@@ -22,9 +22,6 @@
         <count>0.5</count>
       </li>
     </ingredients>
-    <products>
-      <MealSimple>1</MealSimple>
-    </products>
     <fixedIngredientFilter>
       <categories>
         <li>FoodRaw</li>
@@ -42,8 +39,12 @@
       </exceptedCategories>
       <exceptedThingDefs>
         <li>Human_Meat</li>
+        <li>Megaspider_Meat</li>
       </exceptedThingDefs>
     </defaultIngredientFilter>
+		<products>
+			<MealSimple>1</MealSimple>
+		</products>
     <workSkill>Cooking</workSkill>
   </RecipeDef>
 
@@ -101,6 +102,7 @@
       </exceptedCategories>
       <exceptedThingDefs>
 				<li>Human_Meat</li>
+        <li>Megaspider_Meat</li>
 			</exceptedThingDefs>
 		</defaultIngredientFilter>
 		<skillRequirements>
@@ -161,6 +163,7 @@
       </exceptedCategories>
       <exceptedThingDefs>
 				<li>Human_Meat</li>
+        <li>Megaspider_Meat</li>
 			</exceptedThingDefs>
 		</defaultIngredientFilter>
 		<skillRequirements>
@@ -170,6 +173,68 @@
 			</li>
 		</skillRequirements>
     <workSkill>Cooking</workSkill>
+  </RecipeDef>
+
+  <RecipeDef>
+    <defName>CookMealSurvival</defName>
+    <label>cook survival meal</label>
+    <description>Cooks a packaged survival meal from a combination of raw meat and raw plant ingredients. Much of the ingredients are wasted.</description>
+    <jobString>Cooking survival meal.</jobString>
+    <workSpeedStat>CookSpeed</workSpeedStat>
+    <effectWorking>Cook</effectWorking>
+    <soundWorking>Recipe_CookMeal</soundWorking>
+    <allowMixingIngredients>true</allowMixingIngredients>
+    <ingredientValueGetterClass>IngredientValueGetter_Nutrition</ingredientValueGetterClass>
+    <ingredients>
+      <li>
+        <filter>
+          <categories>
+            <li>MeatRaw</li>
+            <li>AnimalProductRaw</li>
+          </categories>
+        </filter>
+        <count>0.5</count>
+      </li>
+      <li>
+        <filter>
+          <categories>
+            <li>PlantFoodRaw</li>
+          </categories>
+        </filter>
+        <count>0.5</count>
+      </li>
+    </ingredients>
+    <products>
+      <MealSurvivalPack>1</MealSurvivalPack>
+    </products>
+    <fixedIngredientFilter>
+      <categories>
+        <li>FoodRaw</li>
+      </categories>
+      <disallowedSpecialFilters>
+        <li>AllowPlantFood</li>
+      </disallowedSpecialFilters>
+    </fixedIngredientFilter>
+    <defaultIngredientFilter>
+      <categories>
+        <li>FoodRaw</li>
+      </categories>
+      <exceptedCategories>
+        <li>EggsFertilized</li>
+      </exceptedCategories>
+      <exceptedThingDefs>
+        <li>Human_Meat</li>
+        <li>Megaspider_Meat</li>
+      </exceptedThingDefs>
+    </defaultIngredientFilter>
+    <skillRequirements>
+      <li>
+        <skill>Cooking</skill>
+        <minLevel>8</minLevel>
+      </li>
+    </skillRequirements>
+    <workSkill>Cooking</workSkill>
+    <researchPrerequisite>PackagedSurvivalMeal</researchPrerequisite>
   </RecipeDef>
 
 </RecipeDefs>

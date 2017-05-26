@@ -13,14 +13,21 @@
     <verbs>
       <li>
         <verbClass>Verb_MeleeAttack</verbClass>
-        <defaultCooldownTicks>145</defaultCooldownTicks>
+        <defaultCooldownTime>2.4</defaultCooldownTime>
         <meleeDamageBaseAmount>23</meleeDamageBaseAmount>
         <meleeDamageDef>Scratch</meleeDamageDef>
         <linkedBodyPartsGroup>TuskAttackTool</linkedBodyPartsGroup>
       </li>
+      <li>
+        <verbClass>Verb_MeleeAttack</verbClass>
+        <defaultCooldownTime>1.65</defaultCooldownTime>
+        <meleeDamageBaseAmount>12</meleeDamageBaseAmount>
+        <meleeDamageDef>Blunt</meleeDamageDef>
+        <commonality>0.01</commonality>
+        <linkedBodyPartsGroup>HeadAttackTool</linkedBodyPartsGroup>
+      </li>
     </verbs>
     <race>
-      <deathActionWorkerClass>DeathActionWorker_DropBodyParts</deathActionWorkerClass>
       <herdAnimal>true</herdAnimal>
       <body>QuadrupedAnimalWithHoovesTusksAndTrunk</body>
       <baseHungerRate>2.0</baseHungerRate>
@@ -33,7 +40,7 @@
       <gestationPeriodDays>60</gestationPeriodDays>
       <wildness>0.75</wildness>
       <nuzzleMtbHours>120</nuzzleMtbHours>
-      <manhunterOnTameFailChance>0.025</manhunterOnTameFailChance>
+      <manhunterOnTameFailChance>0.018</manhunterOnTameFailChance>
       <trainableIntelligence>Advanced</trainableIntelligence>
       <lifeExpectancy>50</lifeExpectancy>
       <lifeStageAges>
@@ -43,11 +50,11 @@
         </li>
         <li>
           <def>AnimalJuvenile</def>
-          <minAge>1.0</minAge>
+          <minAge>0.8</minAge>
         </li>
         <li>
           <def>AnimalAdult</def>
-          <minAge>4.0</minAge>
+          <minAge>2.0</minAge>
           <soundWounded>Pawn_Elephant_Injured</soundWounded>
           <soundDeath>Pawn_Elephant_Dead</soundDeath>
           <soundCall>Pawn_Elephant_Call</soundCall>
@@ -119,11 +126,11 @@
           <texPath>Things/Pawn/Animal/Muffalo/MuffaloDessicated</texPath>
           <drawSize>3.8</drawSize>
         </dessicatedBodyGraphicData>
-        <dropBodyPart>
+        <butcherBodyPart>
           <bodyPartGroup>TuskAttackTool</bodyPartGroup>
           <thing>ElephantTusk</thing>
           <allowFemale>false</allowFemale>
-        </dropBodyPart>
+        </butcherBodyPart>
       </li>
     </lifeStages>
   </PawnKindDef>
@@ -132,9 +139,9 @@
 
 
   <ThingDef ParentName="AnimalThingBase">
-    <defName>Megatherium</defName>
-    <label>megatherium</label>
-    <description>A type of ground sloth, megatheria are giant, solitary herbivores. Long extinct after being wiped out by the natives of Earth's America continent, the ground sloth was later brought back using advanced cloning and artificial gestators.</description>
+    <defName>Megasloth</defName>
+    <label>Megasloth</label>
+    <description>Giant, solitary herbivores. Long extinct after being wiped out by the natives of Earth's American continent, the megasloth was later brought back using advanced cloning and artificial gestators.</description>
     <statBases>
       <MoveSpeed>3.5</MoveSpeed>
       <ComfyTemperatureMin>-45</ComfyTemperatureMin>
@@ -143,17 +150,25 @@
     <verbs>
       <li>
         <verbClass>Verb_MeleeAttack</verbClass>
-        <defaultCooldownTicks>140</defaultCooldownTicks>
+        <defaultCooldownTime>2.3</defaultCooldownTime>
         <meleeDamageBaseAmount>22</meleeDamageBaseAmount>
         <meleeDamageDef>Scratch</meleeDamageDef>
         <linkedBodyPartsGroup>LeftHand</linkedBodyPartsGroup>
       </li>
       <li>
         <verbClass>Verb_MeleeAttack</verbClass>
-        <defaultCooldownTicks>140</defaultCooldownTicks>
+        <defaultCooldownTime>2.3</defaultCooldownTime>
         <meleeDamageBaseAmount>22</meleeDamageBaseAmount>
         <meleeDamageDef>Scratch</meleeDamageDef>
         <linkedBodyPartsGroup>RightHand</linkedBodyPartsGroup>
+      </li>
+      <li>
+        <verbClass>Verb_MeleeAttack</verbClass>
+        <defaultCooldownTime>1.65</defaultCooldownTime>
+        <meleeDamageBaseAmount>12</meleeDamageBaseAmount>
+        <meleeDamageDef>Blunt</meleeDamageDef>
+        <commonality>0.01</commonality>
+        <linkedBodyPartsGroup>HeadAttackTool</linkedBodyPartsGroup>
       </li>
     </verbs>
     <race>
@@ -166,7 +181,7 @@
       <leatherInsulation>1.0</leatherInsulation>
       <gestationPeriodDays>60</gestationPeriodDays>
       <wildness>0.97</wildness>
-      <manhunterOnTameFailChance>0.025</manhunterOnTameFailChance>
+      <manhunterOnTameFailChance>0.018</manhunterOnTameFailChance>
       <trainableIntelligence>Advanced</trainableIntelligence>
       <nuzzleMtbHours>120</nuzzleMtbHours>
       <lifeExpectancy>20</lifeExpectancy>
@@ -181,7 +196,7 @@
         </li>
         <li>
           <def>AnimalAdult</def>
-          <minAge>4.0</minAge>
+          <minAge>3.0</minAge>
           <soundWounded>Pawn_Thrumbo_Pain</soundWounded>
           <soundDeath>Pawn_Thrumbo_Death</soundDeath>
           <soundCall>Pawn_Thrumbo_Call</soundCall>
@@ -194,9 +209,9 @@
     </race>
     <comps>
       <li Class="CompProperties_Shearable">
-        <woolDef>MegatheriumWool</woolDef>
+        <woolDef>WoolMegasloth</woolDef>
         <shearIntervalDays>50</shearIntervalDays>
-        <woolAmount>280</woolAmount>
+        <woolAmount>330</woolAmount>
       </li>
     </comps>
     <tradeTags>
@@ -205,16 +220,16 @@
     </tradeTags>
   </ThingDef>
   <PawnKindDef ParentName="AnimalKindBase">
-    <defName>Megatherium</defName>
-    <label>megatherium</label>
-    <race>Megatherium</race>
+    <defName>Megasloth</defName>
+    <label>Megasloth</label>
+    <race>Megasloth</race>
     <combatPower>310</combatPower>
     <wildSpawn_spawnWild>true</wildSpawn_spawnWild>
     <wildSpawn_EcoSystemWeight>1</wildSpawn_EcoSystemWeight>
     <lifeStages>
       <li>
         <bodyGraphicData>
-          <texPath>Things/Pawn/Animal/Megatherium/Megatherium</texPath>
+          <texPath>Things/Pawn/Animal/Megasloth/Megasloth</texPath>
           <drawSize>1.8</drawSize>
           <shadowData>
             <volume>(0.4, 0.3, 0.3)</volume>
@@ -228,7 +243,7 @@
       </li>
       <li>
         <bodyGraphicData>
-          <texPath>Things/Pawn/Animal/Megatherium/Megatherium</texPath>
+          <texPath>Things/Pawn/Animal/Megasloth/Megasloth</texPath>
           <drawSize>2.6</drawSize>
           <shadowData>
             <volume>(0.6, 0.45, 0.45)</volume>
@@ -242,7 +257,7 @@
       </li>
       <li>
         <bodyGraphicData>
-          <texPath>Things/Pawn/Animal/Megatherium/Megatherium</texPath>
+          <texPath>Things/Pawn/Animal/Megasloth/Megasloth</texPath>
           <drawSize>3.8</drawSize>
           <shadowData>
             <volume>(0.8, 0.6, 0.6)</volume>
@@ -274,15 +289,22 @@
     <verbs>
       <li>
         <verbClass>Verb_MeleeAttack</verbClass>
-        <defaultCooldownTicks>110</defaultCooldownTicks>
+        <defaultCooldownTime>1.85</defaultCooldownTime>
         <meleeDamageBaseAmount>22</meleeDamageBaseAmount>
         <meleeDamageDef>Scratch</meleeDamageDef>
         <linkedBodyPartsGroup>HornAttackTool</linkedBodyPartsGroup>
       </li>
+      <li>
+        <verbClass>Verb_MeleeAttack</verbClass>
+        <defaultCooldownTime>1.65</defaultCooldownTime>
+        <meleeDamageBaseAmount>11</meleeDamageBaseAmount>
+        <meleeDamageDef>Blunt</meleeDamageDef>
+        <commonality>0.01</commonality>
+        <linkedBodyPartsGroup>HeadAttackTool</linkedBodyPartsGroup>
+      </li>
     </verbs>
     <race>
       <body>QuadrupedAnimalWithHoovesAndHorn</body>
-      <deathActionWorkerClass>DeathActionWorker_DropBodyParts</deathActionWorkerClass>
       <herdAnimal>true</herdAnimal>
       <baseBodySize>3.5</baseBodySize>
       <baseHungerRate>4.5</baseHungerRate>
@@ -295,13 +317,13 @@
       <leatherLabel>thrumbofur</leatherLabel>
       <leatherStatFactors>
         <ArmorRating_Blunt>3.5</ArmorRating_Blunt>
-        <ArmorRating_Sharp>3.0</ArmorRating_Sharp>
+        <ArmorRating_Sharp>4.0</ArmorRating_Sharp>
         <ArmorRating_Heat>3.2</ArmorRating_Heat>
       </leatherStatFactors>
       <trainableIntelligence>Advanced</trainableIntelligence>
       <gestationPeriodDays>80</gestationPeriodDays>
       <manhunterOnDamageChance>1</manhunterOnDamageChance>
-      <manhunterOnTameFailChance>0.025</manhunterOnTameFailChance>
+      <manhunterOnTameFailChance>0.018</manhunterOnTameFailChance>
       <wildness>0.985</wildness>
       <lifeExpectancy>220</lifeExpectancy>
       <lifeStageAges>
@@ -311,11 +333,11 @@
         </li>
         <li>
           <def>AnimalJuvenile</def>
-          <minAge>6.0</minAge>
+          <minAge>2.0</minAge>
         </li>
         <li>
           <def>AnimalAdult</def>
-          <minAge>25.0</minAge>
+          <minAge>4.0</minAge>
           <soundCall>Pawn_Thrumbo_Call</soundCall>
           <soundAngry>Pawn_Thrumbo_Angry</soundAngry>
           <soundWounded>Pawn_Thrumbo_Pain</soundWounded>
@@ -337,6 +359,7 @@
     <lifeStages>
       <li>
         <label>thrumbo calf</label>
+        <labelPlural>thrumbo calves</labelPlural>
         <bodyGraphicData>
           <texPath>Things/Pawn/Animal/Thrumbo/Thrumbo</texPath>
           <drawSize>2.5</drawSize>
@@ -377,10 +400,10 @@
           <texPath>Things/Pawn/Animal/Dessicated/CritterDessicatedMedium</texPath>
           <drawSize>2</drawSize>
         </dessicatedBodyGraphicData>
-        <dropBodyPart>
+        <butcherBodyPart>
           <bodyPartGroup>HornAttackTool</bodyPartGroup>
           <thing>ThrumboHorn</thing>
-        </dropBodyPart>
+        </butcherBodyPart>
       </li>
     </lifeStages>
   </PawnKindDef>

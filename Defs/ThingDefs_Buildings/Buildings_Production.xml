@@ -13,9 +13,10 @@
     </graphicData>
     <AltitudeLayer>FloorEmplacement</AltitudeLayer>
     <statBases>
-      <WorkToMake>0</WorkToMake>
+      <WorkToBuild>0</WorkToBuild>
     </statBases>
-    <useHitPoints>False</useHitPoints>
+		<scatterableOnMapGen>false</scatterableOnMapGen>
+		<useHitPoints>False</useHitPoints>
     <Size>(1,1)</Size>
     <DesignationCategory>Production</DesignationCategory>
     <Passability>Standable</Passability>
@@ -48,6 +49,19 @@
   <ThingDef Name="BenchBase" ParentName="BuildingBase" Abstract="True">
     <castEdgeShadows>true</castEdgeShadows>
     <staticSunShadowHeight>0.20</staticSunShadowHeight>
+    <canOverlapZones>false</canOverlapZones>
+		<building>
+			<workSpeedPenaltyOutdoors>true</workSpeedPenaltyOutdoors>
+			<workSpeedPenaltyTemperature>true</workSpeedPenaltyTemperature>
+		</building>
+		<comps>
+			<li>
+				<compClass>CompReportWorkSpeed</compClass>
+			</li>
+		</comps>
+		<placeWorkers>
+			<li>PlaceWorker_ReportWorkSpeedPenalties</li>
+		</placeWorkers>
   </ThingDef>
 
   <ThingDef ParentName="BenchBase">
@@ -78,7 +92,7 @@
     <fillPercent>0.5</fillPercent>
     <useHitPoints>True</useHitPoints>
     <statBases>
-      <WorkToMake>2500</WorkToMake>
+      <WorkToBuild>2500</WorkToBuild>
       <MaxHitPoints>180</MaxHitPoints>
       <Flammability>1.0</Flammability>
       <Cleanliness>-5</Cleanliness>
@@ -137,7 +151,7 @@
     <fillPercent>0.5</fillPercent>
     <useHitPoints>True</useHitPoints>
     <statBases>
-      <WorkToMake>2000</WorkToMake>
+      <WorkToBuild>2000</WorkToBuild>
       <MaxHitPoints>180</MaxHitPoints>
       <Flammability>1.0</Flammability>
       <Cleanliness>-15</Cleanliness>
@@ -158,7 +172,7 @@
     </inspectorTabs>
     <building>
       <spawnedConceptLearnOpportunity>BillsTab</spawnedConceptLearnOpportunity>
-    </building>
+		</building>
     <comps>
       <li Class="CompProperties_AffectedByFacilities">
         <linkableFacilities>
@@ -174,11 +188,11 @@
 
   <ThingDef ParentName="BenchBase">
     <DefName>HandTailoringBench</DefName>
-    <label>hand-tailoring bench</label>
+    <label>hand tailor bench</label>
     <ThingClass>Building_WorkTable</ThingClass>
-    <Description>A workbench for tailoring clothes by hand. Works at 40% of the speed of an electric tailoring bench.</Description>
+    <Description>A workbench for tailoring clothes by hand. Works at 50% of the speed of an electric tailoring bench.</Description>
     <graphicData>
-      <texPath>Things/Building/Production/TableTailor</texPath>
+      <texPath>Things/Building/Production/TableTailorHand</texPath>
       <graphicClass>Graphic_Multi</graphicClass>
       <drawSize>(3.5,1.5)</drawSize>
       <damageData>
@@ -197,10 +211,10 @@
     <fillPercent>0.5</fillPercent>
     <useHitPoints>True</useHitPoints>
     <statBases>
-      <WorkToMake>2000</WorkToMake>
+      <WorkToBuild>2000</WorkToBuild>
       <MaxHitPoints>180</MaxHitPoints>
       <Flammability>1.0</Flammability>
-      <WorkTableWorkSpeedFactor>0.4</WorkTableWorkSpeedFactor>
+      <WorkTableWorkSpeedFactor>0.5</WorkTableWorkSpeedFactor>
     </statBases>
     <Size>(3,1)</Size>
     <DesignationCategory>Production</DesignationCategory>
@@ -214,7 +228,7 @@
     </inspectorTabs>
     <building>
       <spawnedConceptLearnOpportunity>BillsTab</spawnedConceptLearnOpportunity>
-    </building>
+		</building>
     <comps>
       <li Class="CompProperties_AffectedByFacilities">
         <linkableFacilities>
@@ -232,11 +246,11 @@
 
   <ThingDef ParentName="BenchBase">
     <DefName>ElectricTailoringBench</DefName>
-    <label>electric tailoring bench</label>
+    <label>electric tailor bench</label>
     <ThingClass>Building_WorkTable</ThingClass>
     <Description>A workbench with a sewing machine for rapid tailoring of clothes. Can work without electricity at 40% of normal speed.</Description>
     <graphicData>
-      <texPath>Things/Building/Production/TableTailor</texPath>
+      <texPath>Things/Building/Production/TableTailorElectric</texPath>
       <graphicClass>Graphic_Multi</graphicClass>
       <drawSize>(3.5,1.5)</drawSize>
       <damageData>
@@ -259,7 +273,7 @@
     <fillPercent>0.5</fillPercent>
     <useHitPoints>True</useHitPoints>
     <statBases>
-      <WorkToMake>2500</WorkToMake>
+      <WorkToBuild>2500</WorkToBuild>
       <MaxHitPoints>180</MaxHitPoints>
       <Flammability>1.0</Flammability>
     </statBases>
@@ -275,8 +289,8 @@
     </inspectorTabs>
     <building>
       <spawnedConceptLearnOpportunity>BillsTab</spawnedConceptLearnOpportunity>
-      <unpoweredWorkTableWorkSpeedFactor>0.4</unpoweredWorkTableWorkSpeedFactor>
-    </building>
+      <unpoweredWorkTableWorkSpeedFactor>0.5</unpoweredWorkTableWorkSpeedFactor>
+		</building>
     <comps>
       <li Class="CompProperties_Power">
         <compClass>CompPowerTrader</compClass>
@@ -324,7 +338,7 @@
     <fillPercent>0.5</fillPercent>
     <useHitPoints>True</useHitPoints>
     <statBases>
-      <WorkToMake>3000</WorkToMake>
+      <WorkToBuild>3000</WorkToBuild>
       <MaxHitPoints>180</MaxHitPoints>
       <Flammability>1.0</Flammability>
       <Cleanliness>-3</Cleanliness>
@@ -341,7 +355,7 @@
     </inspectorTabs>
     <building>
       <spawnedConceptLearnOpportunity>BillsTab</spawnedConceptLearnOpportunity>
-    </building>
+		</building>
     <comps>
       <li Class="CompProperties_Refuelable">
         <fuelConsumptionRate>80.0</fuelConsumptionRate>
@@ -392,7 +406,7 @@
     <fillPercent>0.5</fillPercent>
     <useHitPoints>True</useHitPoints>
     <statBases>
-      <WorkToMake>3000</WorkToMake>
+      <WorkToBuild>3000</WorkToBuild>
       <MaxHitPoints>180</MaxHitPoints>
       <Flammability>1.0</Flammability>
       <Cleanliness>-3</Cleanliness>
@@ -456,7 +470,7 @@
     <fillPercent>0.5</fillPercent>
     <useHitPoints>True</useHitPoints>
     <statBases>
-      <WorkToMake>3000</WorkToMake>
+      <WorkToBuild>3000</WorkToBuild>
       <MaxHitPoints>180</MaxHitPoints>
       <Flammability>1.0</Flammability>
       <Cleanliness>-2</Cleanliness>
@@ -470,7 +484,7 @@
     <surfaceType>Item</surfaceType>
     <recipes>
       <li>ButcherCorpseMechanoid</li>
-      <li>MakeArtilleryShell</li>
+      <li>MakeMortarShell</li>
     </recipes>
     <inspectorTabs>
       <li>ITab_Bills</li>
@@ -529,7 +543,7 @@
     <fillPercent>0.5</fillPercent>
     <useHitPoints>True</useHitPoints>
     <statBases>
-      <WorkToMake>2000</WorkToMake>
+      <WorkToBuild>2000</WorkToBuild>
       <MaxHitPoints>180</MaxHitPoints>
       <Flammability>1.0</Flammability>
     </statBases>
@@ -544,6 +558,7 @@
       <li>CookMealSimple</li>
       <li>CookMealFine</li>
       <li>CookMealLavish</li>
+      <li>CookMealSurvival</li>
       <li>MakePemmican</li>
     </recipes>
     <inspectorTabs>
@@ -561,7 +576,7 @@
     <building>
       <isMealSource>true</isMealSource>
       <spawnedConceptLearnOpportunity>BillsTab</spawnedConceptLearnOpportunity>
-      <heatPerTickWhileWorking>0.25</heatPerTickWhileWorking>
+      <heatPerTickWhileWorking>0.10</heatPerTickWhileWorking>
     </building>
     <designationHotKey>Misc8</designationHotKey>
     <researchPrerequisites>
@@ -593,7 +608,7 @@
     <fillPercent>0.5</fillPercent>
     <useHitPoints>True</useHitPoints>
     <statBases>
-      <WorkToMake>2000</WorkToMake>
+      <WorkToBuild>2000</WorkToBuild>
       <MaxHitPoints>180</MaxHitPoints>
       <Flammability>1.0</Flammability>
     </statBases>
@@ -608,6 +623,7 @@
       <li>CookMealSimple</li>
       <li>CookMealFine</li>
       <li>CookMealLavish</li>
+      <li>CookMealSurvival</li>
       <li>MakePemmican</li>
     </recipes>
     <inspectorTabs>
@@ -628,7 +644,7 @@
     <building>
       <isMealSource>true</isMealSource>
       <spawnedConceptLearnOpportunity>BillsTab</spawnedConceptLearnOpportunity>
-      <heatPerTickWhileWorking>0.25</heatPerTickWhileWorking>
+      <heatPerTickWhileWorking>0.10</heatPerTickWhileWorking>
     </building>
   </ThingDef>
 
@@ -660,7 +676,7 @@
     <fillPercent>0.5</fillPercent>
     <useHitPoints>True</useHitPoints>
     <statBases>
-      <WorkToMake>2000</WorkToMake>
+      <WorkToBuild>2000</WorkToBuild>
       <MaxHitPoints>180</MaxHitPoints>
       <Flammability>1.0</Flammability>
       <Cleanliness>-5</Cleanliness>
@@ -672,9 +688,6 @@
     <hasInteractionCell>True</hasInteractionCell>
     <interactionCellOffset>(0,0,-1)</interactionCellOffset>
     <surfaceType>Item</surfaceType>
-    <recipes>
-      <li>MakeStoneBlocks</li>
-    </recipes>
     <inspectorTabs>
       <li>ITab_Bills</li>
     </inspectorTabs>
@@ -719,7 +732,7 @@
     <fillPercent>0.5</fillPercent>
     <useHitPoints>True</useHitPoints>
     <statBases>
-      <WorkToMake>2000</WorkToMake>
+      <WorkToBuild>2000</WorkToBuild>
       <MaxHitPoints>180</MaxHitPoints>
       <Flammability>1.0</Flammability>
     </statBases>
@@ -772,7 +785,7 @@
     <fillPercent>0.5</fillPercent>
     <useHitPoints>True</useHitPoints>
     <statBases>
-      <WorkToMake>3500</WorkToMake>
+      <WorkToBuild>3500</WorkToBuild>
       <MaxHitPoints>120</MaxHitPoints>
       <Flammability>1.0</Flammability>
     </statBases>
@@ -829,7 +842,7 @@
     <fillPercent>0.5</fillPercent>
     <useHitPoints>True</useHitPoints>
     <statBases>
-      <WorkToMake>3500</WorkToMake>
+      <WorkToBuild>3500</WorkToBuild>
       <MaxHitPoints>180</MaxHitPoints>
       <Flammability>1.0</Flammability>
     </statBases>
@@ -843,6 +856,7 @@
     <recipes>
       <li>ExtractMetalFromSlag</li>
       <li>SmeltWeapon</li>
+			<li>DestroyWeapon</li>
     </recipes>
     <inspectorTabs>
       <li>ITab_Bills</li>
@@ -866,13 +880,75 @@
     </comps>
     <building>
       <spawnedConceptLearnOpportunity>BillsTab</spawnedConceptLearnOpportunity>
-      <heatPerTickWhileWorking>0.5</heatPerTickWhileWorking>
+      <heatPerTickWhileWorking>0.32</heatPerTickWhileWorking>
     </building>
     <researchPrerequisites><li>ElectricSmelting</li></researchPrerequisites>
     <designationHotKey>Misc10</designationHotKey>
   </ThingDef>
 
-  <ThingDef ParentName="BenchBase">
+	<ThingDef ParentName="BenchBase">
+		<defName>Refinery</defName>
+		<label>refinery</label>
+		<description>A chemical refining plant. Used to refine wood into chemfuel.</description>
+		<thingClass>Building_WorkTable</thingClass>
+		<altitudeLayer>Building</altitudeLayer>
+		<passability>PassThroughOnly</passability>
+		<pathCost>70</pathCost>
+		<statBases>
+			<MaxHitPoints>200</MaxHitPoints>
+			<WorkToBuild>2000</WorkToBuild>
+			<Flammability>1.0</Flammability>
+		</statBases>
+		<size>(3,2)</size>
+		<costList>
+			<Steel>150</Steel>
+			<Component>3</Component>
+		</costList>
+		<comps>
+			<li Class="CompProperties_Power">
+				<compClass>CompPowerTrader</compClass>
+				<basePowerConsumption>170</basePowerConsumption>
+				<startElectricalFires>true</startElectricalFires>
+			</li>
+			<li Class="CompProperties_Flickable"/>
+			<li Class="CompProperties_Breakdownable"/>
+		</comps>
+		<recipes>
+			<li>MakeChemfuelFromWood</li>
+			<li>MakeChemfuelFromOrganics</li>
+		</recipes>
+		<castEdgeShadows>false</castEdgeShadows>
+		<staticSunShadowHeight>0</staticSunShadowHeight>
+		<graphicData>
+			<texPath>Things/Building/Production/Refinery</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+			<shaderType>CutoutComplex</shaderType>
+			<drawSize>(3,2)</drawSize>
+			<shadowData>
+				<volume>(2.7,1,1.8)</volume>
+			</shadowData>
+			<damageData>
+				<rect>(0.3,0.1,2.4,1.8)</rect>
+			</damageData>
+		</graphicData>
+		<inspectorTabs>
+			<li>ITab_Bills</li>
+		</inspectorTabs>
+		<building>
+			<spawnedConceptLearnOpportunity>BillsTab</spawnedConceptLearnOpportunity>
+		</building>
+		<fillPercent>0.5</fillPercent>
+		<interactionCellOffset>(0,0,-1)</interactionCellOffset>
+		<hasInteractionCell>true</hasInteractionCell>
+		<terrainAffordanceNeeded>Heavy</terrainAffordanceNeeded>
+		<designationCategory>Production</designationCategory>
+		<surfaceType>Item</surfaceType>
+		<researchPrerequisites>
+			<li>Refining</li>
+		</researchPrerequisites>
+	</ThingDef>
+
+	<ThingDef ParentName="BenchBase">
     <defName>ComponentAssemblyBench</defName>
     <label>component assembly bench</label>
     <description>A workbench equipped with advanced tools for producing components from simpler materials.</description>
@@ -882,13 +958,13 @@
     <pathCost>70</pathCost>
     <statBases>
       <MaxHitPoints>300</MaxHitPoints>
-      <WorkToMake>5000</WorkToMake>
+      <WorkToBuild>5000</WorkToBuild>
       <Flammability>1.0</Flammability>
     </statBases>
     <size>(5,2)</size>
     <costList>
-      <Steel>400</Steel>
-      <Component>30</Component>
+      <Steel>200</Steel>
+      <Component>14</Component>
     </costList>
     <comps>
       <li Class="CompProperties_AffectedByFacilities">
@@ -974,7 +1050,7 @@
     <pathCost>70</pathCost>
     <statBases>
       <MaxHitPoints>250</MaxHitPoints>
-      <WorkToMake>2800</WorkToMake>
+      <WorkToBuild>2800</WorkToBuild>
       <Flammability>1.0</Flammability>
       <ResearchSpeedFactor>0.6</ResearchSpeedFactor>
     </statBases>
@@ -1017,7 +1093,7 @@
     <pathCost>70</pathCost>
     <statBases>
       <MaxHitPoints>250</MaxHitPoints>
-      <WorkToMake>5000</WorkToMake>
+      <WorkToBuild>5000</WorkToBuild>
       <Flammability>1.0</Flammability>
       <ResearchSpeedFactor>1.0</ResearchSpeedFactor>
     </statBases>
@@ -1077,7 +1153,7 @@
     <AltitudeLayer>Building</AltitudeLayer>
     <useHitPoints>True</useHitPoints>
     <statBases>
-      <WorkToMake>4500</WorkToMake>
+      <WorkToBuild>4500</WorkToBuild>
       <MaxHitPoints>300</MaxHitPoints>
       <Flammability>0</Flammability>
       <Cleanliness>-20</Cleanliness>
@@ -1089,6 +1165,7 @@
     <hasInteractionCell>True</hasInteractionCell>
     <interactionCellOffset>(0,0,-1)</interactionCellOffset>
     <surfaceType>Item</surfaceType>
+    <canOverlapZones>false</canOverlapZones>
     <recipes>
       <li>CremateCorpse</li>
       <li>BurnApparel</li>
@@ -1115,7 +1192,7 @@
     </comps>
     <building>
       <spawnedConceptLearnOpportunity>BillsTab</spawnedConceptLearnOpportunity>
-      <heatPerTickWhileWorking>0.6</heatPerTickWhileWorking>
+      <heatPerTickWhileWorking>0.32</heatPerTickWhileWorking>
     </building>
     <researchPrerequisites><li>ElectricCremation</li></researchPrerequisites>
     <designationHotKey>Misc5</designationHotKey>
@@ -1143,8 +1220,9 @@
     <castEdgeShadows>true</castEdgeShadows>
     <constructEffect>ConstructMetal</constructEffect>
     <fillPercent>0.30</fillPercent>
+    <canOverlapZones>false</canOverlapZones>
     <statBases>
-      <WorkToMake>2800</WorkToMake>
+      <WorkToBuild>2800</WorkToBuild>
       <MaxHitPoints>180</MaxHitPoints>
       <Flammability>1.0</Flammability>
       <Cleanliness>-3</Cleanliness>
@@ -1157,7 +1235,6 @@
     <fertility>2.3</fertility>
     <building>
       <defaultPlantToGrow>PlantPotato</defaultPlantToGrow>
-      <plantsDestroyWithMe>true</plantsDestroyWithMe>
       <sowTag>Hydroponic</sowTag>
     </building>
     <tickerType>Rare</tickerType>
@@ -1192,7 +1269,8 @@
     <fillPercent>0.45</fillPercent>
     <pathCost>60</pathCost>
     <statBases>
-      <WorkToMake>600</WorkToMake>
+      <WorkToBuild>600</WorkToBuild>
+      <Mass>10</Mass>
       <MaxHitPoints>100</MaxHitPoints>
       <Flammability>1.0</Flammability>
     </statBases>
@@ -1201,6 +1279,13 @@
       <Steel>10</Steel>
       <WoodLog>30</WoodLog>
     </costList>
+		<comps>
+			<li Class="CompProperties_TemperatureRuinable">
+				<minSafeTemperature>-1</minSafeTemperature>
+				<maxSafeTemperature>32</maxSafeTemperature>
+				<progressPerDegreePerTick>0.00001</progressPerDegreePerTick>
+			</li>
+		</comps>
     <tickerType>Rare</tickerType>
     <rotatable>true</rotatable>
     <designationCategory>Production</designationCategory>
@@ -1236,13 +1321,14 @@
     </researchPrerequisites>
     <statBases>
       <MaxHitPoints>140</MaxHitPoints>
-      <WorkToMake>5000</WorkToMake>
+      <WorkToBuild>5000</WorkToBuild>
       <Flammability>1.0</Flammability>
       <Beauty>-25</Beauty>
     </statBases>
     <comps>
       <li Class="CompProperties_Forbiddable"/>
-      <li Class="CompProperties_Power">
+			<li Class="CompProperties_Flickable"/>
+			<li Class="CompProperties_Power">
         <compClass>CompPowerTrader</compClass>
         <basePowerConsumption>250</basePowerConsumption>
         <startElectricalFires>true</startElectricalFires>
@@ -1282,14 +1368,14 @@
     <blockWind>true</blockWind>
     <fillPercent>1</fillPercent>
     <statBases>
-      <WorkToMake>2200</WorkToMake>
+      <WorkToBuild>2200</WorkToBuild>
       <MaxHitPoints>350</MaxHitPoints>
       <Flammability>1.0</Flammability>
     </statBases>
     <building>
       <isMealSource>true</isMealSource>
       <wantsHopperAdjacent>true</wantsHopperAdjacent>
-      <foodCostPerDispense>6</foodCostPerDispense>
+      <nutritionCostPerDispense>0.3</nutritionCostPerDispense>
       <soundDispense>DispensePaste</soundDispense>
     </building>
     <comps>
@@ -1313,6 +1399,7 @@
     <designationCategory>Production</designationCategory>
     <constructEffect>ConstructMetal</constructEffect>
     <designationHotKey>Misc6</designationHotKey>
+    <canOverlapZones>false</canOverlapZones>
     <researchPrerequisites>
       <li>NutrientPaste</li>
     </researchPrerequisites>
@@ -1335,6 +1422,7 @@
     <passability>PassThroughOnly</passability>
     <fillPercent>0.5</fillPercent>
     <pathCost>70</pathCost>
+    <canOverlapZones>false</canOverlapZones>
     <building>
       <fixedStorageSettings>
         <priority>Important</priority>
@@ -1355,6 +1443,7 @@
           </categories>
           <exceptedThingDefs>
             <li>Human_Meat</li>
+            <li>Megaspider_Meat</li>
           </exceptedThingDefs>
         </filter>
       </defaultStorageSettings>
@@ -1364,7 +1453,7 @@
     </inspectorTabs>
     <castEdgeShadows>true</castEdgeShadows>
     <statBases>
-      <WorkToMake>450</WorkToMake>
+      <WorkToBuild>450</WorkToBuild>
       <MaxHitPoints>100</MaxHitPoints>
       <Flammability>1.0</Flammability>
     </statBases>

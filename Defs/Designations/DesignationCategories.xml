@@ -1,7 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <Defs>
 
-  
   <DesignationCategoryDef>
     <defName>Orders</defName>
     <label>orders</label>
@@ -91,6 +90,7 @@
     <label>power</label>
     <description>Electricity production, transmission, and management.</description>
     <order>400</order>
+    <showPowerGrid>true</showPowerGrid>
     <specialDesignatorClasses>
       <li>Designator_Cancel</li>
       <li>Designator_Deconstruct</li>

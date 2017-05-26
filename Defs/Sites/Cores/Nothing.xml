@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <SiteCoreDef>
+    <defName>Nothing</defName>
+    <label>site</label>
+    <siteTexture>World/WorldObjects/Sites/GenericSite</siteTexture>
+    <expandingIconTexture>World/WorldObjects/Expanding/Sites/Nothing</expandingIconTexture>
+  </SiteCoreDef>
+
+</Defs>

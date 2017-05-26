@@ -25,7 +25,7 @@
     <fillPercent>0.25</fillPercent>
     <statBases>
       <MaxHitPoints>80</MaxHitPoints>
-      <WorkToMake>200</WorkToMake>
+      <WorkToBuild>200</WorkToBuild>
       <Flammability>0</Flammability>
     </statBases>
     <selectable>true</selectable>
@@ -108,7 +108,7 @@
     <fillPercent>0.40</fillPercent>
     <statBases>
       <MaxHitPoints>80</MaxHitPoints>
-      <WorkToMake>200</WorkToMake>
+      <WorkToBuild>200</WorkToBuild>
       <Flammability>0</Flammability>
     </statBases>
     <selectable>true</selectable>
@@ -165,8 +165,9 @@
     <rotatable>false</rotatable>
     <fillPercent>0.4</fillPercent>
     <statBases>
-      <WorkToMake>1000</WorkToMake>
+      <WorkToBuild>1000</WorkToBuild>
       <MaxHitPoints>100</MaxHitPoints>
+      <Mass>6</Mass>
       <Flammability>1.0</Flammability>
     </statBases>
     <tickerType>Rare</tickerType>
@@ -223,15 +224,16 @@
     <fillPercent>1</fillPercent>
     <coversFloor>true</coversFloor>
     <blockLight>true</blockLight>
+    <canOverlapZones>false</canOverlapZones>
     <castEdgeShadows>true</castEdgeShadows>
     <staticSunShadowHeight>1.0</staticSunShadowHeight>
     <statBases>
-      <WorkToMake>1600</WorkToMake>
+      <WorkToBuild>1600</WorkToBuild>
       <MaxHitPoints>100</MaxHitPoints>
       <Flammability>1.0</Flammability>
     </statBases>
     <tickerType>Rare</tickerType>
-    <description>An electrical device that fits into a wall and pushes cold air into a room. Its exhaust port generates a lot of heat. Can be used to cool down rooms during the summer months, or to create a walk-in freezer. </description>
+    <description>An electrical device that fits into a wall and pushes cold air into a room. Its exhaust port generates a lot of heat. Can be used to cool down rooms during summer, or to create a walk-in freezer. </description>
     <costList>
       <Steel>90</Steel>
       <Component>3</Component>
@@ -283,9 +285,10 @@
     <coversFloor>true</coversFloor>
     <blockLight>true</blockLight>
     <castEdgeShadows>true</castEdgeShadows>
+    <canOverlapZones>false</canOverlapZones>
     <staticSunShadowHeight>1.0</staticSunShadowHeight>
     <statBases>
-			<WorkToMake>400</WorkToMake>
+			<WorkToBuild>400</WorkToBuild>
 			<MaxHitPoints>100</MaxHitPoints>
 			<Flammability>1.0</Flammability>
 		</statBases>
@@ -304,6 +307,13 @@
 		</building>
 		<designationCategory>Temperature</designationCategory>
     <designationHotKey>Misc5</designationHotKey>
+    <comps>
+      <li Class="CompProperties_Flickable">
+        <commandTexture>UI/Commands/Vent</commandTexture>
+        <commandLabelKey>CommandDesignateOpenCloseVentLabel</commandLabelKey>
+        <commandDescKey>CommandDesignateOpenCloseVentDesc</commandDescKey>
+      </li>
+    </comps>
   </ThingDef>
   
 </Defs>

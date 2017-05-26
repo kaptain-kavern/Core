@@ -4,12 +4,22 @@
   <BiomeDef>
     <defName>BorealForest</defName>
     <label>boreal forest</label>
-    <description>Northern forests of coniferous trees. Despite the harsh winters, boreal forests sustain a diverse population of small and large animals.</description>
+    <description>Forests of coniferous trees. Despite the harsh winters, boreal forests sustain a diverse population of small and large animals, and have warm summers. Snow makes it extremely slow to travel in winter.</description>
     <workerClass>BiomeWorker_BorealForest</workerClass>
     <implemented>true</implemented>
-    <animalDensity>3.0</animalDensity>
-    <plantDensity>0.5</plantDensity>
-    <baseColor>(0.30, 0.60, 0.55)</baseColor>
+    <animalDensity>1.9</animalDensity>
+    <plantDensity>0.30</plantDensity>
+    <factionBaseSelectionWeight>0.9</factionBaseSelectionWeight>
+    <pathCost>
+      <points>
+        <li>(0, 26000)</li>
+        <li>(0.23, 1750)</li>
+        <li>(0.43, 1750)</li>
+        <li>(0.83, 44000)</li>
+        <li>(1, 26000)</li>
+      </points>
+    </pathCost>
+    <texture>World/Biomes/BorealForest</texture>
     <soundsAmbient>
       <li>AmbientNightInsects_Standard</li>
     </soundsAmbient>
@@ -90,14 +100,15 @@
       <SnowHard>4</SnowHard>
     </baseWeatherCommonalities>
     <wildPlants>
-      <PlantRaspberry>2.2</PlantRaspberry>
-      <PlantBush>3.0</PlantBush>
-      <PlantGrass>8.0</PlantGrass>
-      <PlantMoss>4.0</PlantMoss>
-      <PlantTreePoplar>1.2</PlantTreePoplar>
-      <PlantTreePine>5.0</PlantTreePine>
-      <PlantTreeBirch>1.5</PlantTreeBirch>
-    </wildPlants>
+			<PlantGrass>10.0</PlantGrass>
+			<PlantMoss>4.0</PlantMoss>
+			<PlantBush>3.0</PlantBush>
+			<PlantTreePine>5.0</PlantTreePine>
+			<PlantRaspberry>1.8</PlantRaspberry>
+			<PlantTreeBirch>1.5</PlantTreeBirch>
+			<PlantTreePoplar>1.2</PlantTreePoplar>
+			<PlantWildHealroot>0.3</PlantWildHealroot>
+		</wildPlants>
     <wildAnimals>
       <Elk>0.5</Elk>
       <Ibex>0.4</Ibex>
@@ -110,7 +121,7 @@
       <Turkey>0.2</Turkey>
       <Deer>0.03</Deer>
       <Rat>0.8</Rat>
-      <Megatherium>0.03</Megatherium>
+      <Megasloth>0.03</Megasloth>
       <Raccoon>0.4</Raccoon>
       <Warg>0.02</Warg>
       <GrizzlyBear>0.03</GrizzlyBear>
@@ -129,12 +140,22 @@
   <BiomeDef>
     <defName>Tundra</defName>
     <label>tundra</label>
-    <description>These mostly-frozen plains bear almost no trees and little vegetation. There are a few small animals interspesed with large herds of migratory grazers and their predators.</description>
+    <description>These mostly-frozen plains bear almost no trees and little vegetation. There are a few small animals interspersed with large herds of migratory grazers and their predators. Snow makes it extremely slow to travel in winter.</description>
     <workerClass>BiomeWorker_Tundra</workerClass>
     <implemented>true</implemented>
-    <animalDensity>1.0</animalDensity>
-    <plantDensity>0.25</plantDensity>
-    <baseColor>(0.36, 0.73, 0.67)</baseColor>
+    <animalDensity>0.8</animalDensity>
+    <plantDensity>0.14</plantDensity>
+    <factionBaseSelectionWeight>0.32</factionBaseSelectionWeight>
+    <pathCost>
+      <points>
+        <li>(0, 25300)</li>
+        <li>(0.23, 0)</li>
+        <li>(0.43, 0)</li>
+        <li>(0.83, 44000)</li>
+        <li>(1, 25300)</li>
+			</points>
+    </pathCost>
+    <texture>World/Biomes/Tundra</texture>
     <soundsAmbient>
       <li>AmbientNightInsects_Standard</li>
     </soundsAmbient>
@@ -205,15 +226,16 @@
       <SnowHard>4</SnowHard>
     </baseWeatherCommonalities>
     <wildPlants>
-      <PlantRaspberry>0.01</PlantRaspberry>
-      <PlantBush>0.03</PlantBush>
-      <PlantAstragalus>0.01</PlantAstragalus>
-      <PlantDandelion>0.01</PlantDandelion>
-      <PlantGrass>0.3</PlantGrass>
-      <PlantMoss>0.05</PlantMoss>
-      <PlantTreePine>0.01</PlantTreePine>
-      <PlantTreeBirch>0.01</PlantTreeBirch>
-    </wildPlants>
+			<PlantGrass>0.36</PlantGrass>
+			<PlantMoss>0.05</PlantMoss>
+			<PlantBush>0.03</PlantBush>
+			<PlantRaspberry>0.01</PlantRaspberry>
+			<PlantAstragalus>0.01</PlantAstragalus>
+			<PlantDandelion>0.01</PlantDandelion>
+			<PlantTreePine>0.005</PlantTreePine>
+      <PlantTreeBirch>0.005</PlantTreeBirch>
+			<PlantWildHealroot>0.005</PlantWildHealroot>
+		</wildPlants>
     <wildAnimals>
       <Elk>0.25</Elk>
       <Ibex>0.1</Ibex>
@@ -224,7 +246,7 @@
       <Snowhare>1</Snowhare>
       <Husky>0.01</Husky>
       <Rat>0.4</Rat>
-      <Megatherium>0.02</Megatherium>
+      <Megasloth>0.02</Megasloth>
       <Warg>0.03</Warg>
       <PolarBear>0.01</PolarBear>
       <GrizzlyBear>0.02</GrizzlyBear>
@@ -243,11 +265,20 @@
   <BiomeDef>
     <defName>IceSheet</defName>
     <label>ice sheet</label>
-    <description>The surface is covered with sheets of ice which can be kilometers thick. There is no access to soil, so there are no plants. The only animals seen here are migrating to somewhere else - or badly lost.</description>
+    <description>The surface is covered with sheets of ice which can be kilometers thick. No soil, no plants. The only animals here are migrating to somewhere else - or badly lost. Snow slows down travel, but there are ice sheets that provide smooth walking.</description>
     <workerClass>BiomeWorker_IceSheet</workerClass>
-    <animalDensity>0.4</animalDensity>
+    <allowRoads>false</allowRoads>
+    <allowRivers>false</allowRivers>
+    <animalDensity>0.1</animalDensity>
     <plantDensity>0</plantDensity>
-    <baseColor>(0.48, 0.765, 0.882)</baseColor>
+    <hasVirtualPlants>false</hasVirtualPlants>
+    <factionBaseSelectionWeight>0.15</factionBaseSelectionWeight>
+		<pathCost>
+			<points>
+				<li>(0, 5500)</li>
+			</points>
+		</pathCost>
+    <texture>World/Biomes/IceSheet</texture>
     <soundsAmbient>
       <li>AmbientWind_Desolate</li>
     </soundsAmbient>
@@ -277,23 +308,37 @@
         <max>999</max>
       </li>
     </terrainsByFertility>
+		<terrainPatchMakers>
+			<li>
+				<perlinFrequency>0.015</perlinFrequency>
+				<thresholds>
+					<li>
+						<terrain>WaterShallow</terrain>
+						<min>0.76</min>
+						<max>0.98</max>
+					</li>
+					<li>
+						<terrain>WaterDeep</terrain>
+						<min>0.98</min>
+						<max>999</max>
+					</li>
+				</thresholds>
+			</li>
+		</terrainPatchMakers>
     <baseWeatherCommonalities>
       <Clear>12</Clear>
-      <Fog>10</Fog>
+      <Fog>0</Fog>
       <Rain>0</Rain>
       <DryThunderstorm>2</DryThunderstorm>
       <RainyThunderstorm>0</RainyThunderstorm>
-      <FoggyRain>4</FoggyRain>
+      <FoggyRain>0</FoggyRain>
       <SnowGentle>20</SnowGentle>
       <SnowHard>40</SnowHard>
     </baseWeatherCommonalities>
-    <wildPlants>
-      <PlantGrass>6.9</PlantGrass>
-    </wildPlants>
     <wildAnimals>
       <Snowhare>1</Snowhare>
       <Muffalo>0.08</Muffalo>
-      <Megatherium>0.003</Megatherium>
+      <Megasloth>0.003</Megasloth>
       <PolarBear>0.08</PolarBear>
       <Lynx>0.01</Lynx>
       <WolfArctic>0.02</WolfArctic>
@@ -304,6 +349,90 @@
     </allowedPackAnimals>
   </BiomeDef>
 
+	<BiomeDef>
+		<defName>SeaIce</defName>
+		<label>sea ice</label>
+		<description>Permanent ice sheets floating on water. There is no soil, no plants, no minerals to mine, and very few animals. Travel is very slow due to the deep snow and crevasses.</description>
+		<workerClass>BiomeWorker_SeaIce</workerClass>
+		<canAutoChoose>false</canAutoChoose>
+    <allowRoads>false</allowRoads>
+    <allowRivers>false</allowRivers>
+		<animalDensity>0.05</animalDensity>
+		<plantDensity>0</plantDensity>
+    <hasVirtualPlants>false</hasVirtualPlants>
+		<factionBaseSelectionWeight>0.01</factionBaseSelectionWeight>
+		<pathCost>
+			<points>
+				<li>(0, 11000)</li>
+			</points>
+		</pathCost>
+		<texture>World/Biomes/IceSheetOcean</texture>
+		<soundsAmbient>
+			<li>AmbientWind_Desolate</li>
+		</soundsAmbient>
+		<diseaseMtbDays>80</diseaseMtbDays>
+		<diseases>
+			<li>
+				<diseaseInc>Disease_Flu</diseaseInc>
+				<commonality>100</commonality>
+			</li>
+			<li>
+				<diseaseInc>Disease_Plague</diseaseInc>
+				<commonality>80</commonality>
+			</li>
+			<li>
+				<diseaseInc>Disease_FibrousMechanites</diseaseInc>
+				<commonality>30</commonality>
+			</li>
+			<li>
+				<diseaseInc>Disease_SensoryMechanites</diseaseInc>
+				<commonality>30</commonality>
+			</li>
+		</diseases>
+		<terrainsByFertility>
+			<li>
+				<terrain>Ice</terrain>
+				<min>-999</min>
+				<max>999</max>
+			</li>
+		</terrainsByFertility>
+		<terrainPatchMakers>
+			<li>
+				<perlinFrequency>0.015</perlinFrequency>
+				<thresholds>
+					<li>
+						<terrain>WaterShallow</terrain>
+						<min>0.76</min>
+						<max>0.98</max>
+					</li>
+					<li>
+						<terrain>WaterDeep</terrain>
+						<min>0.98</min>
+						<max>999</max>
+					</li>
+				</thresholds>
+			</li>
+		</terrainPatchMakers>
+		<baseWeatherCommonalities>
+			<Clear>12</Clear>
+			<Fog>0</Fog>
+			<Rain>0</Rain>
+			<DryThunderstorm>2</DryThunderstorm>
+			<RainyThunderstorm>0</RainyThunderstorm>
+			<FoggyRain>0</FoggyRain>
+			<SnowGentle>8</SnowGentle>
+			<SnowHard>8</SnowHard>
+		</baseWeatherCommonalities>
+		<wildAnimals>
+			<Snowhare>1</Snowhare>
+			<Muffalo>0.08</Muffalo>
+			<PolarBear>0.08</PolarBear>
+			<WolfArctic>0.02</WolfArctic>
+			<FoxArctic>0.02</FoxArctic>
+		</wildAnimals>
+		<allowedPackAnimals>
+			<li>Muffalo</li>
+		</allowedPackAnimals>
+	</BiomeDef>
 
-  
 </Defs>

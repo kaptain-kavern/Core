@@ -23,7 +23,7 @@
     <driverClass>JobDriver_TakeAndExitMap</driverClass>
     <reportString>stealing TargetA.</reportString>
     <casualInterruptible>false</casualInterruptible>
-    <canCheckOverrideOnDamage>false</canCheckOverrideOnDamage>
+    <checkOverrideOnDamage>Never</checkOverrideOnDamage>
   </JobDef>
 
   <JobDef>
@@ -31,9 +31,17 @@
     <driverClass>JobDriver_Kidnap</driverClass>
     <reportString>kidnapping TargetA.</reportString>
     <casualInterruptible>false</casualInterruptible>
-    <canCheckOverrideOnDamage>false</canCheckOverrideOnDamage>
+    <checkOverrideOnDamage>Never</checkOverrideOnDamage>
   </JobDef>
 
+  <JobDef>
+    <defName>CarryDownedPawnToExit</defName>
+    <driverClass>JobDriver_Kidnap</driverClass>
+    <reportString>carrying TargetA.</reportString>
+    <casualInterruptible>false</casualInterruptible>
+    <checkOverrideOnDamage>Never</checkOverrideOnDamage>
+  </JobDef>
+  
   <!--============= Pawn hauling ===============-->
 
   <JobDef>
@@ -230,8 +238,6 @@
     <defName>Hunt</defName>
     <driverClass>JobDriver_Hunt</driverClass>
     <reportString>hunting TargetA.</reportString>
-    <!-- for when attacked by berserk -->
-    <canCheckOverrideOnDamage>true</canCheckOverrideOnDamage>
     <alwaysShowWeapon>true</alwaysShowWeapon>
     <suspendable>false</suspendable>
   </JobDef>

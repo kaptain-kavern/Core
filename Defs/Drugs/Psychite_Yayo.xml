@@ -4,15 +4,16 @@
   <ThingDef ParentName="MakeableDrugBase">
     <defName>Yayo</defName>
     <label>yayo</label>
-    <description>A fine white powder snorted to produce a euphoric high. Yayo reducing the user's need for rest, and suppresses pain. It is, however, addictive.</description>
+    <description>A fine white powder snorted to produce a euphoric high. Yayo reduces the user's need for rest, and suppresses pain. It is, however, addictive.</description>
     <graphicData>
       <texPath>Things/Item/Drug/Yayo</texPath>
       <graphicClass>Graphic_StackCount</graphicClass>
     </graphicData>
     <rotatable>false</rotatable>
     <statBases>
-      <WorkToMake>500</WorkToMake>
-      <MarketValue>22</MarketValue>
+      <WorkToMake>600</WorkToMake>
+      <MarketValue>23</MarketValue>
+      <Mass>0.05</Mass>
     </statBases>
     <techLevel>Industrial</techLevel>
     <ingestible>
@@ -21,10 +22,15 @@
       <drugCategory>Hard</drugCategory>
       <baseIngestTicks>240</baseIngestTicks>
       <ingestSound>Ingest_Snort</ingestSound>
-      <ingestHoldOffsetStanding>(0.21,0,0.05)</ingestHoldOffsetStanding>
+      <ingestHoldOffsetStanding>
+        <northDefault>
+          <offset>(0.21,0,0.05)</offset>
+        </northDefault>
+      </ingestHoldOffsetStanding>
       <ingestHoldUsesTable>false</ingestHoldUsesTable>
       <ingestCommandString>Snort {0}</ingestCommandString>
       <ingestReportString>Snorting {0}.</ingestReportString>
+      <useEatingSpeedStat>false</useEatingSpeedStat>
       <outcomeDoers>
         <li Class="IngestionOutcomeDoer_GiveHediff">
           <hediffDef>YayoHigh</hediffDef>
@@ -39,22 +45,23 @@
         <li Class="IngestionOutcomeDoer_GiveHediff">
           <hediffDef>PsychiteTolerance</hediffDef>
           <severity>0.040</severity>
+					<divideByBodySize>true</divideByBodySize>
         </li>
       </outcomeDoers>
     </ingestible>
     <recipeMaker>
-      <researchPrerequisite>PsychiteRefining</researchPrerequisite>
+			<researchPrerequisite>PsychiteRefining</researchPrerequisite>
       <recipeUsers>
         <li>DrugLab</li>
       </recipeUsers>
     </recipeMaker>
     <costList>
-      <PsychoidLeaves>14</PsychoidLeaves>
+      <PsychoidLeaves>8</PsychoidLeaves>
     </costList>
     <comps>
       <li Class="CompProperties_Drug">
         <chemical>Psychite</chemical>
-        <addictiveness>0.08</addictiveness>
+        <addictiveness>0.10</addictiveness>
         <minToleranceToAddict>0.04</minToleranceToAddict>
         <existingAddictionSeverityOffset>0.20</existingAddictionSeverityOffset>
         <needLevelOffset>1</needLevelOffset>
@@ -64,7 +71,8 @@
           <min>0.18</min>
           <max>0.35</max>
         </overdoseSeverityOffset>
-      </li>
+				<largeOverdoseChance>0.01</largeOverdoseChance>
+			</li>
     </comps>
   </ThingDef>
 
@@ -76,8 +84,7 @@
     <scenarioCanAdd>true</scenarioCanAdd>
     <maxSeverity>1.0</maxSeverity>
     <comps>
-      <li>
-        <compClass>HediffComp_SeverityPerDay</compClass>
+      <li Class="HediffCompProperties_SeverityPerDay">
         <severityPerDay>-1.5</severityPerDay>
       </li>
     </comps>
@@ -99,6 +106,7 @@
     <defName>YayoHigh</defName>
     <workerClass>ThoughtWorker_Hediff</workerClass>
     <hediff>YayoHigh</hediff>
+    <validWhileDespawned>true</validWhileDespawned>
     <stages>
       <li>
         <label>high on yayo</label>
@@ -115,6 +123,17 @@
     <label>psychite</label>
     <addictionHediff>PsychiteAddiction</addictionHediff>
     <toleranceHediff>PsychiteTolerance</toleranceHediff>
+    <onGeneratedAddictedToleranceChance>0.8</onGeneratedAddictedToleranceChance>
+    <onGeneratedAddictedEvents>
+      <li>
+        <hediff>ChemicalDamageSevere</hediff>
+        <chance>0.15</chance>
+        <partsToAffect>
+          <li>LeftKidney</li>
+          <li>RightKidney</li>
+        </partsToAffect>
+      </li>
+    </onGeneratedAddictedEvents>
   </ChemicalDef>
   
   <NeedDef ParentName="DrugAddictionNeedBase">
@@ -129,15 +148,24 @@
     <defName>PsychiteTolerance</defName>
     <label>psychite tolerance</label>
     <comps>
-      <li>
-        <compClass>HediffComp_SeverityPerDay</compClass>
+      <li Class="HediffCompProperties_SeverityPerDay">
         <severityPerDay>-0.015</severityPerDay>
       </li>
-      <li>
-        <compClass>HediffComp_DrugEffectFactor</compClass>
+      <li Class="HediffCompProperties_DrugEffectFactor">
         <chemical>Psychite</chemical>
       </li>
     </comps>
+		<hediffGivers>
+			<li Class="HediffGiver_RandomDrugEffect">
+				<hediff>ChemicalDamageSevere</hediff>
+				<minSeverity>0.50</minSeverity>
+				<baseMtbDays>120</baseMtbDays>
+				<partsToAffect>
+					<li>LeftKidney</li>
+					<li>RightKidney</li>
+				</partsToAffect>
+			</li>
+		</hediffGivers>
   </HediffDef>
   
   <HediffDef ParentName="AddictionBase">
@@ -146,9 +174,8 @@
     <label>psychite addiction</label>
     <causesNeed>Chemical_Psychite</causesNeed>
     <comps>
-      <li>
-        <compClass>HediffComp_SeverityPerDay</compClass>
-        <severityPerDay>-0.04</severityPerDay>
+      <li Class="HediffCompProperties_SeverityPerDay">
+        <severityPerDay>-0.0333</severityPerDay>
       </li>
     </comps>
     <stages>
@@ -173,6 +200,10 @@
           </li>
         </capMods>
         <mentalStateGivers>
+					<li>
+						<mentalState>BingingDrugExtreme</mentalState>
+						<mtbDays>40</mtbDays>
+					</li>
           <li>
             <mentalState>WanderPsychotic</mentalState>
             <mtbDays>10</mtbDays>
@@ -186,6 +217,7 @@
     <defName>PsychiteWithdrawal</defName>
     <workerClass>ThoughtWorker_Hediff</workerClass>
     <hediff>PsychiteAddiction</hediff>
+    <validWhileDespawned>true</validWhileDespawned>
     <stages>
       <li>
         <visible>false</visible>
@@ -193,7 +225,7 @@
       <li>
         <label>psychite withdrawal</label>
         <description>God I'm tired. And nothing feels good any more.</description>
-        <baseMoodEffect>-25</baseMoodEffect>
+        <baseMoodEffect>-35</baseMoodEffect>
       </li>
     </stages>
   </ThoughtDef>

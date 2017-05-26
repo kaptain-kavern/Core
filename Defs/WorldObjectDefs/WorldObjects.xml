@@ -1,0 +1,114 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+
+  <WorldObjectDef>
+    <defName>Caravan</defName>
+    <label>caravan</label>
+    <description>A group of traveling people.</description>
+    <worldObjectClass>Caravan</worldObjectClass>
+    <texture>World/WorldObjects/Caravan</texture>
+    <useDynamicDrawer>true</useDynamicDrawer>
+    <expandingIcon>true</expandingIcon>
+    <expandingIconTexture>World/WorldObjects/Expanding/Caravan</expandingIconTexture>
+    <expandingIconPriority>100</expandingIconPriority>
+    <allowCaravanIncidentsWhichGenerateMap>true</allowCaravanIncidentsWhichGenerateMap>
+    <inspectorTabs>
+      <li>WITab_Caravan_Health</li>
+      <li>WITab_Caravan_Needs</li>
+      <li>WITab_Caravan_Gear</li>
+      <li>WITab_Caravan_Social</li>
+      <li>WITab_Caravan_Items</li>
+    </inspectorTabs>
+  </WorldObjectDef>
+  
+  <WorldObjectDef>
+    <defName>FactionBase</defName>
+    <label>faction base</label>
+    <description>A base of one of the factions.</description>
+    <worldObjectClass>FactionBase</worldObjectClass>
+    <expandingIcon>true</expandingIcon>
+    <expandingIconPriority>10</expandingIconPriority>
+    <comps>
+      <li Class="WorldObjectCompProperties_CaravanRequest" />
+    </comps>
+  </WorldObjectDef>
+  
+  <WorldObjectDef>
+    <defName>AbandonedFactionBase</defName>
+    <label>abandoned faction base</label>
+    <description>An abandoned base of one of the factions.</description>
+    <texture>World/WorldObjects/TribalFactionBase</texture>
+  </WorldObjectDef>
+  
+  <WorldObjectDef>
+    <defName>DestroyedFactionBase</defName>
+    <label>destroyed faction base</label>
+    <description>A destroyed faction base.</description>
+    <worldObjectClass>DestroyedFactionBase</worldObjectClass>
+    <texture>World/WorldObjects/TribalFactionBase</texture>
+    <expandingIcon>true</expandingIcon>
+    <expandingIconTexture>World/WorldObjects/Expanding/DestroyedFactionBase</expandingIconTexture>
+    <expandingIconPriority>20</expandingIconPriority>
+  </WorldObjectDef>
+  
+  <WorldObjectDef>
+    <defName>JourneyDestination</defName>
+    <label>journey destination</label>
+    <description>The location of a hidden ship which can help you escape the planet.</description>
+    <texture>World/WorldObjects/JourneyDestination</texture>
+    <expandingIcon>true</expandingIcon>
+    <expandingIconTexture>World/WorldObjects/Expanding/JourneyDestination</expandingIconTexture>
+    <expandingIconPriority>50</expandingIconPriority>
+  </WorldObjectDef>
+  
+  <WorldObjectDef>
+    <defName>AttackedCaravan</defName>
+    <label>attacked caravan</label>
+    <description>A caravan under attack.</description>
+    <worldObjectClass>CaravansBattlefield</worldObjectClass>
+    <texture>World/WorldObjects/Ambush</texture>
+    <expandingIcon>true</expandingIcon>
+    <expandingIconTexture>World/WorldObjects/Expanding/Ambush</expandingIconTexture>
+    <expandingIconPriority>80</expandingIconPriority>
+    <isTempIncidentMapOwner>true</isTempIncidentMapOwner>
+  </WorldObjectDef>
+  
+  <WorldObjectDef>
+    <defName>TravelingTransportPods</defName>
+    <label>transport pods</label>
+    <description>Transport pods in flight.</description>
+    <worldObjectClass>TravelingTransportPods</worldObjectClass>
+    <texture>World/WorldObjects/TravelingTransportPods</texture>
+    <useDynamicDrawer>true</useDynamicDrawer>
+    <expandingIcon>true</expandingIcon>
+    <expandingIconTexture>World/WorldObjects/Expanding/TravelingTransportPods</expandingIconTexture>
+    <expandingIconPriority>60</expandingIconPriority>
+    <allowCaravanIncidentsWhichGenerateMap>true</allowCaravanIncidentsWhichGenerateMap>
+  </WorldObjectDef>
+  
+  <WorldObjectDef>
+    <defName>RoutePlannerWaypoint</defName>
+    <label>waypoint</label>
+    <description>A temporary waypoint.</description>
+    <worldObjectClass>RoutePlannerWaypoint</worldObjectClass>
+    <texture>World/WorldObjects/RoutePlannerWaypoint</texture>
+    <expandingIcon>true</expandingIcon>
+    <expandingIconTexture>World/WorldObjects/Expanding/RoutePlannerWaypoint</expandingIconTexture>
+    <expandingIconPriority>1000</expandingIconPriority>
+    <allowCaravanIncidentsWhichGenerateMap>true</allowCaravanIncidentsWhichGenerateMap>
+    <saved>false</saved>
+  </WorldObjectDef>
+  
+  <WorldObjectDef>
+    <defName>Site</defName>
+    <worldObjectClass>Site</worldObjectClass>
+    <expandingIcon>true</expandingIcon>
+    <expandingIconPriority>70</expandingIconPriority>
+    <comps>
+      <li Class="WorldObjectCompProperties_Timeout" />
+      <li Class="WorldObjectCompProperties_DefeatAllEnemiesQuest" />
+      <li Class="WorldObjectCompProperties_ItemStashContents" />
+    </comps>
+  </WorldObjectDef>
+
+</Defs>

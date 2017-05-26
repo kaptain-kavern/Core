@@ -1,28 +1,24 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <Defs>
 
-  <!-- ======== Unlandable biomes ==========-->
-
-  <BiomeDef>
-    <defName>Ocean</defName>
-    <label>ocean</label>
-    <description>Open ocean. Great for fish - not so great for you.</description>
-    <workerClass>BiomeWorker_Ocean</workerClass>
-    <canBuildBase>false</canBuildBase>
-    <hideTerrain>true</hideTerrain>
-    <baseColor>(0.125, 0.369, 0.560)</baseColor>
-  </BiomeDef>
-
-  <!-- ======== Buildable biomes ==========-->
-
   <BiomeDef>
     <defName>TemperateForest</defName>
     <label>temperate forest</label>
-    <description>A friendly biome dominated by forests of deciduous trees interspersed with fertile clearings. Many species of animals move around in the trees and on the plains.</description>
+    <description>Forests of deciduous trees interspersed with fertile clearings. Many species of animals move around in the trees and on the plains. Because of snow, it is slow to travel in winter.</description>
     <workerClass>BiomeWorker_TemperateForest</workerClass>
-    <animalDensity>5.5</animalDensity>
-    <plantDensity>0.83</plantDensity>
-    <baseColor>(0.341, 0.525, 0.180)</baseColor>
+    <animalDensity>2.8</animalDensity>
+    <plantDensity>0.55</plantDensity>
+    <factionBaseSelectionWeight>1</factionBaseSelectionWeight>
+		<pathCost>
+			<points>
+				<li>(0, 5500)</li>
+				<li>(0.03, 1650)</li>
+        <li>(0.63, 1650)</li>
+        <li>(0.83, 27500)</li>
+				<li>(1, 5500)</li>
+			</points>
+		</pathCost>
+    <texture>World/Biomes/TemperateForest</texture>
     <soundsAmbient>
       <li>AmbientNightInsects_Standard</li>
     </soundsAmbient>
@@ -107,13 +103,14 @@
       <SnowHard>4</SnowHard>
     </baseWeatherCommonalities>
     <wildPlants>
-      <PlantRaspberry>0.1</PlantRaspberry>
-      <PlantBush>0.7</PlantBush>
-      <PlantGrass>6.9</PlantGrass>
-      <PlantDandelion>0.8</PlantDandelion>
-      <PlantTreeOak>0.5</PlantTreeOak>
-      <PlantTreePoplar>0.5</PlantTreePoplar>
-    </wildPlants>
+			<PlantGrass>8.0</PlantGrass>
+			<PlantDandelion>0.8</PlantDandelion>
+			<PlantBush>0.7</PlantBush>
+			<PlantTreeOak>0.5</PlantTreeOak>
+			<PlantTreePoplar>0.5</PlantTreePoplar>
+			<PlantRaspberry>0.1</PlantRaspberry>
+			<PlantWildHealroot>0.05</PlantWildHealroot>
+		</wildPlants>
     <wildAnimals>
       <Gazelle>0.05</Gazelle>
       <Ibex>0.3</Ibex>
@@ -131,7 +128,7 @@
       <Ostrich>0.1</Ostrich>
       <Rat>0.8</Rat>
       <Raccoon>0.4</Raccoon>
-      <Megatherium>0.04</Megatherium>
+      <Megasloth>0.04</Megasloth>
       <Warg>0.03</Warg>
       <GrizzlyBear>0.06</GrizzlyBear>
       <Cougar>0.02</Cougar>
@@ -147,11 +144,17 @@
   <BiomeDef>
     <defName>TropicalRainforest</defName>
     <label>tropical rainforest</label>
-    <description>A thick, moist jungle. Dense overgrowth and aggressive wildlife make construction and survival difficult.</description>
+    <description>A thick, moist jungle. Despite its visual beauty, this is a very dangerous biome. Choking overgrowth, aggressive animals, and constant disease are why some explorers call this the "green hell".</description>
     <workerClass>BiomeWorker_TropicalRainforest</workerClass>
-    <animalDensity>7.2</animalDensity>
-    <plantDensity>1.0</plantDensity>
-    <baseColor>(0, 0.372, 0.035)</baseColor>
+    <animalDensity>4.0</animalDensity>
+    <plantDensity>0.85</plantDensity>
+    <factionBaseSelectionWeight>0.7</factionBaseSelectionWeight>
+    <pathCost>
+      <points>
+        <li>(0, 11000)</li>
+      </points>
+    </pathCost>
+    <texture>World/Biomes/TropicalRainforest</texture>
     <soundsAmbient>
       <li>AmbientNightInsects_Jungle</li>
       <li>AmbientDayInsects_Jungle</li>
@@ -241,13 +244,13 @@
       <SnowHard>4</SnowHard>
     </baseWeatherCommonalities>
     <wildPlants>
-      <PlantRaspberry>0.1</PlantRaspberry>
-      <PlantBush>0.7</PlantBush>
-      <PlantTallGrass>6.9</PlantTallGrass>
-      <PlantDandelion>0.8</PlantDandelion>
-      <PlantTreeTeak>0.3</PlantTreeTeak>
-      <PlantTreeCecropia>0.6</PlantTreeCecropia>
-    </wildPlants>
+			<PlantTallGrass>7.0</PlantTallGrass>
+			<PlantDandelion>0.8</PlantDandelion>
+			<PlantBush>0.7</PlantBush>
+			<PlantTreeCecropia>0.6</PlantTreeCecropia>
+			<PlantTreeTeak>0.3</PlantTreeTeak>
+			<PlantRaspberry>0.1</PlantRaspberry>
+		</wildPlants>
     <wildAnimals>
       <Elephant>0.05</Elephant>
       <Monkey>0.5</Monkey>

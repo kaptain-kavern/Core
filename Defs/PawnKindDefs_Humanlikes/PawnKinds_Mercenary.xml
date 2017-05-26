@@ -24,6 +24,7 @@
     <apparelTags>
       <li>Outlander</li>
       <li>Military</li>
+      <li>BeltDefensePop</li>
     </apparelTags>
     <apparelMoney>
       <min>1500</min>
@@ -137,6 +138,7 @@
     <apparelTags>
       <li>Outlander</li>
       <li>Military</li>
+      <li>BeltDefensePop</li>
     </apparelTags>
     <apparelMoney>
       <min>800</min>
@@ -209,7 +211,7 @@
       <li>Military</li>
     </apparelTags>
     <apparelRequired>
-      <li>Apparel_PersonalShield</li>
+      <li>Apparel_ShieldBelt</li>
     </apparelRequired>
     <apparelMoney>
       <min>1000</min>
@@ -259,6 +261,7 @@
   <PawnKindDef ParentName="MercenaryBase">
     <defName>MercenaryHeavy</defName>
     <label>heavy mercenary</label>
+    <labelPlural>heavy mercenaries</labelPlural>
     <combatPower>185</combatPower>
     <gearHealthRange>
       <min>0.5</min>
@@ -267,6 +270,7 @@
     <apparelTags>
       <li>Outlander</li>
       <li>Military</li>
+      <li>BeltDefensePop</li>
     </apparelTags>
     <apparelMoney>
       <min>200</min>
@@ -305,6 +309,7 @@
       <li>Outlander</li>
       <li>Military</li>
       <li>Spacer</li>
+      <li>BeltDefensePop</li>
     </apparelTags>
     <apparelMoney>
       <min>2500</min>
@@ -316,6 +321,7 @@
       <max>2000</max>
     </weaponMoney>
     <weaponTags>
+			<li>EliteGun</li>
       <li>AdvancedGun</li>
     </weaponTags>
     <techHediffsMoney>
@@ -355,12 +361,14 @@
   <PawnKindDef ParentName="EliteBase">
     <defName>PirateBoss</defName>
     <label>boss</label>
+    <labelPlural>bosses</labelPlural>
     <factionLeader>true</factionLeader>
   </PawnKindDef>
 
   <PawnKindDef ParentName="EliteBase">
     <defName>MercenaryElite</defName>
     <label>elite mercenary</label>
+    <labelPlural>elite mercenaries</labelPlural>
   </PawnKindDef>
 
 </PawnKindDefs>

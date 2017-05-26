@@ -7,11 +7,11 @@
     <label>heart</label>
     <hitPoints>20</hitPoints>
     <oldInjuryBaseChance>0.08</oldInjuryBaseChance>
-    <bleedingRateMultiplier>1.5</bleedingRateMultiplier>
+    <bleedingRateMultiplier>5</bleedingRateMultiplier>
     <skinCovered>false</skinCovered>
-    <activities>
-      <li>BloodPumping</li>
-    </activities>
+    <tags>
+      <li>BloodPumpingSource</li>
+    </tags>
     <spawnThingOnRemoved>Heart</spawnThingOnRemoved>
     <dontSuggestAmputation>true</dontSuggestAmputation>
   </BodyPartDef>
@@ -21,11 +21,10 @@
     <label>left lung</label>
     <hitPoints>20</hitPoints>
     <oldInjuryBaseChance>0.08</oldInjuryBaseChance>
-    <bleedingRateMultiplier>1.3</bleedingRateMultiplier>
     <skinCovered>false</skinCovered>
-    <activities>
-      <li>Breathing_main</li>
-    </activities>
+    <tags>
+      <li>BreathingSource</li>
+    </tags>
     <spawnThingOnRemoved>Lung</spawnThingOnRemoved>
   </BodyPartDef>
 
@@ -34,11 +33,10 @@
     <label>right lung</label>
     <hitPoints>20</hitPoints>
     <oldInjuryBaseChance>0.08</oldInjuryBaseChance>
-    <bleedingRateMultiplier>1.3</bleedingRateMultiplier>
     <skinCovered>false</skinCovered>
-    <activities>
-      <li>Breathing_main</li>
-    </activities>
+    <tags>
+      <li>BreathingSource</li>
+    </tags>
     <spawnThingOnRemoved>Lung</spawnThingOnRemoved>
   </BodyPartDef>
 
@@ -47,11 +45,10 @@
     <label>left kidney</label>
     <hitPoints>20</hitPoints>
     <oldInjuryBaseChance>0.08</oldInjuryBaseChance>
-    <bleedingRateMultiplier>1.3</bleedingRateMultiplier>
     <skinCovered>false</skinCovered>
-    <activities>
-      <li>BloodFiltration_kidney</li>
-    </activities>
+    <tags>
+      <li>BloodFiltrationKidney</li>
+    </tags>
     <spawnThingOnRemoved>Kidney</spawnThingOnRemoved>
   </BodyPartDef>
 
@@ -60,11 +57,10 @@
     <label>right kidney</label>
     <hitPoints>20</hitPoints>
     <oldInjuryBaseChance>0.08</oldInjuryBaseChance>
-    <bleedingRateMultiplier>1.3</bleedingRateMultiplier>
     <skinCovered>false</skinCovered>
-    <activities>
-      <li>BloodFiltration_kidney</li>
-    </activities>
+    <tags>
+      <li>BloodFiltrationKidney</li>
+    </tags>
     <spawnThingOnRemoved>Kidney</spawnThingOnRemoved>
   </BodyPartDef>
 
@@ -73,12 +69,10 @@
     <label>liver</label>
     <hitPoints>20</hitPoints>
     <oldInjuryBaseChance>0.08</oldInjuryBaseChance>
-    <bleedingRateMultiplier>1.3</bleedingRateMultiplier>
     <skinCovered>false</skinCovered>
-    <activities>
-      <li>Metabolism</li>
-      <li>BloodFiltration_liver</li>
-    </activities>
+    <tags>
+      <li>BloodFiltrationLiver</li>
+    </tags>
     <spawnThingOnRemoved>Liver</spawnThingOnRemoved>
     <dontSuggestAmputation>true</dontSuggestAmputation>
   </BodyPartDef>
@@ -88,11 +82,10 @@
     <label>stomach</label>
     <hitPoints>25</hitPoints>
     <oldInjuryBaseChance>0.08</oldInjuryBaseChance>
-    <bleedingRateMultiplier>1.4</bleedingRateMultiplier>
     <skinCovered>false</skinCovered>
-    <activities>
-      <li>Eating_digestion</li>
-    </activities>
+    <tags>
+      <li>MetabolismSource</li>
+    </tags>
   </BodyPartDef>
   
 </Defs>

@@ -13,7 +13,7 @@
     <verbs>
       <li>
         <verbClass>Verb_MeleeAttack</verbClass>
-        <defaultCooldownTicks>100</defaultCooldownTicks>
+        <defaultCooldownTime>1.65</defaultCooldownTime>
         <meleeDamageBaseAmount>10</meleeDamageBaseAmount>
         <meleeDamageDef>Blunt</meleeDamageDef>
         <linkedBodyPartsGroup>HeadAttackTool</linkedBodyPartsGroup>
@@ -23,25 +23,27 @@
       <li Class="CompProperties_Milkable">
         <milkDef>Milk</milkDef>
         <milkIntervalDays>2</milkIntervalDays>
-        <milkAmount>6</milkAmount>
+        <milkAmount>12</milkAmount>
       </li>
       <li Class="CompProperties_Shearable">
-        <woolDef>MuffaloWool</woolDef>
+        <woolDef>WoolMuffalo</woolDef>
         <shearIntervalDays>30</shearIntervalDays>
-        <woolAmount>100</woolAmount>
+        <woolAmount>125</woolAmount>
       </li>
     </comps>
     <race>
       <herdAnimal>true</herdAnimal>
       <body>QuadrupedAnimalWithHooves</body>
-      <baseBodySize>2.0</baseBodySize>
+      <baseBodySize>2.1</baseBodySize>
       <baseHealthScale>1.75</baseHealthScale>
+			<baseHungerRate>0.85</baseHungerRate>
       <foodType>VegetarianRoughAnimal</foodType>
       <leatherColor>(152,170,174)</leatherColor>
       <leatherInsulation>1.0</leatherInsulation>
-      <gestationPeriodDays>30</gestationPeriodDays>
+      <gestationPeriodDays>25</gestationPeriodDays>
       <wildness>0.5</wildness>
       <nuzzleMtbHours>120</nuzzleMtbHours>
+			<packAnimal>true</packAnimal>
       <lifeExpectancy>15</lifeExpectancy>
       <lifeStageAges>
         <li>
@@ -54,7 +56,7 @@
         </li>
         <li>
           <def>AnimalAdult</def>
-          <minAge>1</minAge>
+          <minAge>0.5</minAge>
           <soundWounded>Pawn_Muffalo_Wounded</soundWounded>
           <soundDeath>Pawn_Muffalo_Death</soundDeath>
           <soundCall>Pawn_Muffalo_Call</soundCall>
@@ -83,6 +85,7 @@
     <lifeStages>
       <li>
         <label>muffalo calf</label>
+        <labelPlural>muffalo calves</labelPlural>
         <bodyGraphicData>
           <texPath>Things/Pawn/Animal/Muffalo/Muffalo</texPath>
           <drawSize>1.5</drawSize>
@@ -126,11 +129,6 @@
       </li>
     </lifeStages>
   </PawnKindDef>
-  <PawnKindDef ParentName="Muffalo">
-    <defName>PackMuffalo</defName>
-    <carrier>true</carrier>
-  </PawnKindDef>
-
 
   <!-- ====================================================== -->
 
@@ -146,17 +144,25 @@
     <verbs>
       <li>
         <verbClass>Verb_MeleeAttack</verbClass>
-        <defaultCooldownTicks>100</defaultCooldownTicks>
+        <defaultCooldownTime>1.65</defaultCooldownTime>
         <meleeDamageBaseAmount>6</meleeDamageBaseAmount>
         <meleeDamageDef>Blunt</meleeDamageDef>
         <linkedBodyPartsGroup>FrontLeftLeg</linkedBodyPartsGroup>
       </li>
       <li>
         <verbClass>Verb_MeleeAttack</verbClass>
-        <defaultCooldownTicks>100</defaultCooldownTicks>
+        <defaultCooldownTime>1.65</defaultCooldownTime>
         <meleeDamageBaseAmount>6</meleeDamageBaseAmount>
         <meleeDamageDef>Blunt</meleeDamageDef>
         <linkedBodyPartsGroup>FrontRightLeg</linkedBodyPartsGroup>
+      </li>
+      <li>
+        <verbClass>Verb_MeleeAttack</verbClass>
+        <defaultCooldownTime>1.65</defaultCooldownTime>
+        <meleeDamageBaseAmount>2</meleeDamageBaseAmount>
+        <meleeDamageDef>Blunt</meleeDamageDef>
+        <commonality>0.01</commonality>
+        <linkedBodyPartsGroup>HeadAttackTool</linkedBodyPartsGroup>
       </li>
     </verbs>
     <race>
@@ -182,7 +188,7 @@
         </li>
         <li>
           <def>AnimalAdult</def>
-          <minAge>0.7</minAge>
+          <minAge>0.4</minAge>
           <soundWounded>Pawn_Deer_Wounded</soundWounded>
           <soundDeath>Pawn_Deer_Death</soundDeath>
           <soundCall>Pawn_Deer_Call</soundCall>
@@ -265,24 +271,32 @@
     <verbs>
       <li>
         <verbClass>Verb_MeleeAttack</verbClass>
-        <defaultCooldownTicks>100</defaultCooldownTicks>
+        <defaultCooldownTime>1.65</defaultCooldownTime>
         <meleeDamageBaseAmount>8</meleeDamageBaseAmount>
         <meleeDamageDef>Scratch</meleeDamageDef>
         <linkedBodyPartsGroup>FrontLeftClaws</linkedBodyPartsGroup>
       </li>
       <li>
         <verbClass>Verb_MeleeAttack</verbClass>
-        <defaultCooldownTicks>100</defaultCooldownTicks>
+        <defaultCooldownTime>1.65</defaultCooldownTime>
         <meleeDamageBaseAmount>8</meleeDamageBaseAmount>
         <meleeDamageDef>Scratch</meleeDamageDef>
         <linkedBodyPartsGroup>FrontRightClaws</linkedBodyPartsGroup>
       </li>
       <li>
         <verbClass>Verb_MeleeAttack</verbClass>
-        <defaultCooldownTicks>100</defaultCooldownTicks>
+        <defaultCooldownTime>1.65</defaultCooldownTime>
         <meleeDamageBaseAmount>6</meleeDamageBaseAmount>
         <meleeDamageDef>Bite</meleeDamageDef>
         <linkedBodyPartsGroup>Teeth</linkedBodyPartsGroup>
+      </li>
+      <li>
+        <verbClass>Verb_MeleeAttack</verbClass>
+        <defaultCooldownTime>1.65</defaultCooldownTime>
+        <meleeDamageBaseAmount>1</meleeDamageBaseAmount>
+        <meleeDamageDef>Blunt</meleeDamageDef>
+        <commonality>0.01</commonality>
+        <linkedBodyPartsGroup>HeadAttackTool</linkedBodyPartsGroup>
       </li>
     </verbs>
     <comps>
@@ -292,17 +306,17 @@
         <eggLayIntervalDays>10</eggLayIntervalDays>
         <eggProgressUnfertilizedMax>0.5</eggProgressUnfertilizedMax>
         <eggCountRange>
-          <min>3</min>
-          <max>5</max>
+          <min>1</min>
+          <max>2</max>
         </eggCountRange>
       </li>
     </comps>
     <race>
-      <baseHungerRate>0.20</baseHungerRate>
-      <body>QuadrupedAnimalWithClawsTailAndJowl</body>
-      <baseBodySize>0.28</baseBodySize>
+			<body>QuadrupedAnimalWithClawsTailAndJowl</body>
+			<baseBodySize>0.20</baseBodySize>
       <baseHealthScale>0.5</baseHealthScale>
-      <foodType>OmnivoreRoughAnimal</foodType>
+			<baseHungerRate>0.28</baseHungerRate>
+			<foodType>OmnivoreRoughAnimal</foodType>
       <leatherColor>(101,116,58)</leatherColor>
       <leatherLabel>iguana skin</leatherLabel>
       <leatherInsulation>0.50</leatherInsulation>
@@ -328,7 +342,7 @@
         </li>
         <li>
           <def>AnimalAdult</def>
-          <minAge>0.35</minAge>
+          <minAge>0.25</minAge>
           <soundWounded>Pawn_Iguana_Wounded</soundWounded>
           <soundDeath>Pawn_Iguana_Death</soundDeath>
           <soundCall>Pawn_Iguana_Call</soundCall>
@@ -402,17 +416,25 @@
     <verbs>
       <li>
         <verbClass>Verb_MeleeAttack</verbClass>
-        <defaultCooldownTicks>100</defaultCooldownTicks>
+        <defaultCooldownTime>1.65</defaultCooldownTime>
         <meleeDamageBaseAmount>15</meleeDamageBaseAmount>
         <meleeDamageDef>Scratch</meleeDamageDef>
         <linkedBodyPartsGroup>HornAttackTool</linkedBodyPartsGroup>
       </li>
       <li>
         <verbClass>Verb_MeleeAttack</verbClass>
-        <defaultCooldownTicks>100</defaultCooldownTicks>
+        <defaultCooldownTime>1.65</defaultCooldownTime>
         <meleeDamageBaseAmount>17</meleeDamageBaseAmount>
         <meleeDamageDef>Blunt</meleeDamageDef>
         <linkedBodyPartsGroup>HornAttackTool</linkedBodyPartsGroup>
+      </li>
+      <li>
+        <verbClass>Verb_MeleeAttack</verbClass>
+        <defaultCooldownTime>1.65</defaultCooldownTime>
+        <meleeDamageBaseAmount>9</meleeDamageBaseAmount>
+        <meleeDamageDef>Blunt</meleeDamageDef>
+        <commonality>0.01</commonality>
+        <linkedBodyPartsGroup>HeadAttackTool</linkedBodyPartsGroup>
       </li>
     </verbs>
     <race>
@@ -430,7 +452,7 @@
         <ArmorRating_Sharp>2.5</ArmorRating_Sharp>
       </leatherStatFactors>
       <wildness>0.90</wildness>
-      <manhunterOnTameFailChance>0.025</manhunterOnTameFailChance>
+      <manhunterOnTameFailChance>0.018</manhunterOnTameFailChance>
       <manhunterOnDamageChance>1</manhunterOnDamageChance>
       <gestationPeriodDays>45</gestationPeriodDays>
       <nameOnTameChance>1</nameOnTameChance>
@@ -442,11 +464,11 @@
         </li>
         <li>
           <def>AnimalJuvenile</def>
-          <minAge>0.4</minAge>
+          <minAge>0.3</minAge>
         </li>
         <li>
           <def>AnimalAdult</def>
-          <minAge>1.4</minAge>
+          <minAge>1.0</minAge>
           <soundWounded>Pawn_Rhinoceros_Wounded</soundWounded>
           <soundDeath>Pawn_Rhinoceros_Death</soundDeath>
           <soundCall>Pawn_Rhinoceros_Call</soundCall>
@@ -464,6 +486,7 @@
   <PawnKindDef ParentName="AnimalKindBase">
     <defName>Rhinoceros</defName>
     <label>rhinoceros</label>
+    <labelPlural>rhinoceroses</labelPlural>
     <race>Rhinoceros</race>
     <combatPower>290</combatPower>
     <wildSpawn_EcoSystemWeight>0.2</wildSpawn_EcoSystemWeight>
@@ -533,40 +556,49 @@
       <li Class="CompProperties_Milkable">
         <milkDef>Milk</milkDef>
         <milkIntervalDays>2</milkIntervalDays>
-        <milkAmount>6</milkAmount>
+        <milkAmount>12</milkAmount>
       </li>
       <li Class="CompProperties_Shearable">
-        <woolDef>CamelHair</woolDef>
+        <woolDef>WoolCamel</woolDef>
         <shearIntervalDays>30</shearIntervalDays>
-        <woolAmount>100</woolAmount>
+        <woolAmount>125</woolAmount>
       </li>
     </comps>
     <verbs>
       <li>
         <verbClass>Verb_MeleeAttack</verbClass>
-        <defaultCooldownTicks>100</defaultCooldownTicks>
+        <defaultCooldownTime>1.65</defaultCooldownTime>
         <meleeDamageBaseAmount>11</meleeDamageBaseAmount>
         <meleeDamageDef>Blunt</meleeDamageDef>
         <linkedBodyPartsGroup>FrontLeftLeg</linkedBodyPartsGroup>
       </li>
       <li>
         <verbClass>Verb_MeleeAttack</verbClass>
-        <defaultCooldownTicks>100</defaultCooldownTicks>
+        <defaultCooldownTime>1.65</defaultCooldownTime>
         <meleeDamageBaseAmount>11</meleeDamageBaseAmount>
         <meleeDamageDef>Blunt</meleeDamageDef>
         <linkedBodyPartsGroup>FrontRightLeg</linkedBodyPartsGroup>
+      </li>
+      <li>
+        <verbClass>Verb_MeleeAttack</verbClass>
+        <defaultCooldownTime>1.65</defaultCooldownTime>
+        <meleeDamageBaseAmount>6</meleeDamageBaseAmount>
+        <meleeDamageDef>Blunt</meleeDamageDef>
+        <commonality>0.01</commonality>
+        <linkedBodyPartsGroup>HeadAttackTool</linkedBodyPartsGroup>
       </li>
     </verbs>
     <race>
       <body>QuadrupedAnimalWithHoovesAndHump</body>
       <herdAnimal>true</herdAnimal>
-      <baseHungerRate>0.95</baseHungerRate>
-      <baseBodySize>1.9</baseBodySize>
+      <baseBodySize>2.0</baseBodySize>
       <baseHealthScale>1.6</baseHealthScale>
-      <foodType>VegetarianRoughAnimal</foodType>
+			<baseHungerRate>0.80</baseHungerRate>
+			<foodType>VegetarianRoughAnimal</foodType>
       <leatherColor>(204,180,150)</leatherColor>
       <leatherInsulation>1.0</leatherInsulation>
       <wildness>0.25</wildness>
+			<packAnimal>true</packAnimal>
       <gestationPeriodDays>30</gestationPeriodDays>
       <lifeExpectancy>45</lifeExpectancy>
       <lifeStageAges>
@@ -576,11 +608,11 @@
         </li>
         <li>
           <def>AnimalJuvenile</def>
-          <minAge>0.5</minAge>
+          <minAge>0.25</minAge>
         </li>
         <li>
           <def>AnimalAdult</def>
-          <minAge>1.5</minAge>
+          <minAge>0.5</minAge>
           <soundWounded>Pawn_Dromedary_Wounded</soundWounded>
           <soundDeath>Pawn_Dromedary_Death</soundDeath>
           <soundCall>Pawn_Dromedary_Call</soundCall>
@@ -598,6 +630,7 @@
   <PawnKindDef ParentName="AnimalKindBase" Name="Dromedary">
     <defName>Dromedary</defName>
     <label>dromedary</label>
+    <labelPlural>dromedaries</labelPlural>
     <race>Dromedary</race>
     <combatPower>75</combatPower>
     <wildSpawn_EcoSystemWeight>0.2</wildSpawn_EcoSystemWeight>
@@ -609,6 +642,7 @@
     <lifeStages>
       <li>
         <label>dromedary calf</label>
+        <labelPlural>dromedary calves</labelPlural>
         <bodyGraphicData>
           <texPath>Things/Pawn/Animal/Dromedary/Dromedary</texPath>
           <drawSize>1.5</drawSize>
@@ -652,12 +686,5 @@
       </li>
     </lifeStages>
   </PawnKindDef>
-  <PawnKindDef ParentName="Dromedary">
-    <defName>PackDromedary</defName>
-    <carrier>true</carrier>
-  </PawnKindDef>
-
-
-
   
 </Defs>

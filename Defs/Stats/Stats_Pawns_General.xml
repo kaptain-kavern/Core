@@ -12,10 +12,6 @@
     <displayPriorityInCategory>90</displayPriorityInCategory>
     <capacityFactors>
       <li>
-        <capacity>Consciousness</capacity>
-        <weight>1</weight>
-      </li>
-      <li>
         <capacity>Moving</capacity>
         <weight>1</weight>
       </li>
@@ -156,8 +152,8 @@
       <li Class="StatPart_Age">
         <curve>
           <points>
-            <li>(40,1)</li>
-            <li>(80,0.8)</li>
+            <li>(0.5,1)</li>
+            <li>(1,0.8)</li>
           </points>
         </curve>
       </li>

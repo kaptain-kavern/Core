@@ -29,6 +29,12 @@
 	</JobDef>
 
   <JobDef>
+    <defName>WaitMaintainPosture</defName>
+    <driverClass>JobDriver_WaitMaintainPosture</driverClass>
+    <reportString>standing.</reportString>
+  </JobDef>
+
+  <JobDef>
     <defName>WaitDowned</defName>
     <driverClass>JobDriver_Wait</driverClass>
     <reportString>downed.</reportString>
@@ -98,6 +104,12 @@
   </JobDef>
   
   <JobDef>
+    <defName>GiveToPackAnimal</defName>
+    <driverClass>JobDriver_GiveToPackAnimal</driverClass>
+    <reportString>taking TargetA.</reportString>
+  </JobDef>
+  
+  <JobDef>
     <defName>Wear</defName>
     <driverClass>JobDriver_Wear</driverClass>
     <reportString>wearing TargetA.</reportString>
@@ -108,6 +120,12 @@
     <driverClass>JobDriver_RemoveApparel</driverClass>
     <reportString>removing TargetA.</reportString>
   </JobDef>
+
+	<JobDef>
+		<defName>DropEquipment</defName>
+		<driverClass>JobDriver_DropEquipment</driverClass>
+		<reportString>dropping TargetA.</reportString>
+	</JobDef>
 
   <JobDef>
     <defName>Strip</defName>
@@ -143,6 +161,18 @@
     <defName>TakeBeerOutOfFermentingBarrel</defName>
     <driverClass>JobDriver_TakeBeerOutOfFermentingBarrel</driverClass>
     <reportString>taking beer out of TargetA.</reportString>
+  </JobDef>
+  
+  <JobDef>
+    <defName>UnloadInventory</defName>
+    <driverClass>JobDriver_UnloadInventory</driverClass>
+    <reportString>unloading TargetA.</reportString>
+  </JobDef>
+  
+  <JobDef>
+    <defName>UnloadYourInventory</defName>
+    <driverClass>JobDriver_UnloadYourInventory</driverClass>
+    <reportString>unloading inventory.</reportString>
   </JobDef>
   
   <JobDef>
@@ -204,10 +234,24 @@
 	</JobDef>
 
   <JobDef>
-		<defName>FleeAndCower</defName>
-		<driverClass>JobDriver_FleeAndCower</driverClass>
-		<reportString>fleeing.</reportString>
-	</JobDef>
+    <defName>Flee</defName>
+    <driverClass>JobDriver_Flee</driverClass>
+    <reportString>fleeing.</reportString>
+    <checkOverrideOnDamage>OnlyIfInstigatorNotJobTarget</checkOverrideOnDamage>
+  </JobDef>
+
+  <JobDef>
+    <defName>FleeAndCower</defName>
+    <driverClass>JobDriver_FleeAndCower</driverClass>
+    <reportString>fleeing.</reportString>
+    <checkOverrideOnDamage>OnlyIfInstigatorNotJobTarget</checkOverrideOnDamage>
+  </JobDef>
+  
+  <JobDef>
+    <defName>EnterTransporter</defName>
+    <driverClass>JobDriver_EnterTransporter</driverClass>
+    <reportString>entering TargetA.</reportString>
+  </JobDef>
   
   <!--============ Fire ============-->
 
@@ -215,6 +259,7 @@
 		<defName>Ignite</defName>
 		<driverClass>JobDriver_Ignite</driverClass>
 		<reportString>igniting TargetA.</reportString>
+    <collideWithPawns>true</collideWithPawns>
 	</JobDef>
 
 	<JobDef>
@@ -245,7 +290,6 @@
     <defName>LayDown</defName>
     <driverClass>JobDriver_LayDown</driverClass>
     <reportString>lying down.</reportString>
-    <canCheckOverrideOnDamage>true</canCheckOverrideOnDamage>
     <casualInterruptible>false</casualInterruptible>
   </JobDef>
   
@@ -255,7 +299,6 @@
     <defName>Lovin</defName>
     <driverClass>JobDriver_Lovin</driverClass>
     <reportString>lovin'.</reportString>
-    <canCheckOverrideOnDamage>true</canCheckOverrideOnDamage>
     <casualInterruptible>false</casualInterruptible>
   </JobDef>
   

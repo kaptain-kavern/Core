@@ -19,12 +19,12 @@
     <stateClass>MentalState_Berserk</stateClass>
     <label>berserk</label>
     <category>Aggro</category>
-    <recoveryThought>Catharsis</recoveryThought>
+    <moodRecoveryThought>Catharsis</moodRecoveryThought>
     <blockNormalThoughts>true</blockNormalThoughts>
     <nameColor>(0.9,0.2,0.5)</nameColor>
     <beginLetterLabel>berserk</beginLetterLabel>
     <beginLetter>{0} has gone berserk!</beginLetter>
-    <beginLetterType>BadUrgent</beginLetterType>
+    <beginLetterDef>BadUrgent</beginLetterDef>
     <minTicksBeforeRecovery>10000</minTicksBeforeRecovery>
     <recoveryMtbDays>0.3</recoveryMtbDays>
     <maxTicksBeforeRecovery>60000</maxTicksBeforeRecovery>
@@ -34,6 +34,7 @@
     <tale>MentalStateBerserk</tale>
     <recoverFromSleep>true</recoverFromSleep>
     <recoverFromDowned>true</recoverFromDowned>
+    <unspawnedCanDo>true</unspawnedCanDo>
   </MentalStateDef>
 
   <MentalBreakDef>
@@ -56,14 +57,14 @@
     <nameColor>(0.5, 0.9, 0.5)</nameColor>
     <beginLetterLabel>fire starting spree</beginLetterLabel>
     <beginLetter>{0} is on a fire starting spree.</beginLetter>
-    <beginLetterType>BadUrgent</beginLetterType>
-    <recoveryThought>Catharsis</recoveryThought>
+    <beginLetterDef>BadUrgent</beginLetterDef>
+    <moodRecoveryThought>Catharsis</moodRecoveryThought>
     <recoveryMessage>{0} is no longer on a fire starting spree.</recoveryMessage>
     <baseInspectLine>Mental state: Fire starting spree</baseInspectLine>
     <recoverFromSleep>true</recoverFromSleep>
     <recoverFromDowned>true</recoverFromDowned>
+    <unspawnedCanDo>true</unspawnedCanDo>
   </MentalStateDef>
-
 
   <MentalBreakDef>
     <defName>GiveUpExit</defName>
@@ -77,18 +78,17 @@
     <stateClass>MentalState_GiveUpExit</stateClass>
     <category>Sad</category>
     <prisonersCanDo>false</prisonersCanDo>
-    <recoveryThought>Catharsis</recoveryThought>
+    <moodRecoveryThought>Catharsis</moodRecoveryThought>
     <blockNormalThoughts>true</blockNormalThoughts>
     <nameColor>(0.65, 0.9, 0.93)</nameColor>
     <beginLetterLabel>gave up</beginLetterLabel>
     <beginLetter>{0} is leaving the colony.</beginLetter>
-    <beginLetterType>BadNonUrgent</beginLetterType>
+    <beginLetterDef>BadNonUrgent</beginLetterDef>
     <recoveryMessage>{0} has had a change of heart and is coming back to the colony.</recoveryMessage>
     <baseInspectLine>Mental state: Given up and leaving</baseInspectLine>
     <tale>MentalStateGaveUp</tale>
     <allowBeatfire>true</allowBeatfire>
   </MentalStateDef>
-
 
   <MentalBreakDef Name="BingingDrugExtremeBreak">
     <defName>BingingDrugExtreme</defName>
@@ -105,13 +105,13 @@
     <category>Indulgent</category>
     <prisonersCanDo>false</prisonersCanDo>
     <colonistsOnly>true</colonistsOnly>
-    <minTicksBeforeRecovery>6000</minTicksBeforeRecovery>
+    <minTicksBeforeRecovery>20000</minTicksBeforeRecovery>
     <recoveryMtbDays>0.6</recoveryMtbDays>
     <maxTicksBeforeRecovery>60000</maxTicksBeforeRecovery>
     <recoverFromSleep>true</recoverFromSleep>
     <recoverFromDowned>true</recoverFromDowned>
     <nameColor>(0.5, 0.9, 0.5)</nameColor>
-    <recoveryThought>Catharsis</recoveryThought>
+    <moodRecoveryThought>Catharsis</moodRecoveryThought>
     <baseInspectLine>Mental state: Binging on {0}</baseInspectLine>
     <allowBeatfire>true</allowBeatfire>
     <drugCategory>Hard</drugCategory>
@@ -140,18 +140,19 @@
     <stateClass>MentalState_WanderPsychotic</stateClass>
     <label>wandering in psychosis</label>
     <category>Sad</category>
-    <recoveryThought>Catharsis</recoveryThought>
+    <moodRecoveryThought>Catharsis</moodRecoveryThought>
     <blockNormalThoughts>true</blockNormalThoughts>
     <nameColor>(0.65, 0.9, 0.93)</nameColor>
-    <minTicksBeforeRecovery>10000</minTicksBeforeRecovery>
+    <minTicksBeforeRecovery>30000</minTicksBeforeRecovery>
     <recoveryMtbDays>0.8</recoveryMtbDays>
-    <maxTicksBeforeRecovery>60000</maxTicksBeforeRecovery>
+    <maxTicksBeforeRecovery>80000</maxTicksBeforeRecovery>
     <recoveryMessage>{0} is no longer wandering in a psychotic state.</recoveryMessage>
     <beginLetterLabel>daze</beginLetterLabel>
     <beginLetter>{0} is wandering around in a psychotic state.</beginLetter>
-    <beginLetterType>BadNonUrgent</beginLetterType>
+    <beginLetterDef>BadNonUrgent</beginLetterDef>
     <baseInspectLine>Mental state: Psychotic wandering</baseInspectLine>
     <tale>MentalStateGaveUp</tale>
+    <unspawnedCanDo>true</unspawnedCanDo>
   </MentalStateDef>
 
   <!-- Mental breaks: minor -->
@@ -170,7 +171,7 @@
     <category>Indulgent</category>
     <prisonersCanDo>false</prisonersCanDo>
     <colonistsOnly>true</colonistsOnly>
-    <minTicksBeforeRecovery>6000</minTicksBeforeRecovery>
+    <minTicksBeforeRecovery>20000</minTicksBeforeRecovery>
     <recoveryMtbDays>0.3</recoveryMtbDays>
     <maxTicksBeforeRecovery>40000</maxTicksBeforeRecovery>
     <recoverFromSleep>true</recoverFromSleep>
@@ -178,8 +179,8 @@
     <nameColor>(0.5, 0.9, 0.5)</nameColor>
     <beginLetterLabel>food binge</beginLetterLabel>
     <beginLetter>{0} is pigging out on food.</beginLetter>
-    <beginLetterType>BadNonUrgent</beginLetterType>
-    <recoveryThought>Catharsis</recoveryThought>
+    <beginLetterDef>BadNonUrgent</beginLetterDef>
+    <moodRecoveryThought>Catharsis</moodRecoveryThought>
     <recoveryMessage>{0} is no longer pigging out on food.</recoveryMessage>
     <baseInspectLine>Mental state: Pigging out</baseInspectLine>
     <allowBeatfire>true</allowBeatfire>
@@ -197,20 +198,21 @@
     <label>sad wandering</label>
     <category>Sad</category>
     <colonistsOnly>true</colonistsOnly>
-    <minTicksBeforeRecovery>6000</minTicksBeforeRecovery>
+    <minTicksBeforeRecovery>30000</minTicksBeforeRecovery>
     <recoveryMtbDays>0.3</recoveryMtbDays>
-    <maxTicksBeforeRecovery>40000</maxTicksBeforeRecovery>
+    <maxTicksBeforeRecovery>60000</maxTicksBeforeRecovery>
     <recoverFromSleep>true</recoverFromSleep>
     <recoverFromDowned>true</recoverFromDowned>
-    <recoveryThought>Catharsis</recoveryThought>
+    <moodRecoveryThought>Catharsis</moodRecoveryThought>
     <blockNormalThoughts>true</blockNormalThoughts>
     <nameColor>(0.65, 0.9, 0.93)</nameColor>
     <recoveryMessage>{0} is no longer wandering in sadness.</recoveryMessage>
     <beginLetterLabel>sad wander</beginLetterLabel>
     <beginLetter>{0} is wandering around in sadness.</beginLetter>
-    <beginLetterType>BadNonUrgent</beginLetterType>
+    <beginLetterDef>BadNonUrgent</beginLetterDef>
     <baseInspectLine>Mental state: Sad wandering</baseInspectLine>
     <allowBeatfire>true</allowBeatfire>
+    <unspawnedCanDo>true</unspawnedCanDo>
   </MentalStateDef>
 
   <MentalBreakDef>
@@ -222,21 +224,22 @@
   <MentalStateDef ParentName="BaseMentalState">
     <defName>WanderOwnRoom</defName>
     <stateClass>MentalState_WanderOwnRoom</stateClass>
+    <workerClass>MentalStateWorker_WanderOwnRoom</workerClass>
     <label>sitting alone</label>
     <category>Sad</category>
     <colonistsOnly>true</colonistsOnly>
-    <minTicksBeforeRecovery>6000</minTicksBeforeRecovery>
+    <minTicksBeforeRecovery>30000</minTicksBeforeRecovery>
     <recoveryMtbDays>0.6</recoveryMtbDays>
     <maxTicksBeforeRecovery>60000</maxTicksBeforeRecovery>
     <recoverFromSleep>true</recoverFromSleep>
     <recoverFromDowned>true</recoverFromDowned>
-    <recoveryThought>Catharsis</recoveryThought>
+    <moodRecoveryThought>Catharsis</moodRecoveryThought>
     <blockNormalThoughts>true</blockNormalThoughts>
     <nameColor>(0.65, 0.9, 0.93)</nameColor>
     <recoveryMessage>{0} is no longer hiding in HIS room.</recoveryMessage>
     <beginLetterLabel>hide in room</beginLetterLabel>
     <beginLetter>{0} is hiding in HIS room.</beginLetter>
-    <beginLetterType>BadNonUrgent</beginLetterType>
+    <beginLetterDef>BadNonUrgent</beginLetterDef>
     <baseInspectLine>Mental state: Hiding in room</baseInspectLine>
     <allowBeatfire>true</allowBeatfire>
   </MentalStateDef>

@@ -13,7 +13,6 @@
     <requireCapableColonist>true</requireCapableColonist>
     <workTags>
       <li>Firefighting</li>
-      <li>Scary</li>
     </workTags>
   </WorkTypeDef>
 
@@ -137,26 +136,9 @@
     <labelShort>Construct</labelShort>
     <pawnLabel>Constructor</pawnLabel>
     <gerundLabel>Constructing</gerundLabel>
-    <description>Build things that you've designated.</description>
+    <description>Build things that you've designated, and fix damaged or broken-down buildings.</description>
     <verb>Construct</verb>
     <naturalPriority>900</naturalPriority>
-    <requireCapableColonist>true</requireCapableColonist>
-    <relevantSkills>
-      <li>Construction</li>
-    </relevantSkills>
-    <workTags>
-      <li>ManualSkilled</li>
-    </workTags>
-  </WorkTypeDef>
-
-  <WorkTypeDef>
-    <defName>Repair</defName>
-    <labelShort>Repair</labelShort>
-    <pawnLabel>Repairer</pawnLabel>
-    <gerundLabel>Repairing</gerundLabel>
-    <description>Fix damaged or broken-down buildings.</description>
-    <verb>Repair</verb>
-    <naturalPriority>800</naturalPriority>
     <requireCapableColonist>true</requireCapableColonist>
     <relevantSkills>
       <li>Construction</li>
@@ -189,7 +171,7 @@
     <labelShort>Mine</labelShort>
     <pawnLabel>Miner</pawnLabel>
     <gerundLabel>Mining</gerundLabel>
-    <description>Dig out areas which are have designated for mining.</description>
+    <description>Digging and drilling.</description>
     <verb>Mine</verb>
     <naturalPriority>600</naturalPriority>
     <requireCapableColonist>true</requireCapableColonist>
@@ -326,7 +308,7 @@
     <verb>Research at</verb>
     <naturalPriority>100</naturalPriority>
     <relevantSkills>
-      <li>Research</li>
+      <li>Intellectual</li>
     </relevantSkills>
     <workTags>
       <li>Intellectual</li>

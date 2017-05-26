@@ -19,6 +19,7 @@
     <resourceReadoutAlwaysShow>true</resourceReadoutAlwaysShow>
     <statBases>
       <MarketValue>1</MarketValue>
+      <Mass>0.007</Mass>
       <SharpDamageMultiplier>0.5</SharpDamageMultiplier>
       <BluntDamageMultiplier>1.1</BluntDamageMultiplier>
     </statBases>
@@ -44,8 +45,7 @@
       <statFactors>
         <MaxHitPoints>0.7</MaxHitPoints>
         <Flammability>0.2</Flammability>
-        <Beauty>3</Beauty>
-        <WorkToMake>1.2</WorkToMake>
+        <Beauty>2</Beauty>
         <MeleeWeapon_Cooldown>1</MeleeWeapon_Cooldown>
       </statFactors>
       <smeltable>true</smeltable>
@@ -65,7 +65,8 @@
     <soundDrop>Silver_Drop</soundDrop>
     <useHitPoints>false</useHitPoints>
     <statBases>
-      <MarketValue>15</MarketValue>
+      <MarketValue>10</MarketValue>
+      <Mass>0.07</Mass>
       <SharpDamageMultiplier>0.3</SharpDamageMultiplier>
       <BluntDamageMultiplier>1.15</BluntDamageMultiplier>
     </statBases>
@@ -87,13 +88,14 @@
       <soundMeleeHitSharp>MeleeHit_Metal_Sharp</soundMeleeHitSharp>
       <soundMeleeHitBlunt>MeleeHit_Metal_Blunt</soundMeleeHitBlunt>
       <statOffsets>
-        <Beauty>18</Beauty>
+        <Beauty>12</Beauty>
       </statOffsets>
       <statFactors>
         <MaxHitPoints>0.6</MaxHitPoints>
         <Flammability>0.2</Flammability>
-        <Beauty>6</Beauty>
-        <WorkToMake>1.3</WorkToMake>
+        <Beauty>4</Beauty>
+        <WorkToMake>0.9</WorkToMake>
+        <WorkToBuild>0.9</WorkToBuild>
         <MeleeWeapon_Cooldown>1.1</MeleeWeapon_Cooldown>
       </statFactors>
       <smeltable>true</smeltable>
@@ -112,7 +114,8 @@
     <soundInteract>Metal_Drop</soundInteract>
     <soundDrop>Metal_Drop</soundDrop>
     <statBases>
-      <MarketValue>2.0</MarketValue>
+      <MarketValue>1.9</MarketValue>
+      <Mass>0.5</Mass>
       <SharpDamageMultiplier>1</SharpDamageMultiplier>
       <BluntDamageMultiplier>1</BluntDamageMultiplier>
     </statBases>
@@ -154,7 +157,8 @@
     <soundDrop>Metal_Drop</soundDrop>
     <useHitPoints>false</useHitPoints>
     <statBases>
-      <MarketValue>27</MarketValue>
+      <MarketValue>14</MarketValue>
+      <Mass>0.5</Mass>
       <SharpDamageMultiplier>1.2</SharpDamageMultiplier>
       <BluntDamageMultiplier>1.0</BluntDamageMultiplier>
     </statBases>
@@ -166,7 +170,7 @@
       <categories>
         <li>Metallic</li>
       </categories>
-      <commonality>0.25</commonality>
+      <commonality>0.20</commonality>
       <constructEffect>ConstructMetal</constructEffect>
       <color>(160,178,181)</color>
       <soundImpactStuff>BulletImpactMetal</soundImpactStuff>
@@ -174,9 +178,10 @@
       <soundMeleeHitBlunt>MeleeHit_Metal_Blunt</soundMeleeHitBlunt>
       <statFactors>
         <MaxHitPoints>2.8</MaxHitPoints>
-        <Beauty>1.2</Beauty>
+        <Beauty>1</Beauty>
         <Flammability>0.1</Flammability>
-        <WorkToMake>2.0</WorkToMake>
+        <WorkToMake>2.2</WorkToMake>
+				<WorkToBuild>2.2</WorkToBuild>
         <MeleeWeapon_Cooldown>0.8</MeleeWeapon_Cooldown>
       </statFactors>
       <smeltable>true</smeltable>
@@ -199,6 +204,7 @@
     <statBases>
       <MarketValue>1.4</MarketValue>
       <MaxHitPoints>150</MaxHitPoints>
+      <Mass>0.4</Mass>
       <Flammability>1.0</Flammability>
       <DeteriorationRate>2</DeteriorationRate>
       <MeleeWeapon_DamageAmount>8</MeleeWeapon_DamageAmount>
@@ -218,14 +224,12 @@
       <soundImpactStuff>BulletImpactWood</soundImpactStuff>
       <soundMeleeHitSharp>MeleeHit_Wood</soundMeleeHitSharp>
       <soundMeleeHitBlunt>MeleeHit_Wood</soundMeleeHitBlunt>
-      <statOffsets>
-        <Beauty>2</Beauty>
-      </statOffsets>
       <statFactors>
         <MaxHitPoints>0.4</MaxHitPoints>
-        <Beauty>1.25</Beauty>
+        <Beauty>1</Beauty>
         <Flammability>1</Flammability>
         <WorkToMake>0.7</WorkToMake>
+				<WorkToBuild>0.7</WorkToBuild>
         <DoorOpenSpeed>1.2</DoorOpenSpeed>
         <MeleeWeapon_Cooldown>0.9</MeleeWeapon_Cooldown>
       </statFactors>
@@ -255,10 +259,12 @@
       <texPath>Things/Item/Resource/Uranium</texPath>
       <graphicClass>Graphic_Single</graphicClass>
     </graphicData>
+		<useHitPoints>false</useHitPoints>
     <soundInteract>Metal_Drop</soundInteract>
     <soundDrop>Metal_Drop</soundDrop>
     <statBases>
-      <MarketValue>5</MarketValue>
+      <MarketValue>6</MarketValue>
+      <Mass>0.1</Mass>
       <SharpDamageMultiplier>1.1</SharpDamageMultiplier>
       <BluntDamageMultiplier>1.4</BluntDamageMultiplier>
     </statBases>
@@ -281,9 +287,10 @@
       <statFactors>
         <MaxHitPoints>2.5</MaxHitPoints>
         <WorkToMake>1.9</WorkToMake>
-        <Beauty>0.4</Beauty>
+				<WorkToBuild>1.9</WorkToBuild>
+				<Beauty>0.5</Beauty>
         <Flammability>0.0</Flammability>
-        <DoorOpenSpeed>0.9</DoorOpenSpeed>
+        <DoorOpenSpeed>0.75</DoorOpenSpeed>
         <MeleeWeapon_Cooldown>1.35</MeleeWeapon_Cooldown>
       </statFactors>
       <smeltable>true</smeltable>
@@ -299,18 +306,18 @@
       <texPath>Things/Item/Resource/Jade</texPath>
       <graphicClass>Graphic_Single</graphicClass>
     </graphicData>
+		<useHitPoints>false</useHitPoints>
     <soundInteract>ChunkRock_Drop</soundInteract>
     <soundDrop>ChunkRock_Drop</soundDrop>
     <statBases>
       <MarketValue>5</MarketValue>
+      <Mass>0.5</Mass>
       <SharpDamageMultiplier>0.8</SharpDamageMultiplier>
       <BluntDamageMultiplier>1.5</BluntDamageMultiplier>
     </statBases>
     <thingCategories>
       <li>ResourcesRaw</li>
     </thingCategories>
-    <stackLimit>500</stackLimit>
-    <smallVolume>true</smallVolume>
     <deepCommonality>0.5</deepCommonality>
     <stuffProps>
       <categories>
@@ -323,12 +330,13 @@
       <soundMeleeHitSharp>MeleeHit_Stone</soundMeleeHitSharp>
       <soundMeleeHitBlunt>MeleeHit_Stone</soundMeleeHitBlunt>
       <statOffsets>
-        <Beauty>9</Beauty>
+        <Beauty>6</Beauty>
       </statOffsets>
       <statFactors>
         <MaxHitPoints>0.5</MaxHitPoints>
-        <WorkToMake>1.5</WorkToMake>
-        <Beauty>3</Beauty>
+        <WorkToMake>1.4</WorkToMake>
+				<WorkToBuild>5.0</WorkToBuild>
+				<Beauty>2.5</Beauty>
         <Flammability>0.2</Flammability>
         <MeleeWeapon_Cooldown>1.1</MeleeWeapon_Cooldown>
       </statFactors>
@@ -354,7 +362,8 @@
     </graphicData>
     <statBases>
       <MaxHitPoints>100</MaxHitPoints>
-      <MarketValue>1.5</MarketValue>
+      <MarketValue>1.9</MarketValue>
+      <Mass>0.026</Mass>
       <Flammability>1.0</Flammability>
       <DeteriorationRate>4</DeteriorationRate>
     </statBases>
@@ -404,7 +413,8 @@
     </graphicData>
     <statBases>
       <MaxHitPoints>150</MaxHitPoints>
-      <MarketValue>11</MarketValue>
+      <MarketValue>7</MarketValue>
+      <Mass>0.025</Mass>
       <Flammability>1.0</Flammability>
       <DeteriorationRate>3</DeteriorationRate>
     </statBases>
@@ -412,7 +422,7 @@
       <categories>
         <li>Fabric</li>
       </categories>
-      <commonality>0.25</commonality>
+      <commonality>0.15</commonality>
       <color>(174,219,228)</color>
       <statOffsets>
         <ArmorRating_Blunt>0.03</ArmorRating_Blunt>
@@ -447,7 +457,8 @@
     </graphicData>
     <statBases>
       <MaxHitPoints>100</MaxHitPoints>
-      <MarketValue>12</MarketValue>
+      <MarketValue>10</MarketValue>
+      <Mass>0.032</Mass>
       <Flammability>1.0</Flammability>
       <DeteriorationRate>3</DeteriorationRate>
     </statBases>
@@ -455,7 +466,7 @@
       <categories>
         <li>Fabric</li>
       </categories>
-      <commonality>0.35</commonality>
+      <commonality>0.20</commonality>
       <color>(180,60,60)</color>
       <statOffsets>
         <ArmorRating_Blunt>0.05</ArmorRating_Blunt>
@@ -490,14 +501,16 @@
       <graphicClass>Graphic_Single</graphicClass>
     </graphicData>
     <statBases>
-      <MarketValue>45</MarketValue>
+      <MarketValue>16</MarketValue>
+      <Mass>0.038</Mass>
       <Flammability>1.0</Flammability>
-    </statBases>
+			<DeteriorationRate>1.0</DeteriorationRate>
+		</statBases>
     <stuffProps>
       <categories>
         <li>Fabric</li>
       </categories>
-      <commonality>0.18</commonality>
+      <commonality>0.05</commonality>
       <color>(0,106,126)</color>
       <statOffsets>
         <ArmorRating_Blunt>0.03</ArmorRating_Blunt>
@@ -530,7 +543,8 @@
     </graphicData>
     <statBases>
       <MaxHitPoints>90</MaxHitPoints>
-      <MarketValue>4.0</MarketValue>
+      <MarketValue>2.7</MarketValue>
+      <Mass>0.028</Mass>
       <Flammability>1.0</Flammability>
       <DeteriorationRate>3.4</DeteriorationRate>
     </statBases>
@@ -539,7 +553,7 @@
       <categories>
         <li>Fabric</li>
       </categories>
-      <commonality>0.15</commonality>
+      <commonality>0.12</commonality>
       <statFactors>
         <ArmorRating_Electric>1.2</ArmorRating_Electric>
       </statFactors>
@@ -550,15 +564,14 @@
   </ThingDef>
 
   <ThingDef ParentName="WoolBase">
-    <defName>MegatheriumWool</defName>
-    <label>megatherium wool</label>
-    <description>While somewhat coarse, megatherium wool's long fibers make it very strong. It is very warm.</description>
+    <defName>WoolMegasloth</defName>
+    <label>Megasloth wool</label>
+    <description>While somewhat coarse, megasloth wool's long fibers make it very strong. It is very warm.</description>
     <graphicData>
       <color>(189,161,116)</color>
     </graphicData>
     <stuffProps>
       <color>(189,161,116)</color>
-      <commonality>0.15</commonality>
       <statOffsets>
         <ArmorRating_Heat>0.08</ArmorRating_Heat>
         <ArmorRating_Electric>0.02</ArmorRating_Electric>
@@ -573,7 +586,7 @@
   </ThingDef>
 
   <ThingDef ParentName="WoolBase">
-    <defName>MuffaloWool</defName>
+    <defName>WoolMuffalo</defName>
     <label>muffalo wool</label>
     <description>Soft, light and provides very good insulation. Wool clothes can keep the body warm even in extreme conditions.</description>
     <graphicData>
@@ -581,7 +594,6 @@
     </graphicData>
     <stuffProps>
       <color>(179,192,186)</color>
-      <commonality>0.15</commonality>
       <statOffsets>
         <ArmorRating_Heat>0.08</ArmorRating_Heat>
         <ArmorRating_Electric>0.02</ArmorRating_Electric>
@@ -596,7 +608,7 @@
   </ThingDef>
 
   <ThingDef ParentName="WoolBase">
-    <defName>CamelHair</defName>
+    <defName>WoolCamel</defName>
     <label>camelhair</label>
     <description>Camelhair clothing is usually worn by desert travelers to protect them from the heat. It provides excellent insulation due to its thermostatic properties.</description>
     <graphicData>
@@ -604,7 +616,6 @@
     </graphicData>
     <stuffProps>
       <color>(220,179,132)</color>
-      <commonality>0.15</commonality>
       <statOffsets>
         <ArmorRating_Heat>0.17</ArmorRating_Heat>
         <ArmorRating_Electric>0.02</ArmorRating_Electric>
@@ -619,7 +630,7 @@
   </ThingDef>
   
   <ThingDef ParentName="WoolBase">
-    <defName>AlpacaWool</defName>
+    <defName>WoolAlpaca</defName>
     <label>alpaca wool</label>
     <description>The remarkably soft wool of an alpaca. It is very warm.</description>
     <graphicData>
@@ -631,7 +642,6 @@
     </statBases>
     <stuffProps>
       <color>(180,148,109)</color>
-      <commonality>0.15</commonality>
       <statOffsets>
         <ArmorRating_Heat>0.05</ArmorRating_Heat>
       </statOffsets>

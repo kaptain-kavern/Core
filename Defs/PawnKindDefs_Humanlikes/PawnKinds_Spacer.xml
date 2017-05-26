@@ -46,6 +46,7 @@
     </apparelMoney>
     <apparelTags>
       <li>Spacer</li>
+      <li>BeltDefensePop</li>
     </apparelTags>
     <apparelIgnoreSeasons>true</apparelIgnoreSeasons>
     <apparelAllowHeadwearChance>0.5</apparelAllowHeadwearChance>

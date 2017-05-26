@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="utf-8" ?>
+<?xml version="1.0" encoding="utf-8" ?>
 <TraitDefs>
 
   <TraitDef>
@@ -27,6 +27,19 @@
     </requiredWorkTags>
   </TraitDef>
 
+  <TraitDef>
+    <defName>Kind</defName>
+    <commonality>0.2</commonality>
+    <degreeDatas>
+      <li>
+        <label>kind</label>
+        <description>NAME is a nice person. HECAP has a tendency to brighten everyone else's day and never insults others.</description>
+      </li>
+    </degreeDatas>
+    <conflictingTraits>
+      <li>Abrasive</li>
+    </conflictingTraits>
+  </TraitDef>
 
   <TraitDef>
     <defName>Psychopath</defName>
@@ -38,7 +51,6 @@
       </li>
     </degreeDatas>
   </TraitDef>
-
 
   <TraitDef>
     <defName>Cannibal</defName>
@@ -94,16 +106,16 @@
         <label>brawler</label>
         <description>NAME likes to fight up close and personal. HISCAP accuracy is greatly increased in melee combat, but HE'll be very unhappy if asked to carry a ranged weapon.</description>
         <statFactors>
-          <MeleeHitChance>1.75</MeleeHitChance>
+          <MeleeHitChance>1.30</MeleeHitChance>
         </statFactors>
         <skillGains>
           <li>
             <key>Melee</key>
-            <value>6</value>
+            <value>4</value>
           </li>
           <li>
             <key>Shooting</key>
-            <value>-6</value>
+            <value>-4</value>
           </li>
         </skillGains>
       </li>
@@ -221,7 +233,7 @@
     <degreeDatas>
       <li>
         <label>ascetic</label>
-        <description>NAME prefers to live in asceticism. HECAP will be put in a poor mood if HE has a bedroom that's too impressive. HECAP also dislikes fancy food and prefers to eat raw - and raw food won't both HIM a bit.</description>
+        <description>NAME prefers to live in asceticism. HECAP will be put in a poor mood if HE has a bedroom that's too impressive. HECAP also dislikes fancy food and prefers to eat raw - and raw food won't bother HIM a bit.</description>
       </li>
     </degreeDatas>
     <conflictingTraits>
@@ -247,7 +259,7 @@
     <commonalityFemale>0.2</commonalityFemale>
     <degreeDatas>
       <li>
-        <label>dislikes men</label>
+        <label>misandrist</label>
         <description>NAME really dislikes and distrusts men.</description>
       </li>
     </degreeDatas>
@@ -259,7 +271,7 @@
     <commonalityFemale>0.02</commonalityFemale>
     <degreeDatas>
       <li>
-        <label>dislikes women</label>
+        <label>misogynist</label>
         <description>NAME really dislikes and distrusts women.</description>
       </li>
     </degreeDatas>
@@ -310,4 +322,16 @@
     </degreeDatas>
   </TraitDef>
     
+  <TraitDef>
+    <defName>Wimp</defName>
+    <commonality>0.15</commonality>
+    <degreeDatas>
+      <li>
+        <label>wimp</label>
+        <description>NAME is weak and cowardly. Even a little pain will immobilize HIM.</description>
+        <painShockThreshold>0.15</painShockThreshold>
+      </li>
+    </degreeDatas>
+  </TraitDef>
+  
 </TraitDefs>

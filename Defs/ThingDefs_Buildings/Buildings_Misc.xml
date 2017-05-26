@@ -17,9 +17,10 @@
       </damageData>
     </graphicData>
     <altitudeLayer>Building</altitudeLayer>
+    <minifiedDef>MinifiedFurniture</minifiedDef>
     <statBases>
       <MaxHitPoints>75</MaxHitPoints>
-      <WorkToMake>1300</WorkToMake>
+      <WorkToBuild>1300</WorkToBuild>
       <Flammability>1.0</Flammability>
     </statBases>
     <description>Required for orbital trading. You can only sell goods that are near an orbital trade beacon. Can be placed indoors.</description>
@@ -39,6 +40,9 @@
       <li Class="CompProperties_Flickable"/>
       <li Class="CompProperties_Breakdownable"/>
     </comps>
+		<building>
+			<ai_chillDestination>false</ai_chillDestination>
+		</building>
     <leaveResourcesWhenKilled>false</leaveResourcesWhenKilled>
     <pathCost>8</pathCost>
     <designationCategory>Misc</designationCategory>
@@ -71,9 +75,10 @@
     <blockWind>true</blockWind>
     <castEdgeShadows>true</castEdgeShadows>
     <fillPercent>1</fillPercent>
+    <canOverlapZones>false</canOverlapZones>
     <statBases>
       <MaxHitPoints>250</MaxHitPoints>
-      <WorkToMake>2200</WorkToMake>
+      <WorkToBuild>2200</WorkToBuild>
       <Flammability>1.0</Flammability>
     </statBases>
     <description>Allows radio contact with remote traders as well as other factions for trade and diplomacy.</description>
@@ -86,6 +91,9 @@
     <hasInteractionCell>true</hasInteractionCell>
     <terrainAffordanceNeeded>Heavy</terrainAffordanceNeeded>
     <designationCategory>Misc</designationCategory>
+		<building>
+			<ai_chillDestination>false</ai_chillDestination>
+		</building>
     <comps>
       <li Class="CompProperties_Power">
         <compClass>CompPowerTrader</compClass>
@@ -142,7 +150,8 @@
     <minifiedDef>MinifiedFurniture</minifiedDef>
     <statBases>
       <MaxHitPoints>50</MaxHitPoints>
-      <WorkToMake>1500</WorkToMake>
+      <WorkToBuild>1500</WorkToBuild>
+      <Mass>10</Mass>
       <Flammability>1.0</Flammability>
       <Beauty>-8</Beauty>
     </statBases>
@@ -193,11 +202,14 @@
     <altitudeLayer>Building</altitudeLayer>
     <statBases>
       <MaxHitPoints>50</MaxHitPoints>
-      <WorkToMake>1500</WorkToMake>
+      <WorkToBuild>1500</WorkToBuild>
       <Flammability>1.0</Flammability>
       <Beauty>-8</Beauty>
     </statBases>
     <fillPercent>0.15</fillPercent>
+		<building>
+			<ai_chillDestination>false</ai_chillDestination>
+		</building>
     <costList>
       <Steel>75</Steel>
       <Component>5</Component>
@@ -245,7 +257,7 @@
     <altitudeLayer>Building</altitudeLayer>
     <statBases>
       <MaxHitPoints>50</MaxHitPoints>
-      <WorkToMake>1500</WorkToMake>
+      <WorkToBuild>1500</WorkToBuild>
       <Flammability>1.0</Flammability>
       <Beauty>-8</Beauty>
     </statBases>
@@ -254,12 +266,161 @@
     <pathCost>25</pathCost>
     <designationCategory>Misc</designationCategory>
     <rotatable>false</rotatable>
+    <canOverlapZones>false</canOverlapZones>
     <size>(2,2)</size>
     <researchPrerequisites>
       <li>GroundPenetratingScanner</li>
     </researchPrerequisites>
   </ThingDef>
 
+  <ThingDef ParentName="BuildingBase">
+    <defName>LongRangeMineralScanner</defName>
+    <label>long-range mineral scanner</label>
+    <description>Automatically detects precious minerals like gold or jade in the nearby areas (but not in which it was built). The lumps are found on average once per 30 days within a radius of 30 tiles. Building more than one scanner in the same or nearby areas has little to no effect.</description>
+    <graphicData>
+      <texPath>Things/Building/Misc/LongRangeMineralScanner</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <drawSize>(2, 2)</drawSize>
+      <shadowData>
+        <volume>(1.4, 0.5, 1.4)</volume>
+        <offset>(0,0,-0.1)</offset>
+      </shadowData>
+    </graphicData>
+    <costList>
+      <Steel>250</Steel>
+      <Component>8</Component>
+    </costList>
+    <comps>
+      <li Class="CompProperties_Power">
+        <compClass>CompPowerTrader</compClass>
+        <startElectricalFires>true</startElectricalFires>
+        <basePowerConsumption>500</basePowerConsumption>
+        <shortCircuitInRain>false</shortCircuitInRain>
+      </li>
+      <li Class="CompProperties_Breakdownable"/>
+      <li Class="CompProperties_Flickable"/>
+      <li Class="CompProperties_LongRangeMineralScanner"/>
+    </comps>
+    <placeWorkers>
+      <li>PlaceWorker_NotUnderRoof</li>
+    </placeWorkers>
+    <altitudeLayer>Building</altitudeLayer>
+    <statBases>
+      <MaxHitPoints>50</MaxHitPoints>
+      <WorkToBuild>1000</WorkToBuild>
+      <Flammability>1.0</Flammability>
+      <Beauty>-8</Beauty>
+    </statBases>
+    <tickerType>Rare</tickerType>
+    <fillPercent>0.25</fillPercent>
+    <leaveResourcesWhenKilled>false</leaveResourcesWhenKilled>
+    <pathCost>25</pathCost>
+    <designationCategory>Misc</designationCategory>
+    <rotatable>false</rotatable>
+    <canOverlapZones>false</canOverlapZones>
+    <size>(2, 2)</size>
+    <researchPrerequisites>
+      <li>LongRangeMineralScanner</li>
+    </researchPrerequisites>
+  </ThingDef>
+
+  <!--========================== Transport pods ============================-->
+  
+  <ThingDef ParentName="BuildingBase">
+    <defName>PodLauncher</defName>
+    <label>pod launcher</label>
+    <description>A fueling port for launching one transport pod. Pod launchers can launch as a group - but the launchers must be placed adjacent to each other.</description>
+    <graphicData>
+      <texPath>Things/Building/Misc/PodLauncher</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <drawSize>(2,3)</drawSize>
+    </graphicData>
+    <size>(1,2)</size>
+    <rotatable>true</rotatable>
+    <altitudeLayer>Building</altitudeLayer>
+    <passability>Impassable</passability>
+    <castEdgeShadows>true</castEdgeShadows>
+    <fillPercent>1.0</fillPercent>
+    <designationCategory>Misc</designationCategory>
+    <canOverlapZones>false</canOverlapZones>
+    <building>
+      <hasFuelingPort>true</hasFuelingPort>
+    </building>
+    <statBases>
+      <MaxHitPoints>200</MaxHitPoints>
+      <WorkToBuild>6000</WorkToBuild>
+      <Flammability>0</Flammability>
+    </statBases>
+    <costList>
+      <Steel>80</Steel>
+      <Component>3</Component>
+    </costList>
+    <comps>
+      <li Class="CompProperties_Refuelable">
+        <fuelCapacity>150.0</fuelCapacity>
+        <targetFuelLevelConfigurable>true</targetFuelLevelConfigurable>
+        <initialConfigurableTargetFuelLevel>75</initialConfigurableTargetFuelLevel>
+        <fuelFilter>
+          <thingDefs>
+            <li>Chemfuel</li>
+          </thingDefs>
+        </fuelFilter>
+        <consumeFuelOnlyWhenUsed>true</consumeFuelOnlyWhenUsed>
+        <autoRefuelPercent>1</autoRefuelPercent>
+        <showFuelGizmo>true</showFuelGizmo>
+        <drawOutOfFuelOverlay>false</drawOutOfFuelOverlay>
+				<drawFuelGaugeInMap>true</drawFuelGaugeInMap>
+      </li>
+    </comps>
+    <placeWorkers>
+      <li>PlaceWorker_FuelingPort</li>
+      <li>PlaceWorker_NotUnderRoof</li>
+    </placeWorkers>
+    <drawPlaceWorkersWhileSelected>true</drawPlaceWorkersWhileSelected>
+		<researchPrerequisites>
+			<li>TransportPod</li>
+		</researchPrerequisites>
+  </ThingDef>
+  
+  <ThingDef ParentName="BuildingBase">
+    <defName>TransportPod</defName>
+    <label>transport pod</label>
+    <description>A launchable suborbital-travel cargo pod capable of carrying people, items, or animals. Can be used for transport, surprise attacks, or reinforcing battles.</description>
+    <graphicData>
+      <texPath>Things/Special/DropPod</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <drawSize>(2,2)</drawSize>
+    </graphicData>
+    <size>(1,1)</size>
+    <rotatable>false</rotatable>
+    <altitudeLayer>Building</altitudeLayer>
+    <passability>PassThroughOnly</passability>
+    <castEdgeShadows>false</castEdgeShadows>
+    <fillPercent>0.5</fillPercent>
+    <designationCategory>Misc</designationCategory>
+    <iconDrawScale>1</iconDrawScale>
+    <statBases>
+      <MaxHitPoints>250</MaxHitPoints>
+      <WorkToBuild>3000</WorkToBuild>
+      <Flammability>0</Flammability>
+    </statBases>
+    <costList>
+      <Steel>80</Steel>
+      <Component>1</Component>
+    </costList>
+    <comps>
+      <li Class="CompProperties_Transporter" />
+      <li Class="CompProperties_Launchable" />
+    </comps>
+    <placeWorkers>
+      <li>PlaceWorker_NeedsFuelingPort</li>
+      <li>PlaceWorker_NotUnderRoof</li>
+    </placeWorkers>
+		<researchPrerequisites>
+			<li>TransportPod</li>
+		</researchPrerequisites>
+  </ThingDef>
+  
   <!--========================== Facilities ============================-->
 
   <ThingDef ParentName="BuildingBase">
@@ -284,9 +445,11 @@
     <designationHotkey>Misc4</designationHotkey>
     <designationCategory>Misc</designationCategory>
     <minifiedDef>MinifiedFurniture</minifiedDef>
+    <canOverlapZones>false</canOverlapZones>
     <statBases>
       <MaxHitPoints>200</MaxHitPoints>
-      <WorkToMake>5000</WorkToMake>
+      <WorkToBuild>5000</WorkToBuild>
+      <Mass>100</Mass>
       <Flammability>1.0</Flammability>
     </statBases>
     <costList>
@@ -338,7 +501,8 @@
     <fillPercent>0.2</fillPercent>
     <statBases>
       <MaxHitPoints>100</MaxHitPoints>
-      <WorkToMake>4000</WorkToMake>
+      <WorkToBuild>4000</WorkToBuild>
+      <Mass>20</Mass>
       <Flammability>1.0</Flammability>
     </statBases>
     <description>Increases patients treatment quality. Needs to be placed adjacent to a medical bed. One medical bed can be linked to only one vitals monitor.</description>
@@ -348,6 +512,9 @@
     </costList>
     <designationCategory>Misc</designationCategory>
     <minifiedDef>MinifiedFurniture</minifiedDef>
+		<building>
+			<ai_chillDestination>false</ai_chillDestination>
+		</building>
     <comps>
       <li Class="CompProperties_Power">
         <compClass>CompPowerTrader</compClass>
@@ -357,7 +524,7 @@
       <li Class="CompProperties_Flickable"/>
       <li Class="CompProperties_Facility">
         <statOffsets>
-          <MedicalTreatmentQualityFactor>0.04</MedicalTreatmentQualityFactor>
+          <MedicalTendQualityOffset>0.07</MedicalTendQualityOffset>
           <ImmunityGainSpeedFactor>0.02</ImmunityGainSpeedFactor>
         </statOffsets>
         <maxSimultaneous>1</maxSimultaneous>
@@ -391,9 +558,11 @@
     <castEdgeShadows>true</castEdgeShadows>
     <staticSunShadowHeight>0.35</staticSunShadowHeight>
     <fillPercent>0.5</fillPercent>
+    <canOverlapZones>false</canOverlapZones>
     <statBases>
       <MaxHitPoints>100</MaxHitPoints>
-      <WorkToMake>1800</WorkToMake>
+      <WorkToBuild>1800</WorkToBuild>
+      <Mass>40</Mass>
       <Flammability>1.0</Flammability>
     </statBases>
     <description>Increases work speed. Needs to be placed near workbench. One workbench can be simultaneously linked to only two tools cabinets.</description>
@@ -434,11 +603,13 @@
     <description>Place the dead in graves to give them a decent final resting place. Colonists will visit full graves to gain meditative joy.</description>
     <size>(1,2)</size>
     <tickerType>Rare</tickerType>
+    <canOverlapZones>false</canOverlapZones>
     <statBases>
-      <WorkToMake>650</WorkToMake>
+      <WorkToBuild>650</WorkToBuild>
     </statBases>
     <passability>PassThroughOnly</passability>
     <building>
+			<ai_chillDestination>false</ai_chillDestination>
       <isInert>true</isInert>
       <preventDeterioration>true</preventDeterioration>
       <fullGraveGraphicData>
@@ -464,11 +635,6 @@
     <inspectorTabs>
       <li>ITab_Storage</li>
     </inspectorTabs>
-    <comps>
-      <li>
-        <compClass>CompQuality</compClass>
-      </li>
-    </comps>
     <terrainAffordanceNeeded>Diggable</terrainAffordanceNeeded>
     <designationCategory>Misc</designationCategory>
     <designationHotkey>Misc8</designationHotkey>
@@ -495,8 +661,10 @@
     <castEdgeShadows>true</castEdgeShadows>
     <fillPercent>0.5</fillPercent>
     <tickerType>Rare</tickerType>
+    <canOverlapZones>false</canOverlapZones>
     <building>
-      <preventDeterioration>true</preventDeterioration>
+			<ai_chillDestination>false</ai_chillDestination>
+			<preventDeterioration>true</preventDeterioration>
       <fullGraveGraphicData>
 				<texPath>Things/Building/Misc/SarcophagusFull</texPath>
 				<graphicClass>Graphic_Multi</graphicClass>
@@ -521,10 +689,10 @@
       </defaultStorageSettings>
     </building>
     <statBases>
-      <WorkToMake>2500</WorkToMake>
+      <WorkToBuild>2500</WorkToBuild>
       <MaxHitPoints>250</MaxHitPoints>
       <Flammability>1.0</Flammability>
-      <Beauty>10</Beauty>
+      <Beauty>0</Beauty>
     </statBases>
     <stuffCategories>
       <li>Woody</li>
@@ -543,7 +711,6 @@
         <nameMaker>ArtName_SarcophagusPlate</nameMaker>
         <descriptionMaker>ArtDescription_SarcophagusPlate</descriptionMaker>
         <mustBeFullGrave>true</mustBeFullGrave>
-        <canBeEnjoyedAsArt>false</canBeEnjoyedAsArt>
       </li>
     </comps>
     <costStuffCount>60</costStuffCount>
@@ -574,8 +741,9 @@
     <blockWind>true</blockWind>
     <castEdgeShadows>true</castEdgeShadows>
     <fillPercent>0.5</fillPercent>
+    <canOverlapZones>false</canOverlapZones>
     <statBases>
-      <WorkToMake>3200</WorkToMake>
+      <WorkToBuild>3200</WorkToBuild>
       <MaxHitPoints>250</MaxHitPoints>
       <Flammability>1.0</Flammability>
     </statBases>
@@ -585,17 +753,19 @@
     <designationCategory>Misc</designationCategory>
     <hasInteractionCell>true</hasInteractionCell>
     <interactionCellOffset>(1,0,0)</interactionCellOffset>
+		<building>
+			<ai_chillDestination>false</ai_chillDestination>
+		</building>
     <costList>
       <Steel>180</Steel>
       <Uranium>5</Uranium>
-      <Component>4</Component>
+      <Component>8</Component>
     </costList>
     <comps>
       <li Class="CompProperties_Explosive">
         <explosiveRadius>2.66</explosiveRadius>
         <explosiveDamageType>Flame</explosiveDamageType>
       </li>
-      <li Class="CompProperties_Breakdownable"/>
     </comps>
     <terrainAffordanceNeeded>Heavy</terrainAffordanceNeeded>
     <staticSunShadowHeight>0.4</staticSunShadowHeight>
@@ -616,6 +786,7 @@
     <blockWind>true</blockWind>
     <castEdgeShadows>true</castEdgeShadows>
     <fillPercent>0.5</fillPercent>
+    <canOverlapZones>false</canOverlapZones>
     <statBases>
       <MaxHitPoints>250</MaxHitPoints>
       <Flammability>1.0</Flammability>
@@ -634,6 +805,9 @@
       <Steel>25</Steel>
       <Uranium>3</Uranium>
     </killedLeavings>
+		<building>
+			<ai_chillDestination>false</ai_chillDestination>
+		</building>
     <comps>
       <li Class="CompProperties_Explosive">
         <explosiveRadius>2.66</explosiveRadius>
@@ -659,10 +833,11 @@
     </graphicData>
     <AltitudeLayer>FloorEmplacement</AltitudeLayer>
     <statBases>
-      <WorkToMake>0</WorkToMake>
+      <WorkToBuild>0</WorkToBuild>
     </statBases>
     <useHitPoints>False</useHitPoints>
-    <Size>(2,1)</Size>
+		<scatterableOnMapGen>false</scatterableOnMapGen>
+		<Size>(2,1)</Size>
     <DesignationCategory>Misc</DesignationCategory>
     <Passability>Standable</Passability>
     <building>
@@ -682,9 +857,10 @@
     </graphicData>
     <AltitudeLayer>FloorEmplacement</AltitudeLayer>
     <statBases>
-      <WorkToMake>0</WorkToMake>
+      <WorkToBuild>0</WorkToBuild>
     </statBases>
-    <useHitPoints>False</useHitPoints>
+		<scatterableOnMapGen>false</scatterableOnMapGen>
+		<useHitPoints>False</useHitPoints>
     <DesignationCategory>Misc</DesignationCategory>
     <Passability>Standable</Passability>
     <building>
@@ -692,6 +868,30 @@
       <canPlaceOverImpassablePlant>false</canPlaceOverImpassablePlant>
     </building>
     <designationHotkey>Misc11</designationHotkey>
+  </ThingDef>
+  
+  <ThingDef ParentName="BuildingBase">
+    <defName>CaravanPackingSpot</defName>
+    <label>caravan packing spot</label>
+    <Description>Designates a spot where caravans will be formed.</Description>
+    <graphicData>
+      <texPath>Things/Building/Misc/CaravanPackingSpot</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <drawSize>(1,1)</drawSize>
+    </graphicData>
+    <AltitudeLayer>FloorEmplacement</AltitudeLayer>
+    <statBases>
+      <WorkToBuild>0</WorkToBuild>
+    </statBases>
+    <useHitPoints>false</useHitPoints>
+		<scatterableOnMapGen>false</scatterableOnMapGen>
+    <DesignationCategory>Misc</DesignationCategory>
+    <Passability>Standable</Passability>
+    <building>
+      <sowTag>SupportPlantsOnly</sowTag>
+      <canPlaceOverImpassablePlant>false</canPlaceOverImpassablePlant>
+    </building>
+    <designationHotkey>Misc12</designationHotkey>
   </ThingDef>
   
 </Buildings>

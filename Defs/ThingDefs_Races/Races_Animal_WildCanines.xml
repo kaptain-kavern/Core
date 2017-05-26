@@ -16,7 +16,7 @@
     <verbs>
       <li>
         <verbClass>Verb_MeleeAttack</verbClass>
-        <defaultCooldownTicks>90</defaultCooldownTicks>
+        <defaultCooldownTime>1.5</defaultCooldownTime>
         <meleeDamageBaseAmount>10</meleeDamageBaseAmount>
         <meleeDamageDef>Scratch</meleeDamageDef>
         <linkedBodyPartsGroup>FrontLeftPaw</linkedBodyPartsGroup>
@@ -31,7 +31,7 @@
       </li>
       <li>
         <verbClass>Verb_MeleeAttack</verbClass>
-        <defaultCooldownTicks>90</defaultCooldownTicks>
+        <defaultCooldownTime>1.5</defaultCooldownTime>
         <meleeDamageBaseAmount>10</meleeDamageBaseAmount>
         <meleeDamageDef>Scratch</meleeDamageDef>
         <linkedBodyPartsGroup>FrontRightPaw</linkedBodyPartsGroup>
@@ -46,7 +46,7 @@
       </li>
       <li>
         <verbClass>Verb_MeleeAttack</verbClass>
-        <defaultCooldownTicks>120</defaultCooldownTicks>
+        <defaultCooldownTime>2.0</defaultCooldownTime>
         <meleeDamageBaseAmount>12</meleeDamageBaseAmount>
         <meleeDamageDef>Bite</meleeDamageDef>
         <linkedBodyPartsGroup>Teeth</linkedBodyPartsGroup>
@@ -58,6 +58,14 @@
             </li>
           </extraMeleeDamages>
         </surpriseAttack>
+      </li>
+      <li>
+        <verbClass>Verb_MeleeAttack</verbClass>
+        <defaultCooldownTime>1.65</defaultCooldownTime>
+        <meleeDamageBaseAmount>3</meleeDamageBaseAmount>
+        <meleeDamageDef>Blunt</meleeDamageDef>
+        <commonality>0.01</commonality>
+        <linkedBodyPartsGroup>HeadAttackTool</linkedBodyPartsGroup>
       </li>
     </verbs>
     <race>
@@ -76,7 +84,7 @@
       <trainableIntelligence>Advanced</trainableIntelligence>
       <wildness>0.80</wildness>
       <manhunterOnDamageChance>1</manhunterOnDamageChance>
-      <manhunterOnTameFailChance>0.025</manhunterOnTameFailChance>
+      <manhunterOnTameFailChance>0.018</manhunterOnTameFailChance>
       <nuzzleMtbHours>120</nuzzleMtbHours>
       <litterSizeCurve>
         <points>
@@ -95,11 +103,11 @@
         </li>
         <li>
           <def>AnimalJuvenile</def>
-          <minAge>0.25</minAge>
+          <minAge>0.2</minAge>
         </li>
         <li>
           <def>AnimalAdult</def>
-          <minAge>0.8</minAge>
+          <minAge>0.45</minAge>
           <soundWounded>Pawn_Warg_Wounded</soundWounded>
           <soundDeath>Pawn_Warg_Death</soundDeath>
           <soundCall>Pawn_Warg_Call</soundCall>
@@ -123,6 +131,7 @@
     <lifeStages>
       <li>
         <label>warg puppy</label>
+        <labelPlural>warg puppies</labelPlural>
         <bodyGraphicData>
           <texPath>Things/Pawn/Animal/Warg/Warg</texPath>
           <drawSize>1.05</drawSize>
@@ -184,7 +193,7 @@
     <verbs>
       <li>
         <verbClass>Verb_MeleeAttack</verbClass>
-        <defaultCooldownTicks>100</defaultCooldownTicks>
+        <defaultCooldownTime>1.65</defaultCooldownTime>
         <meleeDamageBaseAmount>9</meleeDamageBaseAmount>
         <meleeDamageDef>Scratch</meleeDamageDef>
         <linkedBodyPartsGroup>FrontLeftPaw</linkedBodyPartsGroup>
@@ -199,7 +208,7 @@
       </li>
       <li>
         <verbClass>Verb_MeleeAttack</verbClass>
-        <defaultCooldownTicks>100</defaultCooldownTicks>
+        <defaultCooldownTime>1.65</defaultCooldownTime>
         <meleeDamageBaseAmount>9</meleeDamageBaseAmount>
         <meleeDamageDef>Scratch</meleeDamageDef>
         <linkedBodyPartsGroup>FrontRightPaw</linkedBodyPartsGroup>
@@ -214,7 +223,7 @@
       </li>
       <li>
         <verbClass>Verb_MeleeAttack</verbClass>
-        <defaultCooldownTicks>130</defaultCooldownTicks>
+        <defaultCooldownTime>2.1</defaultCooldownTime>
         <meleeDamageBaseAmount>11</meleeDamageBaseAmount>
         <meleeDamageDef>Bite</meleeDamageDef>
         <linkedBodyPartsGroup>Teeth</linkedBodyPartsGroup>
@@ -226,6 +235,14 @@
             </li>
           </extraMeleeDamages>
         </surpriseAttack>
+      </li>
+      <li>
+        <verbClass>Verb_MeleeAttack</verbClass>
+        <defaultCooldownTime>1.65</defaultCooldownTime>
+        <meleeDamageBaseAmount>3</meleeDamageBaseAmount>
+        <meleeDamageDef>Blunt</meleeDamageDef>
+        <commonality>0.01</commonality>
+        <linkedBodyPartsGroup>HeadAttackTool</linkedBodyPartsGroup>
       </li>
     </verbs>
     <race>
@@ -243,7 +260,7 @@
       <wildness>0.75</wildness>
       <nuzzleMtbHours>120</nuzzleMtbHours>
       <manhunterOnDamageChance>1</manhunterOnDamageChance>
-      <manhunterOnTameFailChance>0.025</manhunterOnTameFailChance>
+      <manhunterOnTameFailChance>0.018</manhunterOnTameFailChance>
       <litterSizeCurve>
         <points>
           <li>(0.5, 0)</li>
@@ -261,11 +278,11 @@
         </li>
         <li>
           <def>AnimalJuvenile</def>
-          <minAge>0.25</minAge>
+          <minAge>0.2</minAge>
         </li>
         <li>
           <def>AnimalAdult</def>
-          <minAge>0.8</minAge>
+          <minAge>0.45</minAge>
           <soundWounded>Pawn_Dog_Injured</soundWounded>
           <soundDeath>Pawn_Dog_Death</soundDeath>
           <soundCall>Pawn_Dog_Call</soundCall>
@@ -305,10 +322,12 @@
   <PawnKindDef ParentName="AnimalKindBaseWolf">
     <defName>WolfTimber</defName>
     <label>timber wolf</label>
+    <labelPlural>timber wolves</labelPlural>
     <race>WolfTimber</race>
     <lifeStages>
       <li>
         <label>timber wolf puppy</label>
+        <labelPlural>timber wolf puppies</labelPlural>
         <bodyGraphicData>
           <texPath>Things/Pawn/Animal/WolfTimber/WolfTimber</texPath>
           <drawSize>1.05</drawSize>
@@ -366,10 +385,12 @@
   <PawnKindDef ParentName="AnimalKindBaseWolf">
     <defName>WolfArctic</defName>
     <label>arctic wolf</label>
+    <labelPlural>arctic wolves</labelPlural>
     <race>WolfArctic</race>
     <lifeStages>
       <li>
-        <label>timber wolf puppy</label>
+        <label>arctic wolf puppy</label>
+        <labelPlural>arctic wolf puppies</labelPlural>
         <bodyGraphicData>
           <texPath>Things/Pawn/Animal/WolfArctic/WolfArctic</texPath>
           <drawSize>1.05</drawSize>
@@ -421,7 +442,7 @@
     <verbs>
       <li>
         <verbClass>Verb_MeleeAttack</verbClass>
-        <defaultCooldownTicks>100</defaultCooldownTicks>
+        <defaultCooldownTime>1.65</defaultCooldownTime>
         <meleeDamageBaseAmount>7</meleeDamageBaseAmount>
         <meleeDamageDef>Scratch</meleeDamageDef>
         <linkedBodyPartsGroup>FrontLeftPaw</linkedBodyPartsGroup>
@@ -436,7 +457,7 @@
       </li>
       <li>
         <verbClass>Verb_MeleeAttack</verbClass>
-        <defaultCooldownTicks>100</defaultCooldownTicks>
+        <defaultCooldownTime>1.65</defaultCooldownTime>
         <meleeDamageBaseAmount>7</meleeDamageBaseAmount>
         <meleeDamageDef>Scratch</meleeDamageDef>
         <linkedBodyPartsGroup>FrontRightPaw</linkedBodyPartsGroup>
@@ -451,7 +472,7 @@
       </li>
       <li>
         <verbClass>Verb_MeleeAttack</verbClass>
-        <defaultCooldownTicks>130</defaultCooldownTicks>
+        <defaultCooldownTime>2.1</defaultCooldownTime>
         <meleeDamageBaseAmount>8</meleeDamageBaseAmount>
         <meleeDamageDef>Bite</meleeDamageDef>
         <linkedBodyPartsGroup>Teeth</linkedBodyPartsGroup>
@@ -463,6 +484,14 @@
             </li>
           </extraMeleeDamages>
         </surpriseAttack>
+      </li>
+      <li>
+        <verbClass>Verb_MeleeAttack</verbClass>
+        <defaultCooldownTime>1.65</defaultCooldownTime>
+        <meleeDamageBaseAmount>2</meleeDamageBaseAmount>
+        <meleeDamageDef>Blunt</meleeDamageDef>
+        <commonality>0.01</commonality>
+        <linkedBodyPartsGroup>HeadAttackTool</linkedBodyPartsGroup>
       </li>
     </verbs>
     <race>
@@ -480,7 +509,7 @@
       <wildness>0.75</wildness>
       <nuzzleMtbHours>120</nuzzleMtbHours>
       <manhunterOnDamageChance>0.20</manhunterOnDamageChance>
-      <manhunterOnTameFailChance>0.025</manhunterOnTameFailChance>
+      <manhunterOnTameFailChance>0.018</manhunterOnTameFailChance>
       <litterSizeCurve>
         <points>
           <li>(0.5, 0)</li>
@@ -498,11 +527,11 @@
         </li>
         <li>
           <def>AnimalJuvenile</def>
-          <minAge>0.25</minAge>
+          <minAge>0.15</minAge>
         </li>
         <li>
           <def>AnimalAdult</def>
-          <minAge>0.5</minAge>
+          <minAge>0.35</minAge>
           <!-- no sounds -->
         </li>
       </lifeStageAges>
@@ -538,10 +567,12 @@
   <PawnKindDef ParentName="AnimalKindBaseFox">
     <defName>FoxFennec</defName>
     <label>fennec fox</label>
+    <labelPlural>fennec foxes</labelPlural>
     <race>FoxFennec</race>
     <lifeStages>
       <li>
         <label>fennec fox puppy</label>
+        <labelPlural>fennec fox puppies</labelPlural>
         <bodyGraphicData>
           <texPath>Things/Pawn/Animal/FoxFennec/FoxFennec</texPath>
           <drawSize>0.9</drawSize>
@@ -582,7 +613,7 @@
 
   <ThingDef ParentName="ThingBaseFox">
     <defName>FoxRed</defName>
-    <label>red Fox</label>
+    <label>red fox</label>
     <description>A small solitary canine evolved for hunting small prey in temperate climates.</description>
     <race>
       <leatherColor>(178,100,34)</leatherColor>
@@ -594,10 +625,12 @@
   <PawnKindDef ParentName="AnimalKindBaseFox">
     <defName>FoxRed</defName>
     <label>red fox</label>
+    <labelPlural>red foxes</labelPlural>
     <race>FoxRed</race>
     <lifeStages>
       <li>
         <label>red fox puppy</label>
+        <labelPlural>red fox puppies</labelPlural>
         <bodyGraphicData>
           <texPath>Things/Pawn/Animal/FoxRed/FoxRed</texPath>
           <drawSize>1.0</drawSize>
@@ -650,10 +683,12 @@
   <PawnKindDef ParentName="AnimalKindBaseFox">
     <defName>FoxArctic</defName>
     <label>arctic fox</label>
+    <labelPlural>arctic foxes</labelPlural>
     <race>FoxArctic</race>
     <lifeStages>
       <li>
-        <label>Arctic fox puppy</label>
+        <label>arctic fox puppy</label>
+        <labelPlural>arctic fox puppies</labelPlural>
         <bodyGraphicData>
           <texPath>Things/Pawn/Animal/FoxArctic/FoxArctic</texPath>
           <drawSize>1.0</drawSize>

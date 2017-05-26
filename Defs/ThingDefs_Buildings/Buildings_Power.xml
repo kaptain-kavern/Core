@@ -22,7 +22,8 @@
     </blueprintGraphicData>
     <uiIconPath>Things/Building/Linked/PowerConduit_MenuIcon</uiIconPath>
     <building>
-      <isInert>true</isInert>
+			<ai_chillDestination>false</ai_chillDestination>
+			<isInert>true</isInert>
       <ignoreNeedsPower>true</ignoreNeedsPower>
       <isEdifice>false</isEdifice>
     </building>
@@ -31,7 +32,7 @@
     <leaveResourcesWhenKilled>false</leaveResourcesWhenKilled>
     <statBases>
       <MaxHitPoints>80</MaxHitPoints>
-      <WorkToMake>35</WorkToMake>
+      <WorkToBuild>35</WorkToBuild>
       <Flammability>1.0</Flammability>
       <Beauty>-2</Beauty>
     </statBases>
@@ -69,7 +70,7 @@
     <category>Building</category>
     <description>Switches power on/off.</description>
     <graphicData>
-      <texPath>Things/Building/Power/PowerSwitch_On</texPath>
+      <texPath>Things/Building/Power/PowerSwitch</texPath>
       <graphicClass>Graphic_Single</graphicClass>
       <shaderType>Transparent</shaderType>
       <damageData>
@@ -77,7 +78,8 @@
       </damageData>
     </graphicData>
     <building>
-      <ignoreNeedsPower>true</ignoreNeedsPower>
+			<ai_chillDestination>false</ai_chillDestination>
+			<ignoreNeedsPower>true</ignoreNeedsPower>
       <allowWireConnection>false</allowWireConnection>
     </building>
     <altitudeLayer>Building</altitudeLayer>
@@ -85,7 +87,7 @@
     <leaveResourcesWhenKilled>false</leaveResourcesWhenKilled>
     <statBases>
       <MaxHitPoints>120</MaxHitPoints>
-      <WorkToMake>200</WorkToMake>
+      <WorkToBuild>200</WorkToBuild>
       <Flammability>0.4</Flammability>
       <Beauty>-2</Beauty>
     </statBases>
@@ -124,7 +126,7 @@
       <drawSize>(2,2)</drawSize>
     </graphicData>
     <altitudeLayer>Building</altitudeLayer>
-    <passability>Impassable</passability>
+    <passability>PassThroughOnly</passability>
     <pathCost>150</pathCost>
     <blockWind>true</blockWind>
     <fillPercent>1.0</fillPercent>
@@ -132,11 +134,12 @@
     <rotatable>false</rotatable>
     <statBases>
       <MaxHitPoints>300</MaxHitPoints>
-      <WorkToMake>2500</WorkToMake>
+      <WorkToBuild>2500</WorkToBuild>
       <Flammability>1.0</Flammability>
     </statBases>
     <tickerType>Normal</tickerType>
     <description>Produces power by consuming wood fuel. Must be fueled by hand.</description>
+    <canOverlapZones>false</canOverlapZones>
     <size>(2,2)</size>
     <building>
       <ignoreNeedsPower>true</ignoreNeedsPower>
@@ -153,7 +156,7 @@
       </li>
       <li Class="CompProperties_Flickable" />
       <li Class="CompProperties_Refuelable">
-        <fuelConsumptionRate>16.0</fuelConsumptionRate>
+        <fuelConsumptionRate>22.0</fuelConsumptionRate>
         <fuelCapacity>75.0</fuelCapacity>
         <fuelFilter>
           <thingDefs>
@@ -206,11 +209,12 @@
     <minifiedDef>MinifiedFurniture</minifiedDef>
     <statBases>
       <MaxHitPoints>100</MaxHitPoints>
-      <WorkToMake>800</WorkToMake>
+      <WorkToBuild>800</WorkToBuild>
+      <Mass>20</Mass>
       <Flammability>1.0</Flammability>
       <Beauty>-18</Beauty>
     </statBases>
-    <description>Stores electricity when there is excess power and yields it when there is not. Warning - charged batteries tend to explode when heated or wet.</description>
+    <description>Stores electricity when there is excess power and yields it when there is not. Warning - charged batteries tend to explode when exposed to rain or fire.</description>
     <size>(1,2)</size>
     <building>
       <ignoreNeedsPower>true</ignoreNeedsPower>
@@ -233,6 +237,7 @@
     <staticSunShadowHeight>0.5</staticSunShadowHeight>
     <constructEffect>ConstructMetal</constructEffect>
     <designationHotkey>Misc4</designationHotkey>
+    <canOverlapZones>false</canOverlapZones>
     <researchPrerequisites>
       <li>Batteries</li>
     </researchPrerequisites>
@@ -256,9 +261,10 @@
     <pathCost>70</pathCost>
     <fillPercent>0.5</fillPercent>
     <castEdgeShadows>true</castEdgeShadows>
+    <canOverlapZones>false</canOverlapZones>
     <statBases>
       <MaxHitPoints>300</MaxHitPoints>
-      <WorkToMake>2500</WorkToMake>
+      <WorkToBuild>2500</WorkToBuild>
       <Flammability>1.0</Flammability>
     </statBases>
     <tickerType>Normal</tickerType>
@@ -307,13 +313,15 @@
     <passability>Impassable</passability>
     <blockWind>true</blockWind>
     <castEdgeShadows>true</castEdgeShadows>
-    <fillPercent>1</fillPercent>
+		<scatterableOnMapGen>false</scatterableOnMapGen>
+		<fillPercent>1</fillPercent>
     <blockLight>true</blockLight>
+    <canOverlapZones>false</canOverlapZones>
     <statBases>
       <MaxHitPoints>500</MaxHitPoints>
-      <WorkToMake>6000</WorkToMake>
+      <WorkToBuild>6000</WorkToBuild>
       <Flammability>1.0</Flammability>
-      <Beauty>-40</Beauty>
+      <Beauty>-30</Beauty>
     </statBases>
     <tickerType>Normal</tickerType>
     <description>Produces electricity from geothermal steam geysers. Must be placed on a geyser.</description>
@@ -338,7 +346,8 @@
       <li>PlaceWorker_OnSteamGeyser</li>
     </placeWorkers>
     <building>
-      <soundAmbient>GeothermalPlant_Ambience</soundAmbient>
+			<ai_chillDestination>false</ai_chillDestination>
+			<soundAmbient>GeothermalPlant_Ambience</soundAmbient>
       <ignoreNeedsPower>true</ignoreNeedsPower>
     </building>
     <constructEffect>ConstructMetal</constructEffect>

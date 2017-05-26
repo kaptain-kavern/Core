@@ -23,6 +23,7 @@
     <emergency>true</emergency>
     <verb>receive treatment in</verb>
     <gerund>receiving treatment in</gerund>
+    <tagToGive>RestingForMedicalReasons</tagToGive>
   </WorkGiverDef>
   
   <!-- ============= Doctor ============= -->
@@ -49,7 +50,7 @@
     <workType>Doctor</workType>
     <verb>rescue</verb>
     <gerund>rescuing</gerund>
-    <priorityInType>80</priorityInType>
+    <priorityInType>90</priorityInType>
     <directOrderable>false</directOrderable>
     <requiredCapacities>
       <li>Manipulation</li>
@@ -61,7 +62,7 @@
     <label>operate on humanlikes</label>
     <giverClass>WorkGiver_DoBill</giverClass>
     <workType>Doctor</workType>
-    <priorityInType>70</priorityInType>
+    <priorityInType>80</priorityInType>
     <billGiversAllHumanlikes>true</billGiversAllHumanlikes>
     <billGiversAllHumanlikesCorpses>true</billGiversAllHumanlikesCorpses>
     <verb>operate</verb>
@@ -73,47 +74,93 @@
   </WorkGiverDef>
 
   <WorkGiverDef>
-    <defName>DoBillsMedicalAnimalOperation</defName>
-    <label>operate on animals</label>
-    <giverClass>WorkGiver_DoBill</giverClass>
+    <defName>DoctorTendToHumanlikes</defName>
+    <label>tend to patients</label>
+    <giverClass>WorkGiver_TendOther</giverClass>
     <workType>Doctor</workType>
-    <priorityInType>60</priorityInType>
-    <billGiversAllAnimals>true</billGiversAllAnimals>
-    <billGiversAllAnimalsCorpses>true</billGiversAllAnimalsCorpses>
-    <verb>operate</verb>
-    <gerund>operating on</gerund>
+    <verb>tend to</verb>
+    <gerund>tending to</gerund>
     <requiredCapacities>
       <li>Manipulation</li>
     </requiredCapacities>
+    <priorityInType>70</priorityInType>
     <prioritizeSustains>true</prioritizeSustains>
+    <tendToHumanlikesOnly>true</tendToHumanlikesOnly>
   </WorkGiverDef>
 
   <WorkGiverDef>
-    <defName>DoctorTreat</defName>
-    <label>give treatment</label>
-    <giverClass>WorkGiver_Tend</giverClass>
+    <defName>DoctorTendToSelf</defName>
+    <label>tend to self</label>
+    <giverClass>WorkGiver_TendSelf</giverClass>
     <workType>Doctor</workType>
-    <verb>treat</verb>
-    <gerund>treating</gerund>
+    <verb>tend to</verb>
+    <gerund>tending to</gerund>
     <requiredCapacities>
       <li>Manipulation</li>
     </requiredCapacities>
-    <priorityInType>50</priorityInType>
+    <priorityInType>65</priorityInType>
     <prioritizeSustains>true</prioritizeSustains>
   </WorkGiverDef>
-
+  
   <WorkGiverDef>
-    <defName>DoctorFeed</defName>
+    <defName>DoctorFeedHumanlikes</defName>
     <label>feed patients</label>
     <giverClass>WorkGiver_FeedPatient</giverClass>
     <workType>Doctor</workType>
     <verb>feed</verb>
     <gerund>feeding</gerund>
-    <priorityInType>40</priorityInType>
+    <priorityInType>60</priorityInType>
     <requiredCapacities>
       <li>Manipulation</li>
     </requiredCapacities>
     <prioritizeSustains>true</prioritizeSustains>
+    <feedHumanlikesOnly>true</feedHumanlikesOnly>
+  </WorkGiverDef>
+
+	<WorkGiverDef>
+		<defName>DoBillsMedicalAnimalOperation</defName>
+		<label>operate on animals</label>
+		<giverClass>WorkGiver_DoBill</giverClass>
+		<workType>Doctor</workType>
+		<priorityInType>50</priorityInType>
+		<billGiversAllAnimals>true</billGiversAllAnimals>
+		<billGiversAllAnimalsCorpses>true</billGiversAllAnimalsCorpses>
+		<verb>operate</verb>
+		<gerund>operating on</gerund>
+		<requiredCapacities>
+			<li>Manipulation</li>
+		</requiredCapacities>
+		<prioritizeSustains>true</prioritizeSustains>
+	</WorkGiverDef>
+
+  <WorkGiverDef>
+    <defName>DoctorTendToAnimals</defName>
+    <label>tend to animals</label>
+    <giverClass>WorkGiver_TendOther</giverClass>
+    <workType>Doctor</workType>
+    <verb>tend to</verb>
+    <gerund>tending to</gerund>
+    <requiredCapacities>
+      <li>Manipulation</li>
+    </requiredCapacities>
+    <priorityInType>40</priorityInType>
+    <prioritizeSustains>true</prioritizeSustains>
+    <tendToAnimalsOnly>true</tendToAnimalsOnly>
+  </WorkGiverDef>
+
+  <WorkGiverDef>
+    <defName>DoctorFeedAnimals</defName>
+    <label>feed animals</label>
+    <giverClass>WorkGiver_FeedPatient</giverClass>
+    <workType>Doctor</workType>
+    <verb>feed</verb>
+    <gerund>feeding</gerund>
+    <priorityInType>30</priorityInType>
+    <requiredCapacities>
+      <li>Manipulation</li>
+    </requiredCapacities>
+    <prioritizeSustains>true</prioritizeSustains>
+    <feedAnimalsOnly>true</feedAnimalsOnly>
   </WorkGiverDef>
 
   <WorkGiverDef>
@@ -148,6 +195,7 @@
     <workType>PatientBedRest</workType>
     <verb>get bed rest in</verb>
     <gerund>getting bed rest in</gerund>
+    <tagToGive>RestingForMedicalReasons</tagToGive>
   </WorkGiverDef>
   
   <!-- ============= Flicker ============= -->
@@ -291,6 +339,7 @@
     <verb>tame</verb>
     <gerund>taming</gerund>
     <priorityInType>80</priorityInType>
+    <tagToGive>Fieldwork</tagToGive>
     <requiredCapacities>
       <li>Talking</li>
       <li>Manipulation</li>
@@ -325,7 +374,7 @@
       <li>FueledStove</li>
     </fixedBillGiverDefs>
     <verb>cook</verb>
-    <gerund>cooking</gerund>
+    <gerund>cooking at</gerund>
     <requiredCapacities>
       <li>Manipulation</li>
     </requiredCapacities>
@@ -342,7 +391,7 @@
       <li>Campfire</li>
     </fixedBillGiverDefs>
     <verb>cook</verb>
-    <gerund>cooking</gerund>
+    <gerund>cooking at</gerund>
     <requiredCapacities>
       <li>Manipulation</li>
     </requiredCapacities>
@@ -389,7 +438,7 @@
       <li>Brewery</li>
     </fixedBillGiverDefs>
     <verb>brew</verb>
-    <gerund>brewing</gerund>
+    <gerund>brewing at</gerund>
     <requiredCapacities>
       <li>Manipulation</li>
     </requiredCapacities>
@@ -405,6 +454,7 @@
     <workType>Hunting</workType>
     <verb>hunt</verb>
     <gerund>hunting</gerund>
+    <tagToGive>Fieldwork</tagToGive>
     <requiredCapacities>
       <li>Manipulation</li>
     </requiredCapacities>
@@ -412,38 +462,70 @@
   
   <!-- ============= Construction ============= -->
 
-  <WorkGiverDef>
-    <defName>Deconstruct</defName>
-    <label>deconstruct structures</label>
-    <giverClass>WorkGiver_Deconstruct</giverClass>
-    <workType>Construction</workType>
-    <priorityInType>200</priorityInType>
-    <verb>deconstruct</verb>
-    <gerund>deconstructing</gerund>
-    <requiredCapacities>
-      <li>Manipulation</li>
-    </requiredCapacities>
-  </WorkGiverDef>
+	<WorkGiverDef>
+		<defName>FixBrokenDownBuilding</defName>
+		<label>fix broken-down buildings</label>
+		<giverClass>WorkGiver_FixBrokenDownBuilding</giverClass>
+		<workType>Construction</workType>
+		<priorityInType>90</priorityInType>
+		<verb>replace broken components in</verb>
+		<gerund>replacing broken components in</gerund>
+		<requiredCapacities>
+			<li>Manipulation</li>
+		</requiredCapacities>
+		<prioritizeSustains>true</prioritizeSustains>
+	</WorkGiverDef>
 
-  <WorkGiverDef>
-    <defName>Uninstall</defName>
-    <label>uninstall structures</label>
-    <giverClass>WorkGiver_Uninstall</giverClass>
-    <workType>Construction</workType>
-    <priorityInType>195</priorityInType>
-    <verb>uninstall</verb>
-    <gerund>uninstalling</gerund>
-    <requiredCapacities>
-      <li>Manipulation</li>
-    </requiredCapacities>
-  </WorkGiverDef>
+	<WorkGiverDef>
+		<defName>Repair</defName>
+		<label>repair damaged things</label>
+		<giverClass>WorkGiver_Repair</giverClass>
+		<workType>Construction</workType>
+		<priorityInType>80</priorityInType>
+		<verb>repair</verb>
+		<gerund>repairing</gerund>
+		<requiredCapacities>
+			<li>Manipulation</li>
+		</requiredCapacities>
+		<canBeDoneByNonColonists>true</canBeDoneByNonColonists>
+	</WorkGiverDef>
+	
+	<WorkGiverDef>
+		<defName>BuildRoofs</defName>
+		<label>build roofs</label>
+		<giverClass>WorkGiver_BuildRoof</giverClass>
+		<workType>Construction</workType>
+		<priorityInType>70</priorityInType>
+		<verb>build roof</verb>
+		<gerund>building roof</gerund>
+		<scanThings>false</scanThings>
+		<scanCells>true</scanCells>
+		<requiredCapacities>
+			<li>Manipulation</li>
+		</requiredCapacities>
+	</WorkGiverDef>
+
+	<WorkGiverDef>
+		<defName>RemoveRoofs</defName>
+		<label>remove roofs</label>
+		<giverClass>WorkGiver_RemoveRoof</giverClass>
+		<workType>Construction</workType>
+		<priorityInType>60</priorityInType>
+		<verb>remove roof</verb>
+		<gerund>removing roof</gerund>
+		<scanThings>false</scanThings>
+		<scanCells>true</scanCells>
+		<requiredCapacities>
+			<li>Manipulation</li>
+		</requiredCapacities>
+	</WorkGiverDef>
 
   <WorkGiverDef>
     <defName>ConstructFinishFrames</defName>
     <label>construct placed frames</label>
     <giverClass>WorkGiver_ConstructFinishFrames</giverClass>
     <workType>Construction</workType>
-    <priorityInType>100</priorityInType>
+    <priorityInType>50</priorityInType>
     <verb>construct</verb>
     <gerund>constructing</gerund>
     <requiredCapacities>
@@ -458,7 +540,7 @@
     <label>deliver resources to frames</label>
     <giverClass>WorkGiver_ConstructDeliverResourcesToFrames</giverClass>
     <workType>Construction</workType>
-    <priorityInType>10</priorityInType>
+    <priorityInType>40</priorityInType>
     <verb>work on</verb>
     <gerund>working on</gerund>
     <requiredCapacities>
@@ -473,7 +555,7 @@
     <label>deliver resources to blueprints</label>
     <giverClass>WorkGiver_ConstructDeliverResourcesToBlueprints</giverClass>
     <workType>Construction</workType>
-    <priorityInType>9</priorityInType>
+    <priorityInType>30</priorityInType>
     <verb>work on</verb>
     <gerund>working on</gerund>
     <requiredCapacities>
@@ -482,43 +564,39 @@
     <canBeDoneByNonColonists>true</canBeDoneByNonColonists>
     <prioritizeSustains>true</prioritizeSustains>
   </WorkGiverDef>
+	
+	<WorkGiverDef>
+		<defName>Deconstruct</defName>
+		<label>deconstruct structures</label>
+		<giverClass>WorkGiver_Deconstruct</giverClass>
+		<workType>Construction</workType>
+		<priorityInType>20</priorityInType>
+		<verb>deconstruct</verb>
+		<gerund>deconstructing</gerund>
+		<requiredCapacities>
+			<li>Manipulation</li>
+		</requiredCapacities>
+	</WorkGiverDef>
 
-  <WorkGiverDef>
-    <defName>BuildRoofs</defName>
-    <label>build roofs</label>
-    <giverClass>WorkGiver_BuildRoof</giverClass>
-    <workType>Construction</workType>
-    <priorityInType>8</priorityInType>
-    <verb>build roof</verb>
-    <gerund>building roof</gerund>
-    <scanThings>false</scanThings>
-    <scanCells>true</scanCells>
-    <requiredCapacities>
-      <li>Manipulation</li>
-    </requiredCapacities>
-  </WorkGiverDef>
-  
-  <WorkGiverDef>
-    <defName>RemoveRoofs</defName>
-    <label>remove roofs</label>
-    <giverClass>WorkGiver_RemoveRoof</giverClass>
-    <workType>Construction</workType>
-    <priorityInType>7</priorityInType>
-    <verb>remove roof</verb>
-    <gerund>removing roof</gerund>
-    <scanThings>false</scanThings>
-    <scanCells>true</scanCells>
-    <requiredCapacities>
-      <li>Manipulation</li>
-    </requiredCapacities>
-  </WorkGiverDef>
-  
-  <WorkGiverDef>
+	<WorkGiverDef>
+		<defName>Uninstall</defName>
+		<label>uninstall structures</label>
+		<giverClass>WorkGiver_Uninstall</giverClass>
+		<workType>Construction</workType>
+		<priorityInType>19</priorityInType>
+		<verb>uninstall</verb>
+		<gerund>uninstalling</gerund>
+		<requiredCapacities>
+			<li>Manipulation</li>
+		</requiredCapacities>
+	</WorkGiverDef>
+
+	<WorkGiverDef>
     <defName>ConstructRemoveFloors</defName>
     <label>remove floors</label>
     <giverClass>WorkGiver_ConstructRemoveFloor</giverClass>
     <workType>Construction</workType>
-    <priorityInType>6</priorityInType>
+    <priorityInType>10</priorityInType>
     <verb>remove floor</verb>
     <gerund>removing floor</gerund>
     <scanThings>false</scanThings>
@@ -528,66 +606,20 @@
     </requiredCapacities>
   </WorkGiverDef>
 
-  <WorkGiverDef>
-    <defName>ConstructSmoothFloors</defName>
-    <label>smooth floors</label>
-    <giverClass>WorkGiver_ConstructSmoothFloor</giverClass>
-    <workType>Construction</workType>
-    <priorityInType>5</priorityInType>
-    <verb>smooth</verb>
-    <gerund>smoothing</gerund>
-    <scanThings>false</scanThings>
-    <scanCells>true</scanCells>
-    <requiredCapacities>
-      <li>Manipulation</li>
-    </requiredCapacities>
-  </WorkGiverDef>
-
-  <!-- ============= Repair ============= -->
-
-  <WorkGiverDef>
-    <defName>FixBrokenDownBuilding</defName>
-    <label>fix broken-down things</label>
-    <giverClass>WorkGiver_FixBrokenDownBuilding</giverClass>
-    <workType>Repair</workType>
-    <priorityInType>15</priorityInType>
-    <verb>replace broken components in</verb>
-    <gerund>replacing broken components in</gerund>
-    <requiredCapacities>
-      <li>Manipulation</li>
-    </requiredCapacities>
-    <prioritizeSustains>true</prioritizeSustains>
-  </WorkGiverDef>
-
-  <WorkGiverDef>
-    <defName>DoBillsMedicalMechanoidOperation</defName>
-    <label>operate on mechanoids</label>
-    <giverClass>WorkGiver_DoBill</giverClass>
-    <workType>Repair</workType>
-    <priorityInType>9</priorityInType>
-    <billGiversAllMechanoids>true</billGiversAllMechanoids>
-    <billGiversAllMechanoidsCorpses>true</billGiversAllMechanoidsCorpses>
-    <verb>modify</verb>
-    <gerund>modifying</gerund>
-    <requiredCapacities>
-      <li>Manipulation</li>
-    </requiredCapacities>
-    <prioritizeSustains>true</prioritizeSustains>
-  </WorkGiverDef>
-  
-  <WorkGiverDef>
-    <defName>Repair</defName>
-    <label>repair damaged things</label>
-    <giverClass>WorkGiver_Repair</giverClass>
-    <workType>Repair</workType>
-    <priorityInType>5</priorityInType>
-    <verb>repair</verb>
-    <gerund>repairing</gerund>
-    <requiredCapacities>
-      <li>Manipulation</li>
-    </requiredCapacities>
-    <canBeDoneByNonColonists>true</canBeDoneByNonColonists>
-  </WorkGiverDef>
+	<WorkGiverDef>
+		<defName>ConstructSmoothFloors</defName>
+		<label>smooth floors</label>
+		<giverClass>WorkGiver_ConstructSmoothFloor</giverClass>
+		<workType>Construction</workType>
+		<priorityInType>5</priorityInType>
+		<verb>smooth</verb>
+		<gerund>smoothing</gerund>
+		<scanThings>false</scanThings>
+		<scanCells>true</scanCells>
+		<requiredCapacities>
+			<li>Manipulation</li>
+		</requiredCapacities>
+	</WorkGiverDef>
   
   <!-- ============= Growing ============= -->
 
@@ -631,7 +663,8 @@
     <priorityInType>100</priorityInType>
     <verb>mine</verb>
     <gerund>mining</gerund>
-    <requiredCapacities>
+		<tagToGive>Fieldwork</tagToGive>
+		<requiredCapacities>
       <li>Manipulation</li>
     </requiredCapacities>
   </WorkGiverDef>
@@ -759,6 +792,22 @@
   <!-- ============= Crafting ============= -->
 
   <WorkGiverDef>
+    <defName>DoBillsMedicalMechanoidOperation</defName>
+    <label>operate on mechanoids</label>
+    <giverClass>WorkGiver_DoBill</giverClass>
+    <workType>Crafting</workType>
+    <priorityInType>110</priorityInType>
+    <billGiversAllMechanoids>true</billGiversAllMechanoids>
+    <billGiversAllMechanoidsCorpses>true</billGiversAllMechanoidsCorpses>
+    <verb>modify</verb>
+    <gerund>modifying</gerund>
+    <requiredCapacities>
+      <li>Manipulation</li>
+    </requiredCapacities>
+    <prioritizeSustains>true</prioritizeSustains>
+  </WorkGiverDef>
+
+  <WorkGiverDef>
     <defName>DoBillsUseCraftingSpot</defName>
     <label>do bills at crafting spot</label>
     <giverClass>WorkGiver_DoBill</giverClass>
@@ -774,8 +823,25 @@
     </requiredCapacities>
     <prioritizeSustains>true</prioritizeSustains>
   </WorkGiverDef>
-  
-  <WorkGiverDef>
+
+	<WorkGiverDef>
+		<defName>DoBillsRefinery</defName>
+		<label>works at refinery</label>
+		<giverClass>WorkGiver_DoBill</giverClass>
+		<workType>Crafting</workType>
+		<priorityInType>97</priorityInType>
+		<fixedBillGiverDefs>
+			<li>Refinery</li>
+		</fixedBillGiverDefs>
+		<verb>refine chemicals</verb>
+		<gerund>refining chemicals at</gerund>
+		<requiredCapacities>
+			<li>Manipulation</li>
+		</requiredCapacities>
+		<prioritizeSustains>true</prioritizeSustains>
+	</WorkGiverDef>
+
+	<WorkGiverDef>
     <defName>DoBillsProduceDrugs</defName>
     <label>produce drugs</label>
     <giverClass>WorkGiver_DoBill</giverClass>
@@ -785,7 +851,7 @@
       <li>DrugLab</li>
     </fixedBillGiverDefs>
     <verb>produce drugs</verb>
-    <gerund>produce drugs at</gerund>
+    <gerund>producing drugs at</gerund>
     <requiredCapacities>
       <li>Manipulation</li>
     </requiredCapacities>
@@ -828,14 +894,105 @@
 
   <!-- ============= Hauling ============= -->
 
-  <WorkGiverDef>
+	<WorkGiverDef>
+		<defName>UnloadCarriers</defName>
+		<label>unload carriers</label>
+		<giverClass>WorkGiver_UnloadCarriers</giverClass>
+		<workType>Hauling</workType>
+		<verb>unload</verb>
+		<gerund>unloading</gerund>
+		<priorityInType>120</priorityInType>
+		<requiredCapacities>
+			<li>Manipulation</li>
+		</requiredCapacities>
+	</WorkGiverDef>
+  
+	<WorkGiverDef>
+		<defName>LoadTransporters</defName>
+		<label>load transporters</label>
+		<giverClass>WorkGiver_LoadTransporters</giverClass>
+		<workType>Hauling</workType>
+		<verb>load</verb>
+		<gerund>loading</gerund>
+		<priorityInType>110</priorityInType>
+		<requiredCapacities>
+			<li>Manipulation</li>
+		</requiredCapacities>
+	</WorkGiverDef>
+  
+	<WorkGiverDef>
+		<defName>HelpGatheringItemsForCaravan</defName>
+		<label>load caravan</label>
+		<giverClass>WorkGiver_HelpGatheringItemsForCaravan</giverClass>
+		<workType>Hauling</workType>
+		<verb>load</verb>
+		<gerund>loading</gerund>
+		<priorityInType>105</priorityInType>
+		<requiredCapacities>
+			<li>Manipulation</li>
+		</requiredCapacities>
+	</WorkGiverDef>
+  
+	<WorkGiverDef>
+		<defName>Strip</defName>
+		<label>strip corpses</label>
+		<giverClass>WorkGiver_Strip</giverClass>
+		<workType>Hauling</workType>
+		<verb>strip</verb>
+		<gerund>stripping</gerund>
+		<priorityInType>100</priorityInType>
+		<requiredCapacities>
+			<li>Manipulation</li>
+		</requiredCapacities>
+	</WorkGiverDef>
+
+	<WorkGiverDef>
+		<defName>BuryCorpses</defName>
+		<label>bury corpses</label>
+		<giverClass>WorkGiver_BuryCorpses</giverClass>
+		<workType>Hauling</workType>
+		<verb>bury</verb>
+		<gerund>burying</gerund>
+		<priorityInType>90</priorityInType>
+		<requiredCapacities>
+			<li>Manipulation</li>
+		</requiredCapacities>
+	</WorkGiverDef>
+
+	<WorkGiverDef>
+		<defName>HaulCorpses</defName>
+		<label>haul corpses</label>
+		<giverClass>WorkGiver_HaulCorpses</giverClass>
+		<workType>Hauling</workType>
+		<verb>haul</verb>
+		<gerund>hauling</gerund>
+		<priorityInType>80</priorityInType>
+		<requiredCapacities>
+			<li>Manipulation</li>
+		</requiredCapacities>
+	</WorkGiverDef>
+
+	<WorkGiverDef>
+		<defName>Open</defName>
+		<label>open containers</label>
+		<giverClass>WorkGiver_Open</giverClass>
+		<workType>Hauling</workType>
+		<verb>open</verb>
+		<gerund>opening</gerund>
+		<priorityInType>70</priorityInType>
+		<requiredCapacities>
+			<li>Manipulation</li>
+		</requiredCapacities>
+	</WorkGiverDef>
+	
+	<WorkGiverDef>
     <defName>Refuel</defName>
     <label>refuel fuelable buildings</label>
     <giverClass>WorkGiver_Refuel</giverClass>
     <workType>Hauling</workType>
     <verb>refuel</verb>
     <gerund>refueling</gerund>
-    <priorityInType>400</priorityInType>
+    <priorityInType>60</priorityInType>
     <requiredCapacities>
       <li>Manipulation</li>
     </requiredCapacities>
@@ -849,46 +1006,54 @@
     <workType>Hauling</workType>
     <verb>rearm</verb>
     <gerund>rearming</gerund>
-    <priorityInType>300</priorityInType>
+    <priorityInType>50</priorityInType>
     <requiredCapacities>
       <li>Manipulation</li>
     </requiredCapacities>
   </WorkGiverDef>
 
-  <WorkGiverDef>
-    <defName>Strip</defName>
-    <label>strip corpses</label>
-    <giverClass>WorkGiver_Strip</giverClass>
-    <workType>Hauling</workType>
-    <verb>strip</verb>
-    <gerund>stripping</gerund>
-    <priorityInType>200</priorityInType>
-    <requiredCapacities>
-      <li>Manipulation</li>
-    </requiredCapacities>
-  </WorkGiverDef>
+	<WorkGiverDef>
+		<defName>DoBillsCremate</defName>
+		<label>do cremation bills</label>
+		<giverClass>WorkGiver_DoBill</giverClass>
+		<workType>Hauling</workType>
+		<priorityInType>40</priorityInType>
+		<fixedBillGiverDefs>
+			<li>ElectricCrematorium</li>
+		</fixedBillGiverDefs>
+		<verb>cremate</verb>
+		<gerund>cremating at</gerund>
+		<requiredCapacities>
+			<li>Manipulation</li>
+		</requiredCapacities>
+		<prioritizeSustains>true</prioritizeSustains>
+	</WorkGiverDef>
 
-  <WorkGiverDef>
-    <defName>Open</defName>
-    <label>open containers</label>
-    <giverClass>WorkGiver_Open</giverClass>
-    <workType>Hauling</workType>
-    <verb>open</verb>
-    <gerund>opening</gerund>
-    <priorityInType>150</priorityInType>
-    <requiredCapacities>
-      <li>Manipulation</li>
-    </requiredCapacities>
-  </WorkGiverDef>
-  
-  <WorkGiverDef>
+	<WorkGiverDef>
+		<defName>DoBillsHaulCampfire</defName>
+		<label>do bills at campfire</label>
+		<giverClass>WorkGiver_DoBill</giverClass>
+		<workType>Hauling</workType>
+		<priorityInType>30</priorityInType>
+		<fixedBillGiverDefs>
+			<li>Campfire</li>
+		</fixedBillGiverDefs>
+		<verb>work at</verb>
+		<gerund>working at</gerund>
+		<requiredCapacities>
+			<li>Manipulation</li>
+		</requiredCapacities>
+		<prioritizeSustains>true</prioritizeSustains>
+	</WorkGiverDef>
+	
+	<WorkGiverDef>
     <defName>TakeBeerOutOfFermentingBarrel</defName>
     <label>take beer out of fermenting barrels</label>
     <giverClass>WorkGiver_TakeBeerOutOfFermentingBarrel</giverClass>
     <workType>Hauling</workType>
     <verb>take beer</verb>
     <gerund>taking beer from</gerund>
-    <priorityInType>130</priorityInType>
+    <priorityInType>20</priorityInType>
     <requiredCapacities>
       <li>Manipulation</li>
     </requiredCapacities>
@@ -901,67 +1066,7 @@
     <workType>Hauling</workType>
     <verb>fill</verb>
     <gerund>filling</gerund>
-    <priorityInType>120</priorityInType>
-    <requiredCapacities>
-      <li>Manipulation</li>
-    </requiredCapacities>
-  </WorkGiverDef>
-
-  <WorkGiverDef>
-    <defName>DoBillsCremate</defName>
-    <label>do cremation bills</label>
-    <giverClass>WorkGiver_DoBill</giverClass>
-    <workType>Hauling</workType>
-    <priorityInType>100</priorityInType>
-    <fixedBillGiverDefs>
-      <li>ElectricCrematorium</li>
-    </fixedBillGiverDefs>
-    <verb>cremate</verb>
-    <gerund>cremating at</gerund>
-    <requiredCapacities>
-      <li>Manipulation</li>
-    </requiredCapacities>
-    <prioritizeSustains>true</prioritizeSustains>
-  </WorkGiverDef>
-
-  <WorkGiverDef>
-    <defName>DoBillsHaulCampfire</defName>
-    <label>do bills at campfire</label>
-    <giverClass>WorkGiver_DoBill</giverClass>
-    <workType>Hauling</workType>
-    <priorityInType>90</priorityInType>
-    <fixedBillGiverDefs>
-      <li>Campfire</li>
-    </fixedBillGiverDefs>
-    <verb>work at</verb>
-    <gerund>working at</gerund>
-    <requiredCapacities>
-      <li>Manipulation</li>
-    </requiredCapacities>
-    <prioritizeSustains>true</prioritizeSustains>
-  </WorkGiverDef>
-
-  <WorkGiverDef>
-    <defName>BuryCorpses</defName>
-    <label>bury corpses</label>
-    <giverClass>WorkGiver_BuryCorpses</giverClass>
-    <workType>Hauling</workType>
-    <verb>bury</verb>
-    <gerund>burying</gerund>
-    <priorityInType>10</priorityInType>
-    <requiredCapacities>
-      <li>Manipulation</li>
-    </requiredCapacities>
-  </WorkGiverDef>
-
-  <WorkGiverDef>
-    <defName>HaulCorpses</defName>
-    <label>haul corpses</label>
-    <giverClass>WorkGiver_HaulCorpses</giverClass>
-    <workType>Hauling</workType>
-    <verb>haul</verb>
-    <gerund>hauling</gerund>
-    <priorityInType>8</priorityInType>
+    <priorityInType>19</priorityInType>
     <requiredCapacities>
       <li>Manipulation</li>
     </requiredCapacities>
@@ -974,7 +1079,7 @@
     <workType>Hauling</workType>
     <verb>haul</verb>
     <gerund>hauling</gerund>
-    <priorityInType>5</priorityInType>
+    <priorityInType>10</priorityInType>
     <requiredCapacities>
       <li>Manipulation</li>
     </requiredCapacities>

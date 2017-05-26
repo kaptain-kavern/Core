@@ -90,7 +90,7 @@
       </li>
     </ingredients>
     <products>
-      <Pemmican>18</Pemmican>
+      <Pemmican>16</Pemmican>
     </products>
     <fixedIngredientFilter>
       <categories>
@@ -109,6 +109,7 @@
       </categories>
       <exceptedThingDefs>
         <li>Human_Meat</li>
+        <li>Megaspider_Meat</li>
       </exceptedThingDefs>
     </defaultIngredientFilter>
     <workSkill>Cooking</workSkill>

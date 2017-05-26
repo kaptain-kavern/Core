@@ -12,13 +12,18 @@
     <graphicData>
       <texPath>Things/Item/Resource/Milk</texPath>
     </graphicData>
+    <socialPropernessMatters>true</socialPropernessMatters>
     <statBases>
       <MarketValue>3.1</MarketValue>
+      <Mass>0.045</Mass>
     </statBases>
     <comps>
-      <li Class="CompProperties_FoodPoisoningChance" />
+			<li Class="CompProperties_FoodPoisoningChance">
+				<humanlikeOnly>true</humanlikeOnly>
+			</li>
       <li Class="CompProperties_Rottable">
         <daysToRotStart>14</daysToRotStart>
+				<rotDestroys>true</rotDestroys>
       </li>
     </comps>
     <ingestible>
@@ -38,8 +43,10 @@
     <graphicData>
       <texPath>Things/Item/Resource/AnimalProductRaw/InsectJelly</texPath>
     </graphicData>
+    <socialPropernessMatters>true</socialPropernessMatters>
     <statBases>
       <MarketValue>8.0</MarketValue>
+      <Mass>0.025</Mass>
     </statBases>
     <ingestible>
       <foodType>AnimalProduct</foodType>
@@ -69,8 +76,12 @@
       <nutrition>0.25</nutrition>
       <ingestEffect>EatMeat</ingestEffect>
       <ingestSound>RawMeat_Eat</ingestSound>
-      <tastesRaw>true</tastesRaw>
+      <tasteThought>AteRawFood</tasteThought>
     </ingestible>
+    <socialPropernessMatters>true</socialPropernessMatters>
+    <statBases>
+      <Mass>0.15</Mass>
+    </statBases>
   </ThingDef>
 
   <ThingDef Abstract="True" Name="EggUnfertBase" ParentName="EggBase" >
@@ -83,8 +94,11 @@
     <comps>
       <li Class="CompProperties_Rottable">
         <daysToRotStart>15</daysToRotStart>
-      </li>
-      <li Class="CompProperties_FoodPoisoningChance" />
+				<rotDestroys>true</rotDestroys>
+			</li>
+			<li Class="CompProperties_FoodPoisoningChance">
+				<humanlikeOnly>true</humanlikeOnly>
+			</li>
     </comps>
   </ThingDef>
 
@@ -96,6 +110,16 @@
     <thingCategories>
       <li>EggsFertilized</li>
     </thingCategories>
+		<comps>
+			<li Class="CompProperties_FoodPoisoningChance">
+				<humanlikeOnly>true</humanlikeOnly>
+			</li>
+			<li Class="CompProperties_TemperatureRuinable">
+				<minSafeTemperature>0</minSafeTemperature>
+				<maxSafeTemperature>50</maxSafeTemperature>
+				<progressPerDegreePerTick>0.00003</progressPerDegreePerTick>
+			</li>
+		</comps>
   </ThingDef>
 
   <!-- Chicken -->
@@ -148,7 +172,7 @@
         <hatcherDaysToHatch>4.5</hatcherDaysToHatch>
         <hatcherPawn>Cobra</hatcherPawn>
       </li>
-    </comps>
+		</comps>
   </ThingDef>
 
   <!-- Iguana -->
@@ -250,27 +274,27 @@
       <MarketValue>23.0</MarketValue>
     </statBases>
     <comps>
-      <li Class="CompProperties_Hatcher">
-        <hatcherDaysToHatch>8</hatcherDaysToHatch>
-        <hatcherPawn>Ostrich</hatcherPawn>
-      </li>
-    </comps>
-  </ThingDef>
-  
-  <!-- Turkey -->
+			<li Class="CompProperties_Hatcher">
+				<hatcherDaysToHatch>8</hatcherDaysToHatch>
+				<hatcherPawn>Ostrich</hatcherPawn>
+			</li>
+		</comps>
+	</ThingDef>
 
-  <ThingDef ParentName="EggFertBase">
-    <defName>EggTurkeyFertilized</defName>
-    <label>turkey egg (fert.)</label>
-    <description>Fertilized turkey egg. If all goes well, it should hatch into a baby turkey. It can be eaten raw, but it's much better cooked.</description>
-    <graphicData>
-      <color>(236,217,184)</color>
-      <drawSize>1.1</drawSize>
-    </graphicData>
-    <statBases>
-      <MarketValue>11.0</MarketValue>
-    </statBases>
-    <comps>
+	<!-- Turkey -->
+
+	<ThingDef ParentName="EggFertBase">
+		<defName>EggTurkeyFertilized</defName>
+		<label>turkey egg (fert.)</label>
+		<description>Fertilized turkey egg. If all goes well, it should hatch into a baby turkey. It can be eaten raw, but it's much better cooked.</description>
+		<graphicData>
+			<color>(236,217,184)</color>
+			<drawSize>1.1</drawSize>
+		</graphicData>
+		<statBases>
+			<MarketValue>11.0</MarketValue>
+		</statBases>
+		<comps>
       <li Class="CompProperties_Hatcher">
         <hatcherDaysToHatch>5</hatcherDaysToHatch>
         <hatcherPawn>Turkey</hatcherPawn>
