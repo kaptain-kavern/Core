@@ -4,6 +4,7 @@
   <SiteCoreDef>
     <defName>ItemStash</defName>
     <label>item stash</label>
+		<description>A stash of valuable items.</description>
     <siteTexture>World/WorldObjects/Sites/GenericSite</siteTexture>
     <expandingIconTexture>World/WorldObjects/Expanding/Sites/ItemStash</expandingIconTexture>
   </SiteCoreDef>

@@ -7,6 +7,7 @@
   </MapGeneratorDef>
   
   <!-- Generate abstract grids-->
+
   <GenStepDef>
     <defName>ElevationFertility</defName>
     <linkWithMapGenerator>BasicMap</linkWithMapGenerator>
@@ -14,6 +15,13 @@
     <genStep Class="GenStep_ElevationFertility"/>
   </GenStepDef>
   
+  <GenStepDef>
+    <defName>Caves</defName>
+    <linkWithMapGenerator>BasicMap</linkWithMapGenerator>
+    <order>11</order>
+    <genStep Class="GenStep_Caves"/>
+  </GenStepDef>
+
   <!-- Generate deep resources -->
   <GenStepDef>
     <defName>ScatterDeepResourceLumps</defName>
@@ -42,6 +50,13 @@
     <linkWithMapGenerator>BasicMap</linkWithMapGenerator>
     <order>210</order>
     <genStep Class="GenStep_Terrain"/>
+  </GenStepDef>
+
+  <GenStepDef>
+    <defName>CavesTerrain</defName>
+    <linkWithMapGenerator>BasicMap</linkWithMapGenerator>
+    <order>211</order>
+    <genStep Class="GenStep_CavesTerrain"/>
   </GenStepDef>
 
   <GenStepDef>
@@ -84,6 +99,10 @@
         <max>1</max>
       </countPer10kCellsRange>
       <clearSpaceSize>30</clearSpaceSize>
+      <terrainValidationRadius>4</terrainValidationRadius>
+      <terrainValidationDisallowed>
+        <li>Road</li>
+      </terrainValidationDisallowed>
       <validators>
         <li Class="ScattererValidator_Buildable">
           <radius>4</radius>
@@ -116,6 +135,13 @@
     <order>800</order>
     <genStep Class="GenStep_Plants"/>
   </GenStepDef>
+
+  <GenStepDef>
+    <defName>CavePlants</defName>
+    <linkWithMapGenerator>BasicMap</linkWithMapGenerator>
+    <order>801</order>
+    <genStep Class="GenStep_CavePlants"/>
+  </GenStepDef>
     
   <GenStepDef>
     <defName>Snow</defName>
@@ -129,6 +155,13 @@
     <linkWithMapGenerator>BasicMap</linkWithMapGenerator>
     <order>1000</order>
     <genStep Class="GenStep_Animals"/>
+  </GenStepDef>
+
+  <GenStepDef>
+    <defName>CaveHives</defName>
+    <linkWithMapGenerator>BasicMap</linkWithMapGenerator>
+    <order>1100</order>
+    <genStep Class="GenStep_CaveHives"/>
   </GenStepDef>
 
   <GenStepDef>

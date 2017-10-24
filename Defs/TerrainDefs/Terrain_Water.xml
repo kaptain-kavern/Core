@@ -1,36 +1,70 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
-<TerrainDefs>
+<Defs>
 
   <TerrainDef>
     <defName>WaterDeep</defName>
     <label>deep water</label>
     <texturePath>Terrain/Surfaces/WaterDeepRamp</texturePath>
-    <EdgeType>Water</EdgeType>
-    <RenderPrecedence>396</RenderPrecedence>
+    <waterDepthShader>Map/WaterDepth</waterDepthShader>
+    <edgeType>Water</edgeType>
+    <renderPrecedence>395</renderPrecedence>
 		<passability>Impassable</passability>
-    <PathCost>300</PathCost>
+    <pathCost>300</pathCost>
     <acceptFilth>false</acceptFilth>
     <fertility>0</fertility>
     <avoidWander>true</avoidWander>
     <changeable>false</changeable>
 		<holdSnow>false</holdSnow>
+    <takeSplashes>true</takeSplashes>
+    <extinguishesFire>true</extinguishesFire>
+    <tags>
+      <li>Water</li>
+    </tags>
+  </TerrainDef>
+
+  <TerrainDef>
+    <defName>WaterOceanDeep</defName>
+    <label>deep ocean water</label>
+    <texturePath>Terrain/Surfaces/WaterDeepRamp</texturePath>
+    <waterDepthShader>Map/WaterDepth</waterDepthShader>
+    <edgeType>Water</edgeType>
+    <renderPrecedence>397</renderPrecedence>
+    <passability>Impassable</passability>
+    <pathCost>300</pathCost>
+    <acceptFilth>false</acceptFilth>
+    <fertility>0</fertility>
+    <avoidWander>true</avoidWander>
+    <changeable>false</changeable>
+    <holdSnow>false</holdSnow>
+    <takeSplashes>true</takeSplashes>
+    <extinguishesFire>true</extinguishesFire>
+    <tags>
+      <li>Water</li>
+    </tags>
   </TerrainDef>
 
   <TerrainDef>
     <defName>WaterMovingDeep</defName>
     <label>deep moving water</label>
     <texturePath>Terrain/Surfaces/WaterDeepRamp</texturePath>
-    <EdgeType>Water</EdgeType>
-    <RenderPrecedence>395</RenderPrecedence>
+    <waterDepthShader>Map/WaterDepth</waterDepthShader>
+    <waterDepthShaderParameters>
+      <_UseWaterOffset>1</_UseWaterOffset>
+    </waterDepthShaderParameters>
+    <edgeType>Water</edgeType>
+    <renderPrecedence>399</renderPrecedence>
     <passability>Impassable</passability>
-    <PathCost>300</PathCost>
+    <pathCost>300</pathCost>
     <acceptFilth>false</acceptFilth>
     <fertility>0</fertility>
     <avoidWander>true</avoidWander>
     <changeable>false</changeable>
     <holdSnow>false</holdSnow>
+    <takeSplashes>true</takeSplashes>
+    <extinguishesFire>true</extinguishesFire>
     <tags>
       <li>River</li>
+      <li>Water</li>
     </tags>
   </TerrainDef>
   
@@ -38,32 +72,66 @@
     <defName>WaterShallow</defName>
     <label>shallow water</label>
     <texturePath>Terrain/Surfaces/WaterShallowRamp</texturePath>
-    <EdgeType>Water</EdgeType>
-    <RenderPrecedence>394</RenderPrecedence>
-    <PathCost>12</PathCost>
+    <waterDepthShader>Map/WaterDepth</waterDepthShader>
+    <edgeType>Water</edgeType>
+    <renderPrecedence>394</renderPrecedence>
+    <pathCost>12</pathCost>
     <acceptFilth>false</acceptFilth>
     <fertility>0</fertility>
     <avoidWander>true</avoidWander>
     <changeable>false</changeable>
     <holdSnow>false</holdSnow>
     <driesTo>Gravel</driesTo>
+    <takeSplashes>true</takeSplashes>
+    <extinguishesFire>true</extinguishesFire>
+    <tags>
+      <li>Water</li>
+    </tags>
+  </TerrainDef>
+
+  <TerrainDef>
+    <defName>WaterOceanShallow</defName>
+    <label>shallow ocean water</label>
+    <texturePath>Terrain/Surfaces/WaterShallowRamp</texturePath>
+    <waterDepthShader>Map/WaterDepth</waterDepthShader>
+    <edgeType>Water</edgeType>
+    <renderPrecedence>396</renderPrecedence>
+    <pathCost>12</pathCost>
+    <acceptFilth>false</acceptFilth>
+    <fertility>0</fertility>
+    <avoidWander>true</avoidWander>
+    <changeable>false</changeable>
+    <holdSnow>false</holdSnow>
+    <driesTo>Gravel</driesTo>
+    <takeSplashes>true</takeSplashes>
+    <extinguishesFire>true</extinguishesFire>
+    <tags>
+      <li>Water</li>
+    </tags>
   </TerrainDef>
 
   <TerrainDef>
     <defName>WaterMovingShallow</defName>
     <label>shallow moving water</label>
     <texturePath>Terrain/Surfaces/WaterShallowRamp</texturePath>
-    <EdgeType>Water</EdgeType>
-    <RenderPrecedence>394</RenderPrecedence>
-    <PathCost>12</PathCost>
+    <waterDepthShader>Map/WaterDepth</waterDepthShader>
+    <waterDepthShaderParameters>
+      <_UseWaterOffset>1</_UseWaterOffset>
+    </waterDepthShaderParameters>
+    <edgeType>Water</edgeType>
+    <renderPrecedence>398</renderPrecedence>
+    <pathCost>12</pathCost>
     <acceptFilth>false</acceptFilth>
     <fertility>0</fertility>
     <avoidWander>true</avoidWander>
     <changeable>false</changeable>
     <holdSnow>false</holdSnow>
+    <takeSplashes>true</takeSplashes>
+    <extinguishesFire>true</extinguishesFire>
     <tags>
       <li>River</li>
+      <li>Water</li>
     </tags>
   </TerrainDef>
   
-</TerrainDefs>
+</Defs>

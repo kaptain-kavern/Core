@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
-<Ambrosia>
+<Defs>
 
   <ThingDef ParentName="DrugBase">
     <defName>Ambrosia</defName>
@@ -15,6 +15,7 @@
     <statBases>
       <MarketValue>15</MarketValue>
       <Mass>0.1</Mass>
+			<DeteriorationRate>4</DeteriorationRate>
     </statBases>
     <techLevel>Neolithic</techLevel>
     <ingestible>
@@ -63,6 +64,7 @@
     <defaultLabelColor>(1,0,0.5)</defaultLabelColor>
     <scenarioCanAdd>true</scenarioCanAdd>
     <maxSeverity>1.0</maxSeverity>
+    <isBad>false</isBad>
     <comps>
       <li Class="HediffCompProperties_SeverityPerDay">
         <severityPerDay>-0.75</severityPerDay>
@@ -154,4 +156,4 @@
     </stages>
   </ThoughtDef>
 
-</Ambrosia>
+</Defs>

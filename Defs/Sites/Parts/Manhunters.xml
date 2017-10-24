@@ -4,9 +4,16 @@
   <SitePartDef>
     <defName>Manhunters</defName>
     <label>manhunter pack</label>
-    <siteTexture>World/WorldObjects/Sites/GenericSite</siteTexture>
+    <description>A pack of manhunting animals.</description>
+		<descriptionDialogue>there is a group of manhunting animals wandering nearby</descriptionDialogue>
+		<siteTexture>World/WorldObjects/Sites/GenericSite</siteTexture>
     <expandingIconTexture>World/WorldObjects/Expanding/Sites/Manhunters</expandingIconTexture>
     <knownDanger>true</knownDanger>
+    <tags>
+      <li>MineralScannerPreciousLumpThreat</li>
+      <li>ItemStashQuestThreat</li>
+      <li>DownedRefugeeQuestThreat</li>
+    </tags>
   </SitePartDef>
 
   <GenStepDef>

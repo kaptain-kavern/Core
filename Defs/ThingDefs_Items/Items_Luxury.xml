@@ -37,11 +37,11 @@
     <soundDrop>Standard_Drop</soundDrop>
 		<socialPropernessMatters>true</socialPropernessMatters>
     <statBases>
-      <MaxHitPoints>100</MaxHitPoints>
+      <MaxHitPoints>60</MaxHitPoints>
       <MarketValue>6</MarketValue>
       <Mass>0.075</Mass>
       <Flammability>1.0</Flammability>
-      <DeteriorationRate>10</DeteriorationRate>
+      <DeteriorationRate>8</DeteriorationRate>
     </statBases>
     <thingCategories>
       <li>Foods</li>

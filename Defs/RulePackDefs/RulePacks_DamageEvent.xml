@@ -1,0 +1,78 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+  <RulePackDef>
+    <defName>DamageEvent_Include</defName>
+    <include>
+      <li>Combat_WoundInclude</li>
+    </include>
+    <rulePack>
+      <rulesStrings>
+        <li>logentry->[damageSource] [recipient_nameShortDef], [destroying] [recipient_possessive] [destroyed_targets].</li>
+        <li>logentry->[damageSource] [recipient_nameShortDef], [destroying] [recipient_possessive] [destroyed_targets] and [damaging] [recipient_possessive] [damaged_targets].</li>
+        <li>logentry(recipient_part_destroyed_count==0)->[damageSource] [recipient_nameShortDef], [damaging] [recipient_possessive] [damaged_targets].</li>
+        <li>logentry(p=0.1)->[damageSource] [recipient_nameShortDef].</li>
+      </rulesStrings>
+    </rulePack>
+  </RulePackDef>
+    
+  <RulePackDef>
+    <defName>DamageEvent_Ceiling</defName>
+    <include>
+      <li>DamageEvent_Include</li>
+    </include>
+    <rulePack>
+      <rulesStrings>
+        <li>damageSource->the [roof] [collapsed] on</li>
+
+        <li>roof->roof</li>
+        <li>roof->roofing</li>
+        <li>roof->ceiling</li>
+
+        <li>collapsed->collapsed</li>
+        <li>collapsed->fell</li>
+        <li>collapsed->caved in</li>
+
+        <li>damaging->smashing</li>
+        <li>damaging->bashing</li>
+        <li>damaging->clobbering</li>
+        <li>damaging->bruising</li>
+        <li>damaging->lacerating</li>
+
+        <li>destroying->shattering</li>
+        <li>destroying->crushing</li>
+        <li>destroying->obliterating</li>
+        <li>destroying->annihilating</li>
+        <li>destroying->breaking</li>
+      </rulesStrings>
+    </rulePack>
+  </RulePackDef>
+
+  <RulePackDef>
+    <defName>DamageEvent_Fire</defName>
+    <include>
+      <li>DamageEvent_Include</li>
+    </include>
+    <rulePack>
+      <rulesStrings>
+        <li>damageSource->[fire] burned</li>
+
+        <li>fire(p=3)->fire</li>
+        <li>fire(p=3)->a fire</li>
+        <li>fire(p=3)->the fire</li>
+        <li>fire->heat</li>
+        <li>fire->a conflagration</li>
+        <li>fire->an inferno</li>
+
+        <li>damaging->scorching</li>
+        <li>damaging->broiling</li>
+        <li>damaging->searing</li>
+        <li>damaging->singeing</li>
+
+        <li>destroying->charring</li>
+        <li>destroying->roasting</li>
+        <li>destroying->cooking</li>
+        <li>destroying->cremating</li>
+      </rulesStrings>
+    </rulePack>
+  </RulePackDef>
+</Defs>

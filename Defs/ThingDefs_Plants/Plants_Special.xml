@@ -17,7 +17,7 @@
     </statBases>
     <tickerType>Long</tickerType>
     <selectable>true</selectable>
-    <fillPercent>0.29</fillPercent>
+    <fillPercent>0.20</fillPercent>
     <neverMultiSelect>True</neverMultiSelect>
     <drawerType>MapMeshOnly</drawerType>
     <pathCostIgnoreRepeat>false</pathCostIgnoreRepeat>
@@ -35,7 +35,7 @@
     <plant>
       <harvestWork>200</harvestWork>
       <harvestYield>0</harvestYield>
-      <fertilityMin>0</fertilityMin>
+      <fertilityMin>0.01</fertilityMin>
       <fertilitySensitivity>0</fertilitySensitivity>
       <soundHarvesting>Harvest_Tree</soundHarvesting>
       <soundHarvestFinish>Harvest_Tree_Finish</soundHarvestFinish>

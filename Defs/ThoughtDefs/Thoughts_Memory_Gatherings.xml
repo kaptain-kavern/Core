@@ -23,7 +23,7 @@
       <li>
         <label>attended wedding</label>
         <description>It was great to see two people come together to build a future like that.</description>
-        <baseMoodEffect>25</baseMoodEffect>
+        <baseMoodEffect>20</baseMoodEffect>
       </li>
     </stages>
   </ThoughtDef>
@@ -31,13 +31,13 @@
   <ThoughtDef>
     <defName>AttendedParty</defName>
     <durationDays>10.0</durationDays>
-    <stackLimit>3</stackLimit>
-    <stackedEffectMultiplier>0.5</stackedEffectMultiplier>
+    <stackLimit>15</stackLimit>
+    <stackedEffectMultiplier>1</stackedEffectMultiplier>
     <stages>
       <li>
         <label>attended party</label>
         <description>I had a good time at that party.</description>
-        <baseMoodEffect>15</baseMoodEffect>
+        <baseMoodEffect>1</baseMoodEffect>
       </li>
     </stages>
   </ThoughtDef>

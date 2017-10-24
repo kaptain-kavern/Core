@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
-<TraitDefs>
+<Defs>
 
   <TraitDef>
     <defName>SpeedOffset</defName>
@@ -48,7 +48,8 @@
             <li>(100, 50)</li>
           </points>
         </randomMentalStateMtbDaysMoodCurve>
-      </li>    
+				<marketValueFactorOffset>-0.15</marketValueFactorOffset>
+			</li>    
       <li>
         <label>chemical interest</label>
         <description>NAME has an unusual interest in chemical sources of enjoyment. HECAP will consume more of them, and will sometimes go on social drug binges. HECAP will ignore directives to not use pleasurable drugs.</description>
@@ -61,7 +62,8 @@
             <li>(100, 100)</li>
           </points>
         </randomMentalStateMtbDaysMoodCurve>
-      </li>
+				<marketValueFactorOffset>-0.10</marketValueFactorOffset>
+			</li>
       <li>
         <label>teetotaler</label>
         <description>NAME abhors the idea of gaining pleasure from chemicals, and avoids alcohol and pleasurable drugs.</description>
@@ -82,22 +84,22 @@
         <label>sanguine</label>
         <description>NAME is just naturally upbeat about HIS situation, pretty much all the time, no matter what it is.</description>
         <degree>2</degree>
-      </li>
+			</li>
       <li>
         <label>optimist</label>
         <description>NAME is naturally optimistic about life. It's hard to get HIM down.</description>
         <degree>1</degree>
-      </li>
+			</li>
       <li>
         <label>pessimist</label>
         <description>NAME tends to look on the bad side of life.</description>
         <degree>-1</degree>
       </li> 
-           <li>
+      <li>
         <label>depressive</label>
         <description>NAME is perenially unhappy. HECAP has trouble sustaining a good mood even when everything is fine.</description>
         <degree>-2</degree>
-      </li>
+			</li>
     </degreeDatas>
   </TraitDef>
 
@@ -249,35 +251,23 @@
     <degreeDatas>
       <li>
         <label>careful shooter</label>
-        <description>NAME is a pretty good shot, but HE needs more time to focus on HIS target.</description>
+        <description>NAME takes more time to aim when shooting. HECAP shoots less often than others, but with more accuracy.</description>
         <commonality>0.4</commonality>
         <degree>1</degree>
         <statOffsets>
           <AimingDelayFactor>0.25</AimingDelayFactor>
-          <ShootingAccuracy>0.50</ShootingAccuracy>
+          <ShootingAccuracy>5</ShootingAccuracy>
         </statOffsets>
-        <skillGains>
-          <li>
-            <key>Shooting</key>
-            <value>3</value>
-          </li>
-        </skillGains>
       </li>
       <li>
         <label>trigger-happy</label>
-        <description>Pew! Pew! Pew! NAME is a terrible shot, but HE doesn't care, because guns are awesome!</description>
+        <description>Pew! Pew! Pew! NAME just likes pulling the trigger. HECAP shoots faster than others, but less accurately.</description>
         <commonality>0.5</commonality>
         <degree>-1</degree>
         <statOffsets>
           <AimingDelayFactor>-0.5</AimingDelayFactor>
-          <ShootingAccuracy>-0.5</ShootingAccuracy>
+          <ShootingAccuracy>-5</ShootingAccuracy>
         </statOffsets>
-        <skillGains>
-          <li>
-            <key>Shooting</key>
-            <value>-2</value>
-          </li>
-        </skillGains>
       </li>
     </degreeDatas>
     <conflictingTraits>
@@ -296,23 +286,27 @@
         <label>beautiful</label>
         <description>NAME is exceptionally beautiful, with an exotic-yet-familiar facial structure and an arresting gaze. People are attracted to HIM before HE even opens HIS mouth.</description>
         <degree>2</degree>
-      </li>
+				<marketValueFactorOffset>0.40</marketValueFactorOffset>
+			</li>
       <li>
         <label>pretty</label>
         <description>NAME has a pretty face, which predisposes people to like HIM.</description>
         <degree>1</degree>
-      </li>
+				<marketValueFactorOffset>0.20</marketValueFactorOffset>
+			</li>
       <li>
         <label>ugly</label>
         <description>NAME is somewhat ugly. This subtly repels others during social interactions.</description>
         <degree>-1</degree>
-      </li>
+				<marketValueFactorOffset>-0.20</marketValueFactorOffset>
+			</li>
       <li>
         <label>staggeringly ugly</label>
         <description>NAME is staggeringly ugly. HISCAP face looks like a cross between a drawing by an untalented child, a malformed fetus in a jar of formaldehyde, and a piece of modern art. Others must exert conscious effort to look at HIM while conversing.</description>
         <degree>-2</degree>
-      </li>      
+				<marketValueFactorOffset>-0.40</marketValueFactorOffset>
+			</li>      
     </degreeDatas>
   </TraitDef>
 
-</TraitDefs>
+</Defs>

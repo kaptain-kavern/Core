@@ -1,10 +1,10 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
-<Penoxycyline>
+<Defs>
 
   <ThingDef ParentName="MakeableDrugPillBase">
     <defName>Penoxycyline</defName>
     <label>penoxycyline</label>
-    <description>A drug for blocking various infections. Blocks malaria, sleeping sickness, and plague. Take every five days.</description>
+    <description>A drug for preventing infections from starting. Blocks malaria, sleeping sickness, and plague. Take every five days. Note: This drug does nothing to cure existing infections - it only prevents new ones.</description>
     <graphicData>
       <texPath>Things/Item/Drug/Penoxycyline</texPath>
       <graphicClass>Graphic_StackCount</graphicClass>
@@ -33,7 +33,7 @@
       </recipeUsers>
     </recipeMaker>
     <costList>
-      <Neutroamine>3</Neutroamine>
+      <Neutroamine>2</Neutroamine>
     </costList>
     <comps>
       <li Class="CompProperties_Drug">
@@ -53,6 +53,7 @@
     <defaultLabelColor>(1,0,0.5)</defaultLabelColor>
     <scenarioCanAdd>true</scenarioCanAdd>
     <maxSeverity>1.0</maxSeverity>
+    <isBad>false</isBad>
     <comps>
       <li Class="HediffCompProperties_SeverityPerDay">
         <severityPerDay>-0.18</severityPerDay>
@@ -69,4 +70,4 @@
       </stages>
   </HediffDef>
   
-</Penoxycyline>
+</Defs>

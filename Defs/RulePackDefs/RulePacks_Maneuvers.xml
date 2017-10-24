@@ -1,0 +1,260 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+  <RulePackDef>
+    <defName>Maneuver_Slash</defName>
+    <rulePack>
+      <rulesStrings>
+        <li>maneuver_inf(p=4)->slash</li>
+        <li>maneuver_inf->cut</li>
+        <li>maneuver_inf->chop</li>
+        <li>maneuver_inf->hack</li>
+        <li>maneuver_inf->slice</li>
+        <li>maneuver_inf->gash</li>
+
+        <li>maneuver_past(p=4)->slashed</li>
+        <li>maneuver_past->cut</li>
+        <li>maneuver_past->chopped</li>
+        <li>maneuver_past->hacked</li>
+        <li>maneuver_past->sliced</li>
+        <li>maneuver_past->gashed</li>
+
+        <li>maneuverresult_present->slashing</li>
+        <li>maneuverresult_present->cutting</li>
+        <li>maneuverresult_present->slicing</li>
+        <li>maneuverresult_present->gashing</li>
+        <li>maneuverresult_present->tearing</li>
+        <li>maneuverresult_present->lacerating</li>
+
+        <li>woundname->wound</li>
+        <li>woundname(p=0.3)->opening</li>
+        <li>flavortext->and exposing the flesh underneath</li>
+        <li>flavortext->and leaving a gory [woundname]</li>
+        <li>flavortext->with blood dripping from the [woundname]</li>
+
+        <li>destroyed_past->bisected</li>
+        <li>destroyed_past->divided</li>
+        <li>destroyed_past->halved</li>
+        <li>destroyed_past->separated</li>
+        <li>destroyed_past->split</li>
+
+        <li>destroyed_present->bisecting</li>
+        <li>destroyed_present->dividing</li>
+        <li>destroyed_present->halving</li>
+        <li>destroyed_present->separating</li>
+        <li>destroyed_present->splitting</li>
+
+        <li>destroyed_suffix->into neat pieces</li>
+        <li>destroyed_suffix->cleanly</li>
+        <li>destroyed_suffix(target_part_destroyed_count==1)->exposing its inner workings</li>
+        <li>destroyed_suffix(target_part_destroyed_count==1)->slicing it in twain</li>
+      </rulesStrings>
+    </rulePack>
+  </RulePackDef>
+
+  <RulePackDef>
+    <defName>Maneuver_Stab</defName>
+    <rulePack>
+      <rulesStrings>
+        <li>maneuver_inf(p=4)->stab</li>
+        <li>maneuver_inf->jab</li>
+        <li>maneuver_inf->pierce</li>
+        <li>maneuver_inf->puncture</li>
+        <li>maneuver_inf->skewer</li>
+        <!-- <li>maneuver_inf->penetrate</li> Doesn't work well with "Jimmy avoided Lilith's gladius penetrate"; disabled for now -->
+
+        <li>maneuver_past(p=4)->stabbed</li>
+        <li>maneuver_past->jabbed</li>
+        <li>maneuver_past->pierced</li>
+        <li>maneuver_past->punctured</li>
+        <li>maneuver_past->skewered</li>
+
+        <li>maneuverresult_present->piercing</li>
+        <li>maneuverresult_present->puncturing</li>
+        <li>maneuverresult_present->penetrating</li>
+        <li>maneuverresult_present->skewering</li>
+
+        <li>woundname->hole</li>
+        <li>woundname->wound</li>
+        <li>woundname->crevice</li>
+        <li>flavortext->leaving a bloody [woundname]</li>
+        <li>flavortext->leaving a torn [woundname]</li>
+        <li>flavortext->leaving a bleeding [woundname]</li>
+
+        <li>destroyed_past->impaled</li>
+        <li>destroyed_past->perforated</li>
+        <li>destroyed_past->skewered</li>
+
+        <li>destroyed_present->impaling</li>
+        <li>destroyed_present->perforating</li>
+        <li>destroyed_present->skewering</li>
+
+        <li>destroyed_suffix->straight through</li>
+        <li>destroyed_suffix->leaving a clean hole</li>
+        <li>destroyed_suffix(target_part_destroyed_count==1)->leaving it leaking gory fluids</li>
+        <li>destroyed_suffix(target_part_destroyed_count==1)->leaving it leaking unrecognizable fluids</li>
+      </rulesStrings>
+    </rulePack>
+  </RulePackDef>
+
+  <RulePackDef>
+    <defName>Maneuver_Smash</defName>
+    <rulePack>
+      <rulesStrings>
+        <li>maneuver_inf(p=4)->smash</li>
+        <li>maneuver_inf->bash</li>
+        <li>maneuver_inf->clobber</li>
+        <li>maneuver_inf->slam</li>
+        <li>maneuver_inf->strike</li>
+
+        <li>maneuver_past(p=4)->smashed</li>
+        <li>maneuver_past->bashed</li>
+        <li>maneuver_past->clobbered</li>
+        <li>maneuver_past->slammed</li>
+        <li>maneuver_past->struck</li>
+
+        <li>maneuverresult_present->smashing</li>
+        <li>maneuverresult_present->bashing</li>
+        <li>maneuverresult_present->clobbering</li>
+        <li>maneuverresult_present->bruising</li>
+        <li>maneuverresult_present->lacerating</li>
+
+        <li>flavortext->leaving an enormous bruise</li>
+        <li>flavortext->leaving the area visibly deformed</li>
+        <li>flavortext->and knocking [recipient_objective] off balance</li>
+        <li>flavortext->and knocking [recipient_objective] to the side</li>
+
+        <li>destroyed_past->shattered</li>
+        <li>destroyed_past->crushed</li>
+        <li>destroyed_past->obliterated</li>
+        <li>destroyed_past->annihilated</li>
+        <li>destroyed_past->broke</li>
+
+        <li>destroyed_present->shattering</li>
+        <li>destroyed_present->crushing</li>
+        <li>destroyed_present->obliterating</li>
+        <li>destroyed_present->annihilating</li>
+        <li>destroyed_present->breaking</li>
+
+        <li>destroyed_suffix->[to] pieces</li>
+        <li>destroyed_suffix->[to] bits</li>
+        <li>destroyed_suffix->[to] a fine mist</li>
+        <li>destroyed_suffix->[to] fragments</li>
+      </rulesStrings>
+    </rulePack>
+  </RulePackDef>
+  
+  <RulePackDef>
+    <defName>Maneuver_Scratch</defName>
+    <rulePack>
+      <rulesStrings>
+        <li>maneuver_inf(p=4)->scratch</li>
+        <li>maneuver_inf->lacerate</li>
+        <li>maneuver_inf->tear</li>
+        <li>maneuver_inf->cut</li>
+
+        <li>maneuver_past(p=4)->scratched</li>
+        <li>maneuver_past->lacerated</li>
+        <li>maneuver_past->tore</li>
+        <li>maneuver_past->cut</li>
+
+        <li>maneuverresult_present->scratching</li>
+        <li>maneuverresult_present->lacerating</li>
+        <li>maneuverresult_present->tearing</li>
+        <li>maneuverresult_present->cutting</li>
+
+        <li>woundname->wound</li>
+        <li>woundname(p=0.3)->opening</li>
+        <li>flavortext->and exposing the flesh underneath</li>
+        <li>flavortext->and leaving a gory [woundname]</li>
+        <li>flavortext->with blood dripping from the [woundname]</li>
+
+        <li>destroyed_past->mauled</li>
+        <li>destroyed_past->lacerated</li>
+        <li>destroyed_past->tore</li>
+        <li>destroyed_past->shredded</li>
+        <li>destroyed_past->ripped</li>
+
+        <li>destroyed_present->mauling</li>
+        <li>destroyed_present->lacerating</li>
+        <li>destroyed_present->tearing</li>
+        <li>destroyed_present->shredding</li>
+        <li>destroyed_present->ripping</li>
+
+        <li>destroyed_suffix->[to] messy strips</li>
+        <li>destroyed_suffix->[to] strips</li>
+        <li>destroyed_suffix->[to] messy pieces</li>
+        <li>destroyed_suffix->[to] pieces</li>
+        <li>destroyed_suffix->[to] fragments</li>
+        <li>destroyed_suffix->[to] a pile of gore</li>
+      </rulesStrings>
+    </rulePack>
+  </RulePackDef>
+
+  <RulePackDef>
+    <defName>Poke</defName>
+    <rulePack>
+      <rulesStrings>
+        <li>maneuver_inf(p=2)->poke</li>
+        <li>maneuver_inf(p=2)->jab</li>
+        <li>maneuver_inf->prod</li>
+        <li>maneuver_inf->shove</li>
+        <li>maneuver_inf->stab</li>
+
+        <li>maneuver_past(p=2)->poked</li>
+        <li>maneuver_past(p=2)->jabbed</li>
+        <li>maneuver_past->prodded</li>
+        <li>maneuver_past->shoved</li>
+        <li>maneuver_past->stabbed</li>
+
+        <li>maneuver_present(p=2)->poking</li>
+        <li>maneuver_present(p=2)->jabbing</li>
+        <li>maneuver_present->prodding</li>
+        <li>maneuver_present->shoving</li>
+        <li>maneuver_present->stabbing</li>
+
+        <li>flavortext->leaving an enormous bruise</li>
+        <li>flavortext->leaving the area visibly deformed</li>
+        <li>flavortext->and knocking [recipient_objective] off balance</li>
+        <li>flavortext->and knocking [recipient_objective] to the side</li>
+
+        <li>destroyed_past->shattered</li>
+        <li>destroyed_past->crushed</li>
+        <li>destroyed_past->obliterated</li>
+        <li>destroyed_past->annihilated</li>
+        <li>destroyed_past->broke</li>
+
+        <li>destroyed_present->shattering</li>
+        <li>destroyed_present->crushing</li>
+        <li>destroyed_present->obliterating</li>
+        <li>destroyed_present->annihilating</li>
+        <li>destroyed_present->breaking</li>
+
+        <li>destroyed_suffix->[to] pieces</li>
+        <li>destroyed_suffix->[to] bits</li>
+        <li>destroyed_suffix->[to] a fine mist</li>
+        <li>destroyed_suffix->[to] fragments</li>
+      </rulesStrings>
+    </rulePack>
+  </RulePackDef>
+
+  <RulePackDef>
+    <defName>Bite</defName>
+    <rulePack>
+      <rulesStrings>
+        <li>maneuver_inf->bite</li>
+
+        <li>maneuver_past->bit</li>
+
+        <li>maneuver_present->biting</li>
+
+        <li>flavortext->biting it off</li>
+
+        <li>destroyed_past->devoured</li>
+
+        <li>destroyed_present->devouring</li>
+
+        <li>destroyed_suffix->to shreds</li>
+      </rulesStrings>
+    </rulePack>
+  </RulePackDef>
+</Defs>

@@ -10,7 +10,7 @@
     <useHitPoints>true</useHitPoints>
     <statBases>
       <Flammability>1.0</Flammability>
-			<SellPriceFactor>1.15</SellPriceFactor>
+			<SellPriceFactor>1.10</SellPriceFactor>
     </statBases>
     <comps>
       <li>

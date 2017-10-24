@@ -4,6 +4,7 @@
   <SiteCoreDef>
     <defName>PreciousLump</defName>
     <label>lump of precious resources</label>
+		<description>A mineable lump of precious resources.</description>
     <siteTexture>World/WorldObjects/Sites/GenericSite</siteTexture>
     <expandingIconTexture>World/WorldObjects/Expanding/Sites/PreciousLump</expandingIconTexture>
     <forceExitAndRemoveMapCountdownDurationDays>10</forceExitAndRemoveMapCountdownDurationDays>

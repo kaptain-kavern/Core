@@ -207,7 +207,7 @@
     <stages>
       <li>
         <label>ate rotten food</label>
-        <description>I ate some disgusting, purtid food. It was melting in my mouth - but not in a good way.</description>
+        <description>I ate some disgusting, putrid food. It was melting in my mouth - but not in a good way.</description>
         <baseMoodEffect>-10</baseMoodEffect>
       </li>
     </stages>

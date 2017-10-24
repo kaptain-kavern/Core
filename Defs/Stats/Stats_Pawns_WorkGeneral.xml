@@ -10,16 +10,17 @@
     <defaultBaseValue>1</defaultBaseValue>
     <toStringStyle>PercentZero</toStringStyle>
     <parts>
-      <li Class="StatPart_Mood">
-        <curve>
-          <points>
-            <li>(0.60,1.00)</li>
-            <li>(1.00,1.20)</li>
-          </points>
-        </curve>
-      </li>
+			<li Class="StatPart_Glow">
+				<factorFromGlowCurve>
+					<points>
+						<li>(0,0.80)</li>
+						<li>(0.30,1.00)</li>
+					</points>
+				</factorFromGlowCurve>
+			</li>
     </parts>
-  </StatDef>
+		<scenarioRandomizable>true</scenarioRandomizable>
+	</StatDef>
 
   <StatDef>
     <defName>MiningSpeed</defName>
@@ -34,8 +35,8 @@
     <skillNeedFactors>
       <li Class="SkillNeed_BaseBonus">
         <skill>Mining</skill>
-        <baseFactor>0.04</baseFactor>
-        <bonusFactor>0.12</bonusFactor>
+        <baseValue>0.04</baseValue>
+        <bonusPerLevel>0.12</bonusPerLevel>
       </li>
     </skillNeedFactors>
 		<capacityFactors>
@@ -49,12 +50,13 @@
 				<max>1</max>
       </li>
     </capacityFactors>
-  </StatDef>
+		<scenarioRandomizable>true</scenarioRandomizable>
+	</StatDef>
 
 	<StatDef>
 		<defName>MiningYield</defName>
 		<label>mining yield</label>
-		<description>The percentage yield a miner will achieve. Higher percentages reduce the chance of wasting the yield. This applies to both wall mining and deep drill mining.</description>
+		<description>The percentage yield a miner will achieve. This applies to both wall mining and deep drill mining. This doesn't affect the rate of mining rock chunks.</description>
 		<category>PawnWork</category>
 		<defaultBaseValue>1</defaultBaseValue>
 		<minValue>0</minValue>
@@ -63,40 +65,40 @@
 		<skillNeedFactors>
 			<li Class="SkillNeed_Direct">
 				<skill>Mining</skill>
-				<factorsPerLevel>
-					<li>0.3</li>
-					<li>0.4</li>
-					<li>0.5</li>
+				<valuesPerLevel>
 					<li>0.6</li>
 					<li>0.7</li>
-					<li>0.75</li>
 					<li>0.8</li>
 					<li>0.85</li>
 					<li>0.9</li>
+					<li>0.925</li>
 					<li>0.95</li>
-					<li>0.96</li>
-					<li>0.97</li>
-					<li>0.98</li>
-					<li>0.99</li>
-					<li>0.99</li>
-					<li>0.99</li>
+					<li>0.975</li>
 					<li>1</li>
-					<li>1</li>
-					<li>1</li>
-					<li>1</li>
-					<li>1</li>
-				</factorsPerLevel>
+					<li>1.01</li>
+					<li>1.02</li>
+					<li>1.03</li>
+					<li>1.04</li>
+					<li>1.05</li>
+					<li>1.06</li>
+					<li>1.07</li>
+					<li>1.08</li>
+					<li>1.09</li>
+					<li>1.10</li>
+					<li>1.12</li>
+					<li>1.13</li>
+				</valuesPerLevel>
 			</li>
 		</skillNeedFactors>
 		<capacityFactors>
 			<li>
 				<capacity>Manipulation</capacity>
-				<weight>1</weight>
+				<weight>0.3</weight>
 				<max>1</max>
 			</li>
 			<li>
 				<capacity>Sight</capacity>
-				<weight>0.1</weight>
+				<weight>0.2</weight>
 				<max>1</max>
 			</li>
 		</capacityFactors>
@@ -115,8 +117,8 @@
     <skillNeedFactors>
       <li Class="SkillNeed_BaseBonus">
         <skill>Construction</skill>
-        <baseFactor>0.5</baseFactor>
-        <bonusFactor>0.15</bonusFactor>
+        <baseValue>0.5</baseValue>
+        <bonusPerLevel>0.15</bonusPerLevel>
       </li>
     </skillNeedFactors>
     <capacityFactors>
@@ -145,14 +147,14 @@
     <skillNeedFactors>
       <li Class="SkillNeed_BaseBonus">
         <skill>Intellectual</skill>
-        <baseFactor>0.1</baseFactor>
-        <bonusFactor>0.15</bonusFactor>
+        <baseValue>0.1</baseValue>
+        <bonusPerLevel>0.15</bonusPerLevel>
       </li>
     </skillNeedFactors>
     <capacityFactors>
       <li>
         <capacity>Manipulation</capacity>
-        <weight>1</weight>
+        <weight>0.5</weight>
 				<max>1.1</max>
 			</li>
       <li>
@@ -161,37 +163,8 @@
 				<max>1.1</max>
 			</li>
     </capacityFactors>
-  </StatDef>
-
-  <StatDef>
-    <defName>ConstructionSpeed</defName>
-    <label>construction speed</label>
-    <description>Speed at which this person constructs and repairs buildings.</description>
-    <category>PawnWork</category>
-    <defaultBaseValue>1</defaultBaseValue>
-    <toStringStyle>PercentZero</toStringStyle>
-    <statFactors>
-      <li>WorkSpeedGlobal</li>
-    </statFactors>
-    <skillNeedFactors>
-      <li Class="SkillNeed_BaseBonus">
-        <skill>Construction</skill>
-        <baseFactor>0.5</baseFactor>
-        <bonusFactor>0.15</bonusFactor>
-      </li>
-    </skillNeedFactors>
-    <capacityFactors>
-      <li>
-        <capacity>Manipulation</capacity>
-        <weight>1</weight>
-      </li>
-      <li>
-        <capacity>Sight</capacity>
-        <weight>0.5</weight>
-				<max>1</max>
-			</li>
-    </capacityFactors>
-  </StatDef>
+		<scenarioRandomizable>true</scenarioRandomizable>
+	</StatDef>
 
 	<StatDef>
 		<defName>AnimalGatherSpeed</defName>
@@ -206,8 +179,8 @@
 		<skillNeedFactors>
 			<li Class="SkillNeed_BaseBonus">
 				<skill>Animals</skill>
-				<baseFactor>0.04</baseFactor>
-				<bonusFactor>0.12</bonusFactor>
+				<baseValue>0.04</baseValue>
+				<bonusPerLevel>0.12</bonusPerLevel>
 			</li>
 		</skillNeedFactors>
 		<capacityFactors>
@@ -235,31 +208,42 @@
 		<skillNeedFactors>
 			<li Class="SkillNeed_Direct">
 				<skill>Animals</skill>
-				<factorsPerLevel>
-					<li>0.5</li>
+				<valuesPerLevel>
 					<li>0.6</li>
 					<li>0.7</li>
 					<li>0.75</li>
 					<li>0.8</li>
 					<li>0.85</li>
-					<li>0.9</li>
-					<li>0.925</li>
+					<li>0.90</li>
 					<li>0.95</li>
-					<li>0.96</li>
-					<li>0.97</li>
-					<li>0.98</li>
-					<li>0.99</li>
-					<li>0.99</li>
-					<li>0.99</li>
+					<li>0.975</li>
 					<li>1</li>
 					<li>1</li>
 					<li>1</li>
 					<li>1</li>
 					<li>1</li>
 					<li>1</li>
-				</factorsPerLevel>
+					<li>1</li>
+					<li>1</li>
+					<li>1</li>
+					<li>1</li>
+					<li>1</li>
+					<li>1</li>
+					<li>1</li>
+				</valuesPerLevel>
 			</li>
 		</skillNeedFactors>
+		<capacityFactors>
+			<li>
+				<capacity>Manipulation</capacity>
+				<weight>0.3</weight>
+			</li>
+			<li>
+				<capacity>Sight</capacity>
+				<weight>0.2</weight>
+				<max>1</max>
+			</li>
+		</capacityFactors>
 	</StatDef>
 	
   <StatDef>
@@ -269,14 +253,15 @@
     <category>PawnWork</category>
     <defaultBaseValue>1</defaultBaseValue>
     <toStringStyle>PercentZero</toStringStyle>
+    <neverDisabled>true</neverDisabled>
     <statFactors>
       <li>WorkSpeedGlobal</li>
     </statFactors>
     <skillNeedFactors>
       <li Class="SkillNeed_BaseBonus">
         <skill>Growing</skill>
-        <baseFactor>0.20</baseFactor>
-        <bonusFactor>0.12</bonusFactor>
+        <baseValue>0.20</baseValue>
+        <bonusPerLevel>0.12</bonusPerLevel>
       </li>
     </skillNeedFactors>
     <capacityFactors>
@@ -286,7 +271,7 @@
       </li>
       <li>
         <capacity>Sight</capacity>
-        <weight>0.5</weight>
+        <weight>0.3</weight>
 				<max>1</max>
 			</li>
     </capacityFactors>
@@ -295,52 +280,85 @@
   <StatDef>
     <defName>PlantHarvestYield</defName>
     <label>plant harvest yield</label>
-    <description>The yield someone gets when harvesting plants. Low yields give a chance that this person will accidentally destroy the harvest.</description>
+    <description>The yield someone gets when harvesting plants. Low yields give a chance that this person will accidentally waste the harvest.</description>
     <category>PawnWork</category>
     <defaultBaseValue>1</defaultBaseValue>
     <toStringStyle>PercentZero</toStringStyle>
+    <neverDisabled>true</neverDisabled>
     <skillNeedFactors>
       <li Class="SkillNeed_Direct">
         <skill>Growing</skill>
-        <factorsPerLevel>
-          <li>0.50</li>
-          <li>0.60</li>
-          <li>0.70</li>
+        <valuesPerLevel>
+          <li>0.6</li>
+          <li>0.7</li>
           <li>0.75</li>
-          <li>0.80</li>
+          <li>0.8</li>
           <li>0.85</li>
-          <li>0.875</li>
           <li>0.90</li>
-          <li>0.925</li>
           <li>0.95</li>
-          <li>0.96</li>
-          <li>0.97</li>
-          <li>0.98</li>
-          <li>0.99</li>
-          <li>0.99</li>
-          <li>0.99</li>
+          <li>0.975</li>
           <li>1</li>
           <li>1</li>
           <li>1</li>
           <li>1</li>
           <li>1</li>
-        </factorsPerLevel>
+          <li>1</li>
+          <li>1</li>
+          <li>1</li>
+          <li>1</li>
+          <li>1</li>
+          <li>1</li>
+          <li>1</li>
+          <li>1</li>
+        </valuesPerLevel>
       </li>
     </skillNeedFactors>
     <capacityFactors>
       <li>
         <capacity>Manipulation</capacity>
-        <weight>0.7</weight>
+        <weight>0.3</weight>
       </li>
       <li>
         <capacity>Sight</capacity>
-        <weight>0.1</weight>
+        <weight>0.2</weight>
 				<max>1</max>
 			</li>
     </capacityFactors>
-  </StatDef>
+		<scenarioRandomizable>true</scenarioRandomizable>
+	</StatDef>
 
-  <StatDef>
+	<StatDef>
+		<defName>ConstructionSpeed</defName>
+		<label>construction speed</label>
+		<description>Speed at which this person constructs and repairs buildings.</description>
+		<category>PawnWork</category>
+		<defaultBaseValue>1</defaultBaseValue>
+		<toStringStyle>PercentZero</toStringStyle>
+		<statFactors>
+			<li>WorkSpeedGlobal</li>
+		</statFactors>
+		<skillNeedFactors>
+			<li Class="SkillNeed_BaseBonus">
+				<skill>Construction</skill>
+				<baseValue>0.5</baseValue>
+				<bonusPerLevel>0.15</bonusPerLevel>
+			</li>
+		</skillNeedFactors>
+		<capacityFactors>
+			<li>
+				<capacity>Manipulation</capacity>
+				<weight>1</weight>
+			</li>
+			<li>
+				<capacity>Sight</capacity>
+				<weight>0.2</weight>
+				<max>1</max>
+			</li>
+		</capacityFactors>
+		<scenarioRandomizable>true</scenarioRandomizable>
+	</StatDef>
+
+	<StatDef>
     <defName>ConstructSuccessChance</defName>
     <label>construct success chance</label>
     <description>The chance that this person will succeed in constructing something. Failing means wasting time and resources.</description>
@@ -350,35 +368,35 @@
     <skillNeedFactors>
       <li Class="SkillNeed_Direct">
         <skill>Construction</skill>
-        <factorsPerLevel>
+        <valuesPerLevel>
           <li>0.75</li>
           <li>0.80</li>
           <li>0.85</li>
-          <li>0.88</li>
+          <li>0.875</li>
           <li>0.90</li>
-          <li>0.93</li>
+          <li>0.925</li>
           <li>0.95</li>
-          <li>0.96</li>
-          <li>0.97</li>
           <li>0.975</li>
-          <li>0.98</li>
-          <li>0.985</li>
-          <li>0.99</li>
-          <li>0.99</li>
-          <li>0.99</li>
-          <li>0.99</li>
           <li>1</li>
           <li>1</li>
           <li>1</li>
           <li>1</li>
           <li>1</li>
-        </factorsPerLevel>
+          <li>1</li>
+          <li>1</li>
+          <li>1</li>
+          <li>1</li>
+          <li>1</li>
+          <li>1</li>
+          <li>1</li>
+          <li>1</li>
+        </valuesPerLevel>
       </li>
     </skillNeedFactors>
     <capacityFactors>
       <li>
         <capacity>Manipulation</capacity>
-        <weight>0.7</weight>
+        <weight>0.3</weight>
       </li>
       <li>
         <capacity>Sight</capacity>
@@ -386,7 +404,8 @@
 				<max>1</max>
 			</li>
     </capacityFactors>
-  </StatDef>
+		<scenarioRandomizable>true</scenarioRandomizable>
+	</StatDef>
 
   <StatDef>
     <defName>FixBrokenDownBuildingSuccessChance</defName>
@@ -398,35 +417,35 @@
     <skillNeedFactors>
       <li Class="SkillNeed_Direct">
         <skill>Construction</skill>
-        <factorsPerLevel>
+        <valuesPerLevel>
           <li>0.75</li>
           <li>0.80</li>
           <li>0.85</li>
-          <li>0.88</li>
+          <li>0.875</li>
           <li>0.90</li>
-          <li>0.93</li>
+          <li>0.925</li>
           <li>0.95</li>
-          <li>0.96</li>
-          <li>0.97</li>
           <li>0.975</li>
-          <li>0.98</li>
-          <li>0.985</li>
-          <li>0.99</li>
-          <li>0.99</li>
-          <li>0.99</li>
-          <li>0.99</li>
           <li>1</li>
           <li>1</li>
           <li>1</li>
           <li>1</li>
           <li>1</li>
-        </factorsPerLevel>
+          <li>1</li>
+          <li>1</li>
+          <li>1</li>
+          <li>1</li>
+          <li>1</li>
+          <li>1</li>
+          <li>1</li>
+          <li>1</li>
+        </valuesPerLevel>
       </li>
     </skillNeedFactors>
     <capacityFactors>
       <li>
         <capacity>Manipulation</capacity>
-        <weight>0.7</weight>
+        <weight>0.3</weight>
       </li>
       <li>
         <capacity>Sight</capacity>

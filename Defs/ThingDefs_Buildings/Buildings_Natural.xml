@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
-<ThingDefs>
+<Defs>
 
   <ThingDef Name="BuildingNaturalBase" Abstract="True">
     <category>Building</category>
@@ -299,7 +299,7 @@
     </graphicData>
     <altitudeLayer>Building</altitudeLayer>
     <rotatable>false</rotatable>
-    <fillPercent>0.7</fillPercent>
+    <fillPercent>0.60</fillPercent>
     <statBases>
       <MaxHitPoints>230</MaxHitPoints>
       <Flammability>1.0</Flammability>
@@ -395,4 +395,4 @@
     </graphicData>
   </ThingDef>
 
-</ThingDefs>
+</Defs>

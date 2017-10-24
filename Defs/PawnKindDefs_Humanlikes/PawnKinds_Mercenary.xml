@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
-<PawnKindDefs>
+<Defs>
 
   <PawnKindDef Name="MercenaryBase" Abstract="True">
     <race>Human</race>
@@ -13,10 +13,80 @@
     <maxGenerationAge>65</maxGenerationAge>
   </PawnKindDef>
 
+	<PawnKindDef Abstract="True" Name="GrenadierBase" ParentName="MercenaryBase">
+		<race>Human</race>
+		<combatPower>65</combatPower>
+		<gearHealthRange>
+			<min>0.7</min>
+			<max>2.3</max>
+		</gearHealthRange>
+		<apparelTags>
+			<li>Outlander</li>
+			<li>Military</li>
+			<li>BeltDefensePop</li>
+		</apparelTags>
+		<apparelMoney>
+			<min>800</min>
+			<max>1400</max>
+		</apparelMoney>
+		<apparelAllowHeadwearChance>0.5</apparelAllowHeadwearChance>
+		<weaponMoney>
+			<min>600</min>
+			<max>1000</max>
+		</weaponMoney>
+		<techHediffsMoney>
+			<min>1000</min>
+			<max>1500</max>
+		</techHediffsMoney>
+		<combatEnhancingDrugsCount>
+			<min>0</min>
+			<max>2</max>
+		</combatEnhancingDrugsCount>
+		<techHediffsTags>
+			<li>Advanced</li>
+		</techHediffsTags>
+		<techHediffsChance>0.003</techHediffsChance>
+		<inventoryOptions>
+			<skipChance>0.9</skipChance>
+			<subOptionsChooseOne>
+				<li>
+					<thingDef>Silver</thingDef>
+					<countRange>
+						<min>50</min>
+						<max>200</max>
+					</countRange>
+				</li>
+				<li>
+					<thingDef>Medicine</thingDef>
+					<countRange>
+						<min>1</min>
+						<max>1</max>
+					</countRange>
+				</li>
+			</subOptionsChooseOne>
+		</inventoryOptions>
+	</PawnKindDef>
+
+	<PawnKindDef ParentName="GrenadierBase">
+		<defName>GrenadierDestructive</defName>
+		<label>grenadier</label>
+		<weaponTags>
+			<li>GrenadeDestructive</li>
+		</weaponTags>
+	</PawnKindDef>
+
+	<PawnKindDef ParentName="GrenadierBase">
+		<defName>GrenadierEMP</defName>
+		<label>EMP grenadier</label>
+		<weaponTags>
+			<li>GrenadeEMP</li>
+		</weaponTags>
+	</PawnKindDef>
+	
   <PawnKindDef ParentName="MercenaryBase">
     <defName>MercenaryGunner</defName>
     <label>mercenary gunner</label>
-    <combatPower>70</combatPower>
+    <combatPower>90</combatPower>
     <gearHealthRange>
       <min>0.7</min>
       <max>2.3</max>
@@ -74,7 +144,7 @@
   <PawnKindDef ParentName="MercenaryBase">
     <defName>MercenarySniper</defName>
     <label>mercenary sniper</label>
-    <combatPower>90</combatPower>
+    <combatPower>95</combatPower>
     <gearHealthRange>
       <min>0.7</min>
       <max>2.3</max>
@@ -127,81 +197,11 @@
       </subOptionsChooseOne>
     </inventoryOptions>
   </PawnKindDef>
-
-  <PawnKindDef Abstract="True" Name="GrenadierBase" ParentName="MercenaryBase">
-    <race>Human</race>
-    <combatPower>60</combatPower>
-    <gearHealthRange>
-      <min>0.7</min>
-      <max>2.3</max>
-    </gearHealthRange>
-    <apparelTags>
-      <li>Outlander</li>
-      <li>Military</li>
-      <li>BeltDefensePop</li>
-    </apparelTags>
-    <apparelMoney>
-      <min>800</min>
-      <max>1400</max>
-    </apparelMoney>
-    <apparelAllowHeadwearChance>0.5</apparelAllowHeadwearChance>
-    <weaponMoney>
-      <min>600</min>
-      <max>1000</max>
-    </weaponMoney>
-    <techHediffsMoney>
-      <min>1000</min>
-      <max>1500</max>
-    </techHediffsMoney>
-    <combatEnhancingDrugsCount>
-      <min>0</min>
-      <max>2</max>
-    </combatEnhancingDrugsCount>
-    <techHediffsTags>
-      <li>Advanced</li>
-    </techHediffsTags>
-    <techHediffsChance>0.003</techHediffsChance>
-    <inventoryOptions>
-      <skipChance>0.9</skipChance>
-      <subOptionsChooseOne>
-        <li>
-          <thingDef>Silver</thingDef>
-          <countRange>
-            <min>50</min>
-            <max>200</max>
-          </countRange>
-        </li>
-        <li>
-          <thingDef>Medicine</thingDef>
-          <countRange>
-            <min>1</min>
-            <max>1</max>
-          </countRange>
-        </li>
-      </subOptionsChooseOne>
-    </inventoryOptions>
-  </PawnKindDef>
-
-  <PawnKindDef ParentName="GrenadierBase">
-    <defName>GrenadierDestructive</defName>
-    <label>grenadier</label>
-    <weaponTags>
-      <li>GrenadeDestructive</li>
-    </weaponTags>
-  </PawnKindDef>
-
-  <PawnKindDef ParentName="GrenadierBase">
-    <defName>GrenadierEMP</defName>
-    <label>EMP grenadier</label>
-    <weaponTags>
-      <li>GrenadeEMP</li>
-    </weaponTags>
-  </PawnKindDef>
   
   <PawnKindDef ParentName="MercenaryBase">
     <defName>MercenarySlasher</defName>
     <label>mercenary slasher</label>
-    <combatPower>135</combatPower>
+    <combatPower>140</combatPower>
     <gearHealthRange>
       <min>0.5</min>
       <max>2.3</max>
@@ -223,7 +223,7 @@
       <max>2000</max>
     </weaponMoney>
     <weaponTags>
-      <li>Melee</li>
+      <li>NonNeolithicOnlyMelee</li>
     </weaponTags>
     <techHediffsMoney>
       <min>2000</min>
@@ -299,7 +299,7 @@
   </PawnKindDef>
 
   <PawnKindDef Abstract="True" Name="EliteBase" ParentName="MercenaryBase">
-    <combatPower>220</combatPower>
+    <combatPower>210</combatPower>
     <maxGenerationAge>45</maxGenerationAge>
     <gearHealthRange>
       <min>0.8</min>
@@ -371,4 +371,4 @@
     <labelPlural>elite mercenaries</labelPlural>
   </PawnKindDef>
 
-</PawnKindDefs>
+</Defs>

@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
-<ThinkTrees>
+<Defs>
 
 	<ThinkTreeDef>
 		<defName>Animal</defName>
@@ -24,6 +24,9 @@
         
         <!-- React to close melee threat -->
 				<li Class="JobGiver_ReactToCloseMeleeThreat" />
+
+        <!-- Do a queued job -->
+        <li Class="ThinkNode_QueuedJob" />
 
         <!-- Wild animals dig out if no path to map edge and starving -->
         <li Class="ThinkNode_ConditionalHasFaction">
@@ -102,7 +105,7 @@
         <li Class="JobGiver_LayEgg" />
 
         <!-- Tame animal -->
-        <li Class="ThinkNode_ConditionalColonyFaction">
+        <li Class="ThinkNode_ConditionalOfPlayerFaction">
           <subNodes>
             <li Class="ThinkNode_Tagger">
               <tagToGive>TrainedAnimalBehavior</tagToGive>
@@ -227,7 +230,7 @@
         </li>
         
         <!-- Tame animal: wander colony -->
-        <li Class="ThinkNode_ConditionalColonyFaction">
+        <li Class="ThinkNode_ConditionalOfPlayerFaction">
           <subNodes>
             <li Class="ThinkNode_Tagger">
               <tagToGive>Idle</tagToGive>
@@ -302,6 +305,14 @@
 			<subNodes>
         <li Class="ThinkNode_ConditionalCanDoConstantThinkTreeJobNow">
           <subNodes>
+            <!-- Wild animals flee tornados, meteorites, etc. -->
+            <li Class="ThinkNode_ConditionalHasFaction">
+              <invert>true</invert>
+              <subNodes>
+                <li Class="JobGiver_FleeImmediateDanger" />
+              </subNodes>
+            </li>
+
             <!-- Lord directives -->
             <li Class="ThinkNode_Subtree">
               <treeDef>LordDutyConstant</treeDef>
@@ -312,4 +323,4 @@
 		</thinkRoot>
 	</ThinkTreeDef>
 
-</ThinkTrees>
+</Defs>

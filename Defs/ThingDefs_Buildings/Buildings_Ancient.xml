@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
-<ThingDefs>
+<Defs>
 
   <ThingDef ParentName="BuildingBase">
     <defName>AncientConcreteBarrier</defName>
@@ -65,7 +65,7 @@
 			<MaxHitPoints>300</MaxHitPoints>
       <WorkToBuild>400</WorkToBuild>
 		</statBases>
-    <fillPercent>0.35</fillPercent>
+    <fillPercent>0.25</fillPercent>
     <passability>PassThroughOnly</passability>
     <pathCost>100</pathCost>
     <blockWind>true</blockWind>
@@ -76,4 +76,4 @@
     </costList>
   </ThingDef>
 
-</ThingDefs>
+</Defs>

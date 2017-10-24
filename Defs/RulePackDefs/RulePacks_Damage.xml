@@ -1,0 +1,47 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+  <RulePackDef>
+    <defName>Damage_Bomb</defName>
+    <rulePack>
+      <rulesStrings>
+        <li>damaged_past(p=2)->blasted</li>
+        <li>damaged_past(p=2)->exploded</li>
+        <li>damaged_past->injured</li>
+        <li>damaged_past->damaged</li>
+        <li>damaged_past->wounded</li>
+        <li>damaged_past->hurt</li>
+        
+        <li>destroyed->shattered</li>
+        <li>destroyed->crushed</li>
+        <li>destroyed->obliterated</li>
+        <li>destroyed->annihilated</li>
+        <li>destroyed->detonated</li>
+      </rulesStrings>
+    </rulePack>
+  </RulePackDef>
+
+  <RulePackDef>
+    <defName>Damage_Flame</defName>
+    <rulePack>
+      <rulesStrings>
+        <li>damaged_past(p=2)->blasted</li>
+        <li>damaged_past(p=2)->scorched</li>
+        <li>damaged_past(p=2)->burned</li>
+        <li>damaged_past(p=2)->blistered</li>
+        <li>damaged_past(p=2)->ignited</li>
+        <li>damaged_past(p=2)->seared</li>
+        <li>damaged_past->injured</li>
+        <li>damaged_past->damaged</li>
+        <li>damaged_past->wounded</li>
+        <li>damaged_past->hurt</li>
+
+        <li>destroyed->cremated</li>
+        <li>destroyed->incinerated</li>
+        <li>destroyed->charred</li>
+        <li>destroyed->obliterated</li>
+        <li>destroyed->annihilated</li>
+        <li>destroyed->detonated</li>
+      </rulesStrings>
+    </rulePack>
+  </RulePackDef>
+</Defs>
