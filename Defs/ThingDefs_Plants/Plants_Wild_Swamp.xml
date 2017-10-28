@@ -20,7 +20,7 @@
       <growDays>13</growDays>
       <leaflessGraphicPath>Things/Plant/TreeWillow_Leafless</leaflessGraphicPath>
       <harvestWork>800</harvestWork>
-      <harvestYield>24</harvestYield>
+      <harvestYield>17</harvestYield>
       <wildClusterSizeRange><min>115</min><max>150</max></wildClusterSizeRange>
       <wildClusterRadius>17</wildClusterRadius>
       <visualSizeRange>
@@ -49,7 +49,7 @@
       <growDays>35</growDays>
       <leaflessGraphicPath>Things/Plant/TreeCypress_Leafless</leaflessGraphicPath>
       <harvestWork>2200</harvestWork>
-      <harvestYield>62</harvestYield>
+      <harvestYield>43</harvestYield>
       <wildClusterSizeRange><min>115</min><max>150</max></wildClusterSizeRange>
       <wildClusterRadius>17</wildClusterRadius>
       <visualSizeRange>
@@ -78,7 +78,7 @@
       <growDays>25</growDays>
       <leaflessGraphicPath>Things/Plant/TreeMaple_Leafless</leaflessGraphicPath>
       <harvestWork>700</harvestWork>
-      <harvestYield>36</harvestYield>
+      <harvestYield>25</harvestYield>
       <wildClusterSizeRange><min>115</min><max>150</max></wildClusterSizeRange>
       <wildClusterRadius>17</wildClusterRadius>
     </plant>

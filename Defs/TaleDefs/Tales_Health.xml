@@ -9,6 +9,7 @@
     <firstPawnSymbol>victim</firstPawnSymbol>
     <secondPawnSymbol>killer</secondPawnSymbol>
     <defSymbol>weapon</defSymbol>
+    <baseInterest>0.25</baseInterest>
     <rulePack>
       <rulesStrings>
         <!-- Killer and/or weapon may not be listed, make sure there's valid options -->
@@ -64,6 +65,7 @@
     <firstPawnSymbol>victim</firstPawnSymbol>
     <secondPawnSymbol>killer</secondPawnSymbol>
     <defSymbol>weapon</defSymbol>
+    <baseInterest>4</baseInterest>
     <rulePack>
       <rulesStrings>
         <!-- Killer and/or weapon may not be listed, make sure there's valid options -->
@@ -114,6 +116,7 @@
     <firstPawnSymbol>killer</firstPawnSymbol>
     <secondPawnSymbol>victim</secondPawnSymbol>
     <defSymbol>weapon</defSymbol>
+    <baseInterest>4</baseInterest>
     <rulePack>
       <rulesStrings>
         <!-- weapon may not be listed, make sure there's valid options -->
@@ -162,6 +165,7 @@
     <firstPawnSymbol>killer</firstPawnSymbol>
     <secondPawnSymbol>victim</secondPawnSymbol>
     <defSymbol>weapon</defSymbol>
+    <baseInterest>4</baseInterest>
     <rulePack>
       <rulesStrings>
         <!-- weapon may not be listed, make sure there's valid options -->
@@ -213,6 +217,7 @@
     <firstPawnSymbol>killer</firstPawnSymbol>
     <secondPawnSymbol>victim</secondPawnSymbol>
     <defSymbol>weapon</defSymbol>
+    <baseInterest>10</baseInterest>
     <rulePack>
       <rulesStrings>
         <!-- weapon may not be listed, make sure there's valid options -->
@@ -265,6 +270,7 @@
     <secondPawnSymbol>victim</secondPawnSymbol>
     <defSymbol>capacity</defSymbol>
     <defType>PawnCapacityDef</defType>
+    <baseInterest>4</baseInterest>
     <rulePack>
       <rulesStrings>
         <li>tale_noun->[killer_nameShortDef] [wound_name_present] [victim_nameShortDef]</li>
@@ -308,6 +314,7 @@
     <firstPawnSymbol>killer</firstPawnSymbol>
     <secondPawnSymbol>victim</secondPawnSymbol>
     <defSymbol>weapon</defSymbol>
+    <baseInterest>4</baseInterest>
     <rulePack>
       <rulesStrings>
         <li>tale_noun->[killer_nameShortDef] [wound_name_present] [victim_nameShortDef] with a mortar</li>
@@ -339,6 +346,7 @@
     <label>exhausted</label>
     <taleClass>Tale_SinglePawn</taleClass>
     <type>Volatile</type>
+    <baseInterest>4</baseInterest>
     <rulePack>
       <rulesStrings>
         <li>tale_noun->[pawn_nameShortDef] collapsing from exhaustion</li>
@@ -367,6 +375,7 @@
     <type>Volatile</type>
     <defSymbol>illness</defSymbol>
     <defType>HediffDef</defType>
+    <baseInterest>4</baseInterest>
     <rulePack>
       <rulesStrings>
         <li>tale_noun->[pawn_nameShortDef] stricken with [illness_label]</li>
@@ -397,6 +406,7 @@
     <label>heatstroke revealed</label>
     <taleClass>Tale_SinglePawnAndDef</taleClass>
     <type>Volatile</type>
+    <baseInterest>4</baseInterest>
     <rulePack>
       <rulesStrings>
         <li>tale_noun->[pawn_nameShortDef] getting heatstroke</li>
@@ -426,6 +436,7 @@
     <label>hypothermia revealed</label>
     <taleClass>Tale_SinglePawnAndDef</taleClass>
     <type>Volatile</type>
+    <baseInterest>4</baseInterest>
     <rulePack>
       <rulesStrings>
         <li>tale_noun->[pawn_nameShortDef] getting hypothermia</li>
@@ -455,6 +466,7 @@
     <label>toxicity revealed</label>
     <taleClass>Tale_SinglePawnAndDef</taleClass>
     <type>Volatile</type>
+    <baseInterest>4</baseInterest>
     <rulePack>
       <rulesStrings>
         <li>tale_noun->[pawn_nameShortDef]'s body becoming toxic</li>
@@ -488,6 +500,7 @@
     <type>Volatile</type>
     <firstPawnSymbol>mother</firstPawnSymbol>
     <secondPawnSymbol>child</secondPawnSymbol>
+    <baseInterest>4</baseInterest>
     <rulePack>
       <rulesStrings>
         <li>tale_noun->[mother_nameShortDef] giving birth to [child_nameShortDef]</li>

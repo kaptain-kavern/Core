@@ -262,6 +262,23 @@
   </RulePackDef>
 
   <RulePackDef>
+    <defName>NamerTropicalRainforest</defName>
+    <include>
+      <li>NamerUtility</li>
+    </include>
+    <rulePack>
+      <rulesStrings>
+        <li>suffix(p=6)->rainforest</li>
+        <li>suffix(p=3)->jungle</li>
+        <li>suffix->forest</li>
+        <li>suffix->grove</li>
+        <li>suffix->woodland</li>
+        <li>suffix->tangle</li>
+      </rulesStrings>
+    </rulePack>
+  </RulePackDef>
+  
+  <RulePackDef>
     <defName>NamerForest</defName>
     <include>
       <li>NamerUtility</li>
@@ -270,9 +287,25 @@
       <rulesStrings>
         <li>suffix(p=6)->forest</li>
         <li>suffix->grove</li>
-        <li>suffix->wetlands</li>
-        <li>suffix->taiga</li>
         <li>suffix->woodland</li>
+        <li>suffix->thicket</li>
+      </rulesStrings>
+    </rulePack>
+  </RulePackDef>
+
+  <RulePackDef>
+    <defName>NamerBorealForest</defName>
+    <include>
+      <li>NamerUtility</li>
+    </include>
+    <rulePack>
+      <rulesStrings>
+        <li>suffix(p=6)->forest</li>
+        <li>suffix(p=3)->taiga</li>
+        <li>suffix->grove</li>
+        <li>suffix->woodland</li>
+        <li>suffix->tangle</li>
+        <li>suffix->thicket</li>
       </rulesStrings>
     </rulePack>
   </RulePackDef>

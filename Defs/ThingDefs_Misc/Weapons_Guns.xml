@@ -845,6 +845,7 @@
 			<AccuracyMedium>0.68</AccuracyMedium>
 			<AccuracyLong>0.53</AccuracyLong>
 			<RangedWeapon_Cooldown>1.16</RangedWeapon_Cooldown>
+      <Weapon_Bulk>1.0</Weapon_Bulk>
 		</statBases>
 		<recipeMaker>
 			<researchPrerequisite>ChargedShot</researchPrerequisite>
@@ -1033,6 +1034,9 @@
         <soundCast>ShotMinigun</soundCast>
         <soundCastTail>GunTail_Medium</soundCastTail>
         <muzzleFlashScale>9</muzzleFlashScale>
+        <targetParams>
+          <canTargetLocations>true</canTargetLocations>
+        </targetParams>
       </li>
     </verbs>
     <tools>

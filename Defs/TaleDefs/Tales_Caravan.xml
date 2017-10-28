@@ -6,6 +6,7 @@
     <label>caravan formed</label>
     <taleClass>Tale_SinglePawn</taleClass>
     <type>Volatile</type>
+    <baseInterest>10</baseInterest>
     <rulePack>
       <rulesStrings>
         <li>tale_noun->[pawn_nameShortDef] departing for adventure</li>
@@ -34,6 +35,7 @@
     <label>caravan fled</label>
     <taleClass>Tale_SinglePawn</taleClass>
     <type>Volatile</type>
+    <baseInterest>20</baseInterest>
     <rulePack>
       <rulesStrings>
         <li>tale_noun->[pawn_nameShortDef] fleeing for [pawn_possessive] life</li>
@@ -65,6 +67,7 @@
     <label>caravan ambush defeated</label>
     <taleClass>Tale_SinglePawn</taleClass>
     <type>Volatile</type>
+    <baseInterest>20</baseInterest>
     <rulePack>
       <rulesStrings>
         <li>tale_noun->a successful defense of [pawn_nameShortDef]'s caravan</li>
@@ -99,6 +102,7 @@
     <taleClass>Tale_SinglePawnAndDef</taleClass>
     <type>Volatile</type>
     <defSymbol>material</defSymbol>
+    <baseInterest>1</baseInterest>
     <rulePack>
       <rulesStrings>
         <li>tale_noun->[pawn_nameShortDef] mining a rich vein of [material_label] in a foreign land</li>
@@ -127,6 +131,7 @@
     <label>caravan assault successful</label>
     <taleClass>Tale_SinglePawn</taleClass>
     <type>Volatile</type>
+    <baseInterest>50</baseInterest>
     <rulePack>
       <rulesStrings>
         <li>tale_noun->[pawn_nameShortDef]'s caravan defeating an enemy stronghold</li>

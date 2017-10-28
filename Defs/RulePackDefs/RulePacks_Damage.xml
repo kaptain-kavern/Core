@@ -11,11 +11,11 @@
         <li>damaged_past->wounded</li>
         <li>damaged_past->hurt</li>
         
-        <li>destroyed->shattered</li>
-        <li>destroyed->crushed</li>
-        <li>destroyed->obliterated</li>
-        <li>destroyed->annihilated</li>
-        <li>destroyed->detonated</li>
+        <li>destroyed_past->shattered</li>
+        <li>destroyed_past->crushed</li>
+        <li>destroyed_past->obliterated</li>
+        <li>destroyed_past->annihilated</li>
+        <li>destroyed_past->detonated</li>
       </rulesStrings>
     </rulePack>
   </RulePackDef>
@@ -35,12 +35,85 @@
         <li>damaged_past->wounded</li>
         <li>damaged_past->hurt</li>
 
-        <li>destroyed->cremated</li>
-        <li>destroyed->incinerated</li>
-        <li>destroyed->charred</li>
-        <li>destroyed->obliterated</li>
-        <li>destroyed->annihilated</li>
-        <li>destroyed->detonated</li>
+        <li>damaged_present(p=2)->blasting</li>
+        <li>damaged_present(p=2)->scorching</li>
+        <li>damaged_present(p=2)->burning</li>
+        <li>damaged_present(p=2)->blistering</li>
+        <li>damaged_present(p=2)->igniting</li>
+        <li>damaged_present(p=2)->searing</li>
+        <li>damaged_present->injuring</li>
+        <li>damaged_present->damaging</li>
+        <li>damaged_present->wounding</li>
+        <li>damaged_present->hurting</li>
+
+        <li>destroyed_past->cremated</li>
+        <li>destroyed_past->incinerated</li>
+        <li>destroyed_past->charred</li>
+        <li>destroyed_past->obliterated</li>
+        <li>destroyed_past->annihilated</li>
+        <li>destroyed_past->detonated</li>
+
+        <li>destroyed_present->cremating</li>
+        <li>destroyed_present->incinerating</li>
+        <li>destroyed_present->charring</li>
+        <li>destroyed_present->obliterating</li>
+        <li>destroyed_present->annihilating</li>
+        <li>destroyed_present->detonating</li>
+      </rulesStrings>
+    </rulePack>
+  </RulePackDef>
+
+  <!-- Weird damage types that don't really destroy anything -->
+  <RulePackDef>
+    <defName>Damage_Extinguish</defName>
+    <rulePack>
+      <rulesStrings>
+        <li>damaged_past->extinguished</li>
+        <li>damaged_past->swamped</li>
+        <li>damaged_past->foamed</li>
+        <li>damaged_past->quenched</li>
+
+        <li>destroyed_past->damaged_past</li>
+      </rulesStrings>
+    </rulePack>
+  </RulePackDef>
+
+  <RulePackDef>
+    <defName>Damage_Stun</defName>
+    <rulePack>
+      <rulesStrings>
+        <li>damaged_past->stunned</li>
+        <li>damaged_past->confused</li>
+        <li>damaged_past->stopped</li>
+        <li>damaged_past->dizzied</li>
+
+        <li>destroyed_past->damaged_past</li>
+      </rulesStrings>
+    </rulePack>
+  </RulePackDef>
+
+  <RulePackDef>
+    <defName>Damage_EMP</defName>
+    <rulePack>
+      <rulesStrings>
+        <li>damaged_past->electrified</li>
+        <li>damaged_past->shocked</li>
+        <li>damaged_past->zapped</li>
+
+        <li>destroyed_past->damaged_past</li>
+      </rulesStrings>
+    </rulePack>
+  </RulePackDef>
+
+  <RulePackDef>
+    <defName>Damage_Smoke</defName>
+    <rulePack>
+      <rulesStrings>
+        <li>damaged_past->smoked</li>
+        <li>damaged_past->fogged</li>
+        <li>damaged_past->clouded</li>
+
+        <li>destroyed_past->damaged_past</li>
       </rulesStrings>
     </rulePack>
   </RulePackDef>

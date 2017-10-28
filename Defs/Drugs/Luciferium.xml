@@ -106,6 +106,7 @@
     <hediffClass>Hediff_Addiction</hediffClass>
     <label>luciferium need</label>
     <causesNeed>Chemical_Luciferium</causesNeed>
+    <everCurableByItem>false</everCurableByItem>
     <stages>
       <li>
       </li>

@@ -56,6 +56,7 @@
     <defName>RandomizeCharacter</defName>
     <text>If you don't like a character, you can regenerate it!\n\nTry randomizing a character with the RANDOMIZE button.</text>
     <eventTagInitiate>ReorderPawn</eventTagInitiate>
+    <eventTagInitiateSource>ReorderCharacters</eventTagInitiateSource>
     <actionTagsAllowed>
       <li>GotoPrevPage</li>
       <li>ReorderPawn</li>

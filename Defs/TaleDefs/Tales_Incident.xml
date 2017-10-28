@@ -6,7 +6,7 @@
     <label>caravan ambushed</label>
     <taleClass>Tale_SinglePawn</taleClass>
     <type>Volatile</type>
-    <baseInterest>1.0</baseInterest>
+    <baseInterest>10</baseInterest>
     <rulePack>
       <rulesStrings>
         <li>tale_noun->[pawn_nameShortDef]'s caravan ambushed</li>
@@ -37,7 +37,7 @@
     <label>caravan ambushed by manhunter</label>
     <taleClass>Tale_SinglePawn</taleClass>
     <type>Volatile</type>
-    <baseInterest>1.0</baseInterest>
+    <baseInterest>10</baseInterest>
     <rulePack>
       <rulesStrings>
         <li>tale_noun->[pawn_nameShortDef]'s caravan ambushed</li>
@@ -66,7 +66,7 @@
     <label>caravan meeting</label>
     <taleClass>Tale_SinglePawn</taleClass>
     <type>Volatile</type>
-    <baseInterest>1.0</baseInterest>
+    <baseInterest>10</baseInterest>
     <rulePack>
       <rulesStrings>
         <li>tale_noun->[pawn_nameShortDef]'s caravan met by others</li>
@@ -101,7 +101,7 @@
     <label>caravan demand</label>
     <taleClass>Tale_SinglePawn</taleClass>
     <type>Volatile</type>
-    <baseInterest>1.0</baseInterest>
+    <baseInterest>10</baseInterest>
     <rulePack>
       <rulesStrings>
         <li>tale_noun->[pawn_nameShortDef]'s caravan receiving a demand</li>
@@ -136,7 +136,7 @@
     <label>meteorite impact</label>
     <taleClass>Tale_SinglePawn</taleClass>
     <type>Volatile</type>
-    <baseInterest>1.0</baseInterest>
+    <baseInterest>50</baseInterest>
     <rulePack>
       <rulesStrings>
         <li>tale_noun->a meteorite falling near [pawn_nameShortDef]'s [community]</li>
@@ -171,7 +171,7 @@
     <label>toxic fallout</label>
     <taleClass>Tale_SinglePawn</taleClass>
     <type>Volatile</type>
-    <baseInterest>1.0</baseInterest>
+    <baseInterest>50</baseInterest>
     <rulePack>
       <rulesStrings>
         <li>tale_noun->fallout settling over [pawn_nameShortDef]'s [community]</li>
@@ -201,7 +201,7 @@
     <label>volcanic winter</label>
     <taleClass>Tale_SinglePawn</taleClass>
     <type>Volatile</type>
-    <baseInterest>1.0</baseInterest>
+    <baseInterest>50</baseInterest>
     <rulePack>
       <rulesStrings>
         <li>tale_noun->volcanic winter beginning at [pawn_nameShortDef]'s [community]</li>
@@ -229,7 +229,7 @@
     <label>aurora</label>
     <taleClass>Tale_SinglePawn</taleClass>
     <type>Volatile</type>
-    <baseInterest>1.0</baseInterest>
+    <baseInterest>20</baseInterest>
     <rulePack>
       <rulesStrings>
         <li>tale_noun->an aurora visible over [pawn_nameShortDef]'s [community]</li>
@@ -259,7 +259,7 @@
     <label>flashstorm</label>
     <taleClass>Tale_SinglePawn</taleClass>
     <type>Volatile</type>
-    <baseInterest>1.0</baseInterest>
+    <baseInterest>20</baseInterest>
     <rulePack>
       <rulesStrings>
         <li>tale_noun->a firestorm that threatened [pawn_nameShortDef]'s [community]</li>
@@ -291,7 +291,7 @@
     <label>tornado</label>
     <taleClass>Tale_SinglePawn</taleClass>
     <type>Volatile</type>
-    <baseInterest>1.0</baseInterest>
+    <baseInterest>50</baseInterest>
     <rulePack>
       <rulesStrings>
         <li>tale_noun->a tornado that touched down near [pawn_nameShortDef]'s [community]</li>
@@ -323,7 +323,7 @@
     <label>raid</label>
     <taleClass>Tale_SinglePawn</taleClass>
     <type>Volatile</type>
-    <baseInterest>1.0</baseInterest>
+    <baseInterest>5</baseInterest>
     <rulePack>
       <rulesStrings>
         <li>tale_noun->an assault on [pawn_nameShortDef]'s [community]</li>
@@ -363,7 +363,7 @@
     <label>infestation</label>
     <taleClass>Tale_SinglePawn</taleClass>
     <type>Volatile</type>
-    <baseInterest>1.0</baseInterest>
+    <baseInterest>5</baseInterest>
     <rulePack>
       <rulesStrings>
         <li>tale_noun->[pawn_nameShortDef]'s [community] infested by insects</li>
@@ -395,7 +395,7 @@
     <label>manhunter pack</label>
     <taleClass>Tale_SinglePawn</taleClass>
     <type>Volatile</type>
-    <baseInterest>1.0</baseInterest>
+    <baseInterest>5</baseInterest>
     <rulePack>
       <rulesStrings>
         <li>tale_noun->[pawn_nameShortDef]'s [community] attacked by animals</li>
@@ -431,7 +431,7 @@
     <label>ship part crash</label>
     <taleClass>Tale_SinglePawn</taleClass>
     <type>Volatile</type>
-    <baseInterest>1.0</baseInterest>
+    <baseInterest>5</baseInterest>
     <rulePack>
       <rulesStrings>
         <li>tale_noun->a [mechanoid] colony crashlanding near [pawn_nameShortDef]'s [community]</li>
@@ -473,7 +473,7 @@
     <label>eclipse</label>
     <taleClass>Tale_SinglePawn</taleClass>
     <type>Volatile</type>
-    <baseInterest>1.0</baseInterest>
+    <baseInterest>5</baseInterest>
     <rulePack>
       <rulesStrings>
         <li>tale_noun->an eclipse over [pawn_nameShortDef]'s [community]</li>
@@ -500,7 +500,7 @@
     <label>journey offer</label>
     <taleClass>Tale_SinglePawn</taleClass>
     <type>Volatile</type>
-    <baseInterest>1.0</baseInterest>
+    <baseInterest>20</baseInterest>
     <rulePack>
       <rulesStrings>
         <li>tale_noun->[pawn_nameShortDef] receiving a message from an old friend</li>

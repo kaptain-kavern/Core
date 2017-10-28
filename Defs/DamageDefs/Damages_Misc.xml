@@ -37,6 +37,7 @@
     <explosionColorEdge>(1, 1, 1, 0.05)</explosionColorEdge>
     <soundExplosion>Explosion_Stun</soundExplosion>
     <harmsHealth>false</harmsHealth>
+    <combatLogRules>Damage_Extinguish</combatLogRules>
   </DamageDef>
 
   <DamageDef ParentName="LocalInjuryBase">
@@ -72,6 +73,7 @@
     <explosionColorEdge>(1, 1, 1, 0.05)</explosionColorEdge>
     <harmsHealth>false</harmsHealth>
     <soundExplosion>Explosion_Smoke</soundExplosion>
+    <combatLogRules>Damage_Smoke</combatLogRules>
   </DamageDef>
 
 </Defs>

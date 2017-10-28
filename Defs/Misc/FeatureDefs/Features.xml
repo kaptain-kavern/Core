@@ -211,11 +211,10 @@
 			<li>TropicalSwamp</li>
 		</rootBiomes>
 		<acceptableBiomes>
-			<li>BorealForest</li>
 			<li>TemperateForest</li>
 			<li>TemperateSwamp</li>
 		</acceptableBiomes>
-		<nameMaker>NamerForest</nameMaker>
+		<nameMaker>NamerTropicalRainforest</nameMaker>
 	</FeatureDef>
 
 	<FeatureDef>
@@ -228,10 +227,8 @@
 		<acceptableBiomes>
 			<li>TemperateForest</li>
 			<li>TemperateSwamp</li>
-			<li>TropicalRainforest</li>
-			<li>TropicalSwamp</li>
 		</acceptableBiomes>
-		<nameMaker>NamerForest</nameMaker>
+		<nameMaker>NamerBorealForest</nameMaker>
 	</FeatureDef>
 
 	<FeatureDef>

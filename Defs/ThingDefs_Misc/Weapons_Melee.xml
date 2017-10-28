@@ -236,6 +236,8 @@
         <cooldownTime>2.15</cooldownTime>
       </li>
       <li>
+        <label>head</label>
+        <labelUsedInLogging>false</labelUsedInLogging>
         <capacities>
           <li>Blunt</li>
         </capacities>
@@ -278,6 +280,8 @@
         <cooldownTime>2.0</cooldownTime>
       </li>
       <li>
+        <label>head</label>
+        <labelUsedInLogging>false</labelUsedInLogging>
         <capacities>
           <li>Blunt</li>
         </capacities>

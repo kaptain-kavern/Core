@@ -175,7 +175,7 @@
 			<growDays>30</growDays>
 			<leaflessGraphicPath>Things/Plant/TreeOak_Leafless</leaflessGraphicPath>
       <harvestWork>1000</harvestWork>
-      <harvestYield>50</harvestYield>
+      <harvestYield>45</harvestYield>
     </plant>
   </ThingDef>
 
@@ -197,7 +197,7 @@
 			<growDays>15.05</growDays>
 			<leaflessGraphicPath>Things/Plant/TreePoplar_Leafless</leaflessGraphicPath>
 			<harvestWork>650</harvestWork>
-      <harvestYield>30</harvestYield>
+      <harvestYield>27</harvestYield>
     </plant>
   </ThingDef>
 
@@ -226,7 +226,7 @@
         <max>3.0</max>
       </visualSizeRange>
       <harvestWork>700</harvestWork>
-      <harvestYield>30</harvestYield>
+      <harvestYield>27</harvestYield>
     </plant>
   </ThingDef>
 
@@ -251,7 +251,7 @@
 			<growDays>20</growDays>
 			<leaflessGraphicPath>Things/Plant/TreeBirch_Leafless</leaflessGraphicPath>
       <harvestWork>700</harvestWork>
-      <harvestYield>30</harvestYield>
+      <harvestYield>27</harvestYield>
       <leaflessGraphicPath>Things/Plant/TreeBirch_Leafless</leaflessGraphicPath>
     </plant>
   </ThingDef>

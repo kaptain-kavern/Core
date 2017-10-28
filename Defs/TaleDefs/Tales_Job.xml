@@ -7,6 +7,7 @@
     <taleClass>Tale_SinglePawnAndDef</taleClass>
     <type>Volatile</type>
     <defSymbol>material</defSymbol>
+    <baseInterest>1</baseInterest>
     <rulePack>
       <rulesStrings>
         <li>tale_noun->[pawn_nameShortDef] mining a rich vein of [material_label]</li>
@@ -36,6 +37,7 @@
     <taleClass>Tale_SinglePawnAndDef</taleClass>
     <type>Volatile</type>
     <defSymbol>object</defSymbol>
+    <baseInterest>5</baseInterest>
     <rulePack>
       <rulesStrings>
         <li>tale_noun->[pawn_nameShortDef] finishing construction on a [object_label]</li>
@@ -63,6 +65,7 @@
     <taleClass>Tale_SinglePawnAndDef</taleClass>
     <type>Volatile</type>
     <defSymbol>object</defSymbol>
+    <baseInterest>5</baseInterest>
     <rulePack>
       <rulesStrings>
         <li>tale_noun->[pawn_nameShortDef] finishing construction on a [object_label]</li>
@@ -91,6 +94,7 @@
     <type>Volatile</type>
     <firstPawnSymbol>attender</firstPawnSymbol>
     <secondPawnSymbol>organizer</secondPawnSymbol>
+    <baseInterest>1</baseInterest>
     <rulePack>
       <rulesStrings>
         <li>tale_noun->[attender_nameShortDef] attending [organizer_nameShortDef]'s party</li>
@@ -117,6 +121,7 @@
     <label>meditated</label>
     <taleClass>Tale_SinglePawn</taleClass>
     <type>Volatile</type>
+    <baseInterest>1</baseInterest>
     <rulePack>
       <rulesStrings>
         <li>tale_noun->[pawn_nameShortDef] meditating</li>
@@ -142,6 +147,7 @@
     <label>prayed</label>
     <taleClass>Tale_SinglePawn</taleClass>
     <type>Volatile</type>
+    <baseInterest>1</baseInterest>
     <rulePack>
       <rulesStrings>
         <li>tale_noun->[pawn_nameShortDef] praying</li>
@@ -168,6 +174,7 @@
     <label>built snowman</label>
     <taleClass>Tale_SinglePawn</taleClass>
     <type>Volatile</type>
+    <baseInterest>1</baseInterest>
     <rulePack>
       <rulesStrings>
         <li>tale_noun->[pawn_nameShortDef] building a snowman</li>
@@ -195,6 +202,7 @@
     <type>Volatile</type>
     <firstPawnSymbol>pawn</firstPawnSymbol>
     <secondPawnSymbol>corpse</secondPawnSymbol>
+    <baseInterest>1</baseInterest>
     <rulePack>
       <rulesStrings>
         <li>tale_noun->[pawn_nameShortDef] visiting the grave of [corpse_nameShortDef]</li>
@@ -225,6 +233,7 @@
     <taleClass>Tale_SinglePawnAndDef</taleClass>
     <type>Volatile</type>
     <defSymbol>object</defSymbol>
+    <baseInterest>0.5</baseInterest>
     <rulePack>
       <rulesStrings>
         <li>tale_noun->[pawn_nameShortDef] relaxing at a [object_label]</li>
@@ -259,6 +268,7 @@
     <label>buried corpse</label>
     <taleClass>Tale_DoublePawn</taleClass>
     <type>Volatile</type>
+    <baseInterest>2</baseInterest>
     <rulePack>
       <rulesStrings>
         <li>tale_noun->[pawn_nameShortDef] burying [corpse_nameShortDef]</li>
@@ -289,6 +299,7 @@
     <label>entered cryptosleep</label>
     <taleClass>Tale_SinglePawn</taleClass>
     <type>Volatile</type>
+    <baseInterest>5</baseInterest>
     <rulePack>
       <rulesStrings>
         <li>tale_noun->[pawn_nameShortDef] entering cryptosleep</li>
@@ -317,6 +328,7 @@
     <type>Volatile</type>
     <firstPawnSymbol>pawn</firstPawnSymbol>
     <secondPawnSymbol>sleeper</secondPawnSymbol>
+    <baseInterest>5</baseInterest>
     <rulePack>
       <rulesStrings>
         <li>tale_noun->[pawn_nameShortDef] putting [sleeper_nameShortDef] into cryptosleep</li>
@@ -349,6 +361,7 @@
     <type>Volatile</type>
     <firstPawnSymbol>stripper</firstPawnSymbol>
     <secondPawnSymbol>stripped</secondPawnSymbol>
+    <baseInterest>2</baseInterest>
     <rulePack>
       <rulesStrings>
         <li>tale_noun->[stripper_nameShortDef] stripping [stripped_nameShortDef]</li>
@@ -377,6 +390,7 @@
     <type>Volatile</type>
     <defSymbol>skill</defSymbol>
     <defType>SkillDef</defType>
+    <baseInterest>5</baseInterest>
     <rulePack>
       <rulesStrings>
         <li>tale_noun->[pawn_nameShortDef] becoming a master at [skill_label]</li>
@@ -410,6 +424,7 @@
     <type>Volatile</type>
     <defSymbol>skill</defSymbol>
     <defType>SkillDef</defType>
+    <baseInterest>10</baseInterest>
     <rulePack>
       <rulesStrings>
         <li>tale_noun->[pawn_nameShortDef] becoming a master at [skill_label]</li>
@@ -441,6 +456,7 @@
     <type>Volatile</type>
     <firstPawnSymbol>human</firstPawnSymbol>
     <secondPawnSymbol>animal</secondPawnSymbol>
+    <baseInterest>2</baseInterest>
     <rulePack>
       <rulesStrings>
         <li>tale_noun->[human_nameShortDef] recruiting yet another animal to their growing [animalgroup]</li>

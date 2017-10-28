@@ -172,7 +172,7 @@
       <isResourceRock>true</isResourceRock>
       <mineableThing>Uranium</mineableThing>
       <mineableYield>35</mineableYield>
-      <mineableScatterCommonality>0.07</mineableScatterCommonality>
+      <mineableScatterCommonality>0.09</mineableScatterCommonality>
       <mineableScatterLumpSizeRange>
         <min>1</min>
         <max>6</max>

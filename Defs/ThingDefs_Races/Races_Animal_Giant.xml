@@ -375,6 +375,7 @@
     <race>
       <body>QuadrupedAnimalWithHoovesAndHorn</body>
       <herdAnimal>true</herdAnimal>
+      <herdMigrationAllowed>false</herdMigrationAllowed>
       <baseBodySize>3.5</baseBodySize>
       <baseHungerRate>4.5</baseHungerRate>
       <baseHealthScale>13.0</baseHealthScale>
