@@ -45,7 +45,7 @@
         </li>
         <li Class="IngestionOutcomeDoer_GiveHediff">
           <hediffDef>PsychiteTolerance</hediffDef>
-          <severity>0.01</severity>
+          <severity>0.02</severity>
 					<divideByBodySize>true</divideByBodySize>
 				</li>
       </outcomeDoers>
@@ -62,9 +62,9 @@
     <comps>
       <li Class="CompProperties_Drug">
         <chemical>Psychite</chemical>
-        <addictiveness>0.05</addictiveness>
-        <minToleranceToAddict>0.00</minToleranceToAddict>
-        <existingAddictionSeverityOffset>0.10</existingAddictionSeverityOffset>
+        <addictiveness>0.02</addictiveness>
+        <minToleranceToAddict>0.10</minToleranceToAddict>
+        <existingAddictionSeverityOffset>0.15</existingAddictionSeverityOffset>
         <needLevelOffset>1</needLevelOffset>
         <listOrder>110</listOrder>
 			</li>

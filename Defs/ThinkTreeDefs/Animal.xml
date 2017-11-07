@@ -8,6 +8,12 @@
         <!-- Keep lying down if we have to -->
 				<li Class="ThinkNode_ConditionalMustKeepLyingDown">
 					<subNodes>
+            <!-- Do a queued job if possible -->
+            <li Class="ThinkNode_QueuedJob">
+              <inBedOnly>true</inBedOnly>
+            </li>
+
+            <!-- Keep lying down -->
             <li Class="JobGiver_KeepLyingDown" />
           </subNodes>
         </li>

@@ -247,9 +247,9 @@
     </statBases>
     <ingestible>
       <nutrition>1.25</nutrition>
-    </ingestible><plant>
+    </ingestible>
+    <plant>
 			<growDays>20</growDays>
-			<leaflessGraphicPath>Things/Plant/TreeBirch_Leafless</leaflessGraphicPath>
       <harvestWork>700</harvestWork>
       <harvestYield>27</harvestYield>
       <leaflessGraphicPath>Things/Plant/TreeBirch_Leafless</leaflessGraphicPath>

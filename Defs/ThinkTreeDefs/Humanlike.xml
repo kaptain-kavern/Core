@@ -24,6 +24,11 @@
         <!-- If we HAVE to keep lying down... -->
         <li Class="ThinkNode_ConditionalMustKeepLyingDown">
           <subNodes>
+            <!-- Do a queued job if possible (e.g. watch tv in bed) -->
+            <li Class="ThinkNode_QueuedJob">
+              <inBedOnly>true</inBedOnly>
+            </li>
+
             <!-- Get joy -->
             <li Class="ThinkNode_Tagger">
               <tagToGive>SatisfyingNeeds</tagToGive>
