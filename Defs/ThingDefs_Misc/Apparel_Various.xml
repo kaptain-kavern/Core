@@ -44,6 +44,18 @@
         <li>HandTailoringBench</li>
       </recipeUsers>
       <unfinishedThingDef>UnfinishedApparel</unfinishedThingDef>
+      <defaultIngredientFilter>
+        <categories>
+          <li>Root</li>
+        </categories>
+        <exceptedThingDefs>
+          <li>Gold</li>
+          <li>Silver</li>
+          <li>Plasteel</li>
+          <li>Jade</li>
+          <li>Uranium</li>
+        </exceptedThingDefs>
+      </defaultIngredientFilter>
     </recipeMaker>
   </ThingDef>
   
@@ -57,6 +69,18 @@
         <li>TableMachining</li>
       </recipeUsers>
       <unfinishedThingDef>UnfinishedApparel</unfinishedThingDef>
+      <defaultIngredientFilter>
+        <categories>
+          <li>Root</li>
+        </categories>
+        <exceptedThingDefs>
+          <li>Gold</li>
+          <li>Silver</li>
+          <li>Plasteel</li>
+          <li>Jade</li>
+          <li>Uranium</li>
+        </exceptedThingDefs>
+      </defaultIngredientFilter>
     </recipeMaker>
   </ThingDef>
   

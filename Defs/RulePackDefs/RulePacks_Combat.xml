@@ -203,6 +203,7 @@
         <li>action(p=0.3)->[initiator_definite] hit [recipient_definite] with a [damaged_inf] from [implement]</li>
         <li>action(p=0.3)->[initiator_definite] used [implement] to [damaged_inf] [recipient_definite]</li>
         <li>action->[initiator_definite] [damaged_past] [recipient_definite] with [implement]</li>
+        <li>action(p=0.6)->[initiator_definite] [damaged_past] [recipient_definite]</li>
       </rulesStrings>
     </rulePack>
   </RulePackDef>

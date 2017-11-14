@@ -15,7 +15,7 @@
     <fertility>0</fertility>
     <constructEffect>ConstructDirt</constructEffect>
     <acceptTerrainSourceFilth>True</acceptTerrainSourceFilth>
-    <terrainAffordanceNeeded>Light</terrainAffordanceNeeded>
+    <terrainAffordanceNeeded>Heavy</terrainAffordanceNeeded>
   </TerrainDef>
 
   <!-- ================= Misc ================= -->

@@ -77,7 +77,7 @@
         <li>logentry->[subject_definite] [died] [duetoa] [culpritHediff_labelNoun] in [subject_possessive] [culpritHediff_target_label] [flavorsuffix].</li>
 
         <li>logentry->[subject_definite] [died].</li>
-        <li>logentry->[subject_definite] [died] [suffixflavor].</li>
+        <li>logentry->[subject_definite] [died] [flavorsuffix].</li>
       </rulesStrings>
     </rulePack>
   </RulePackDef>

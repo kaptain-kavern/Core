@@ -167,6 +167,7 @@
       <li Class="CompProperties_Targetable">
         <compClass>CompTargetable_SingleCorpse</compClass>
         <fleshCorpsesOnly>true</fleshCorpsesOnly>
+        <nonDessicatedCorpsesOnly>true</nonDessicatedCorpsesOnly>
       </li>
       <li>
         <compClass>CompTargetEffect_Resurrect</compClass>

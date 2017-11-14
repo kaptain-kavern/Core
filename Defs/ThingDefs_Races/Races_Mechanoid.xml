@@ -94,6 +94,7 @@
         <power>20</power>
         <cooldownTime>1.65</cooldownTime>
         <linkedBodyPartsGroup>LeftBlade</linkedBodyPartsGroup>
+        <alwaysTreatAsWeapon>true</alwaysTreatAsWeapon>
       </li>
       <li>
         <label>right blade</label>
@@ -104,6 +105,7 @@
         <power>20</power>
         <cooldownTime>1.65</cooldownTime>
         <linkedBodyPartsGroup>RightBlade</linkedBodyPartsGroup>
+        <alwaysTreatAsWeapon>true</alwaysTreatAsWeapon>
       </li>
       <li>
         <label>head</label>

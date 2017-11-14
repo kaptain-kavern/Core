@@ -41,7 +41,7 @@
 		<defName>ShipReactor</defName>
 		<label>ship antimatter reactor</label>
 		<description>Allows you to use an antimatter containment core to build a reactor to power a ship.</description>
-		<baseCost>4000</baseCost>
+		<baseCost>8000</baseCost>
 		<techLevel>Spacer</techLevel>
 		<prerequisites>
 			<li>ShipBasics</li>
@@ -67,7 +67,7 @@
 		<defName>ShipComputerCore</defName>
 		<label>ship computer core</label>
 		<description>Allows coercing an existing AI persona into a usable AI computer core for ship guidance.</description>
-		<baseCost>2500</baseCost>
+		<baseCost>1500</baseCost>
 		<techLevel>Spacer</techLevel>
 		<prerequisites>
 			<li>ShipBasics</li>
@@ -80,7 +80,7 @@
     <defName>ShipSensorCluster</defName>
     <label>ship sensor cluster</label>
     <description>Allows you to construct long-range sensors for a ship.</description>
-    <baseCost>6000</baseCost>
+    <baseCost>3000</baseCost>
     <techLevel>Spacer</techLevel>
     <prerequisites>
       <li>ShipBasics</li>

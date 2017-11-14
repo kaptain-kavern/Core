@@ -48,8 +48,8 @@
       <shipPart>true</shipPart>
     </building>
     <costList>
-      <Steel>500</Steel>
-      <Plasteel>150</Plasteel>
+      <Steel>400</Steel>
+      <Plasteel>75</Plasteel>
       <Component>10</Component>
     </costList>
     <terrainAffordanceNeeded>Heavy</terrainAffordanceNeeded>
@@ -173,7 +173,7 @@
     </building>
     <costList>
       <Steel>250</Steel>
-      <AdvancedComponent>20</AdvancedComponent>
+      <AdvancedComponent>10</AdvancedComponent>
 			<Gold>100</Gold>
       <AIPersonaCore>1</AIPersonaCore>
     </costList>
@@ -225,9 +225,9 @@
     </building>
     <costList>
       <Steel>500</Steel>
-      <Plasteel>500</Plasteel>
-			<Uranium>150</Uranium>
-      <AdvancedComponent>25</AdvancedComponent>
+      <Plasteel>400</Plasteel>
+			<Uranium>100</Uranium>
+      <AdvancedComponent>20</AdvancedComponent>
     </costList>
     <comps>
       <li Class="CompProperties_Power">
@@ -290,10 +290,10 @@
       <shipPart>true</shipPart>
     </building>
     <costList>
-      <Steel>500</Steel>
-      <Plasteel>300</Plasteel>
+      <Steel>400</Steel>
+      <Plasteel>200</Plasteel>
 			<Uranium>100</Uranium>
-      <AdvancedComponent>25</AdvancedComponent>
+      <AdvancedComponent>15</AdvancedComponent>
     </costList>
     <terrainAffordanceNeeded>Heavy</terrainAffordanceNeeded>
     <staticSunShadowHeight>1.0</staticSunShadowHeight>

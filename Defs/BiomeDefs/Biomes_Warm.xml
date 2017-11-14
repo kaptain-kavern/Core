@@ -152,7 +152,6 @@
 	    <pathCost_fall>15000</pathCost_fall>
 	    <pathCost_winter>15000</pathCost_winter>
 		<texture>World/Biomes/TropicalSwamp</texture>
-		<canAutoChoose>false</canAutoChoose>
 		<soundsAmbient>
 			<li>AmbientNightInsects_Jungle</li>
 			<li>AmbientDayInsects_Jungle</li>

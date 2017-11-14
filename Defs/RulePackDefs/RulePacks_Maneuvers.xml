@@ -228,11 +228,11 @@
         <li>damaged_past->shoved</li>
         <li>damaged_past->stabbed</li>
 
-        <li>maneuver_present(p=2)->poking</li>
-        <li>maneuver_present(p=2)->jabbing</li>
-        <li>maneuver_present->prodding</li>
-        <li>maneuver_present->shoving</li>
-        <li>maneuver_present->stabbing</li>
+        <li>damaged_present(p=2)->poking</li>
+        <li>damaged_present(p=2)->jabbing</li>
+        <li>damaged_present->prodding</li>
+        <li>damaged_present->shoving</li>
+        <li>damaged_present->stabbing</li>
 
         <li>flavortextconsequence(recipient_flesh!=Mechanoid)->leaving an enormous bruise</li>
         <li>flavortextconsequence->leaving the area visibly deformed</li>
@@ -273,11 +273,11 @@
         <li>damaged_past->gnawed</li>
         <li>damaged_past->tore</li>
 
-        <li>maneuver_present->biting</li>
-        <li>maneuver_present->chomping</li>
-        <li>maneuver_present->nipped</li>
-        <li>maneuver_present->gnawing</li>
-        <li>maneuver_present->tearing</li>
+        <li>damaged_present->biting</li>
+        <li>damaged_present->chomping</li>
+        <li>damaged_present->nipped</li>
+        <li>damaged_present->gnawing</li>
+        <li>damaged_present->tearing</li>
 
         <li>flavortextconsequence(recipient_flesh!=Mechanoid)->exposing the flesh underneath</li>
         <li>flavortextconsequence(recipient_flesh==Mechanoid)->exposing the machinery underneath</li>

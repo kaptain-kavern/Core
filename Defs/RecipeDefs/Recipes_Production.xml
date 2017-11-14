@@ -250,7 +250,7 @@
     <workSpeedStat>SmithingSpeed</workSpeedStat>
     <effectWorking>Cook</effectWorking>
     <soundWorking>Recipe_Machining</soundWorking>
-    <workAmount>12000</workAmount>
+    <workAmount>9000</workAmount>
     <unfinishedThingDef>UnfinishedComponent</unfinishedThingDef>
     <ingredients>
       <li>
@@ -259,7 +259,15 @@
             <li>Component</li>
           </thingDefs>
         </filter>
-        <count>2</count>
+        <count>1</count>
+      </li>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>Steel</li>
+          </thingDefs>
+        </filter>
+        <count>10</count>
       </li>
       <li>
         <filter>
@@ -267,7 +275,7 @@
             <li>Gold</li>
           </thingDefs>
         </filter>
-        <count>0.5</count>
+        <count>0.3</count>
       </li>
       <li>
         <filter>
@@ -275,11 +283,12 @@
             <li>Uranium</li>
           </thingDefs>
         </filter>
-        <count>0.5</count>
+        <count>0.3</count>
       </li>
     </ingredients>
     <fixedIngredientFilter>
       <thingDefs>
+        <li>Steel</li>
         <li>Component</li>
         <li>Gold</li>
         <li>Uranium</li>

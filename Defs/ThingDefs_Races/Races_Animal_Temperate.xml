@@ -430,7 +430,7 @@
     <label>elk</label>
     <labelPlural>elk</labelPlural>
     <race>Elk</race>
-    <combatPower>130</combatPower>
+    <combatPower>75</combatPower>
     <wildSpawn_spawnWild>true</wildSpawn_spawnWild>
     <wildSpawn_EcoSystemWeight>0.9</wildSpawn_EcoSystemWeight>
     <wildSpawn_GroupSizeRange>

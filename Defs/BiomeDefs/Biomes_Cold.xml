@@ -264,7 +264,6 @@
     <pathCost_fall>3000</pathCost_fall>
     <pathCost_winter>46000</pathCost_winter>
     <texture>World/Biomes/ColdBog</texture>
-    <canAutoChoose>false</canAutoChoose>
     <soundsAmbient>
       <li>AmbientNightInsects_Standard</li>
     </soundsAmbient>

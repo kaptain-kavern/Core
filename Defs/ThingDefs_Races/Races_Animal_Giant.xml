@@ -97,7 +97,7 @@
     <defName>Elephant</defName>
     <label>elephant</label>
     <race>Elephant</race>
-    <combatPower>280</combatPower>
+    <combatPower>200</combatPower>
     <wildSpawn_spawnWild>true</wildSpawn_spawnWild>
     <wildSpawn_EcoSystemWeight>1</wildSpawn_EcoSystemWeight>
     <wildSpawn_GroupSizeRange>
@@ -261,7 +261,7 @@
     <defName>Megasloth</defName>
     <label>megasloth</label>
     <race>Megasloth</race>
-    <combatPower>350</combatPower>
+    <combatPower>150</combatPower>
     <wildSpawn_spawnWild>true</wildSpawn_spawnWild>
     <wildSpawn_EcoSystemWeight>1</wildSpawn_EcoSystemWeight>
     <lifeStages>
@@ -424,7 +424,7 @@
     <defName>Thrumbo</defName>
     <label>thrumbo</label>
     <race>Thrumbo</race>
-    <combatPower>700</combatPower>
+    <combatPower>440</combatPower>
 		<canArriveManhunter>false</canArriveManhunter>
     <wildSpawn_spawnWild>false</wildSpawn_spawnWild>
     <lifeStages>

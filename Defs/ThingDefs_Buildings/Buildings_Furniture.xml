@@ -348,6 +348,7 @@
       <li Class="CompProperties_AffectedByFacilities">
         <linkableFacilities>
           <li>Dresser</li>
+          <li>EndTable</li>
         </linkableFacilities>
       </li>
     </comps>
@@ -370,7 +371,7 @@
   <ThingDef ParentName="BedBase">
     <defName>BedrollDouble</defName>
     <label>double bedroll</label>
-    <description>A double-wide cloth bed that sits on the floor. It is lightweight and can be rolled up for easy transport, but it is not quite as comfortable as a typical bed.</description>
+    <description>A simple double-wide bed that sits on the floor, usually made of cloth or leather, often lined with fur. It is lightweight and can be rolled up for easy transport, but it is not quite as comfortable as a typical bed.</description>
     <graphicData>
       <texPath>Things/Building/Furniture/Bed/BedrollDouble</texPath>
       <graphicClass>Graphic_Single</graphicClass>
@@ -388,6 +389,7 @@
       <li Class="CompProperties_AffectedByFacilities">
         <linkableFacilities>
           <li>Dresser</li>
+          <li>EndTable</li>
         </linkableFacilities>
       </li>
     </comps>

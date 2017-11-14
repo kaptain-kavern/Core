@@ -152,7 +152,6 @@
     <pathCost_fall>3650</pathCost_fall>
     <pathCost_winter>28500</pathCost_winter>
     <texture>World/Biomes/TemperateSwamp</texture>
-    <canAutoChoose>false</canAutoChoose>
     <soundsAmbient>
       <li>AmbientNightInsects_Standard</li>
     </soundsAmbient>
